@@ -1,4 +1,4 @@
-# Portfolio — Mathias ALY-BERIL
+# Portfolio — Mathias ALY BERIL
 
 Portfolio personnel présentant mes projets académiques et personnels en informatique :
 développement logiciel, cybersécurité, data, systèmes & réseaux et systèmes embarqués.
@@ -79,5 +79,5 @@ Tout document ou capture ajouté au site doit d'abord être vérifié et, si né
 
 ## Auteur
 
-Mathias ALY-BERIL — étudiant ingénieur en informatique (ESIROI, Université de La Réunion).
+Mathias ALY BERIL — étudiant ingénieur en informatique (ESIROI, Université de La Réunion).
 Contact : alyderil.mathias@gmail.com · GitHub : https://github.com/Silverwolf974
