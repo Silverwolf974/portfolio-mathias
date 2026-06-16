@@ -1,8 +1,28 @@
-# --- Dépôts de projets imbriqués (cursus) ---
-# Ces dossiers sont des dépôts Git indépendants (GitLab interne de l'école).
-# On ne les versionne PAS ici pour éviter des références de sous-modules cassées
-# et garder le dépôt du portfolio propre. Les projets restent intacts en local.
+# ============================================================
+#  Dépôts de projets du cursus — NON publiés dans le portfolio
+#  Ce sont des dépôts Git indépendants (GitLab interne de l'école).
+#  On ne les versionne PAS ici : sinon Git les enregistre comme des
+#  sous-modules sans URL et le build GitHub Pages échoue.
+#  Les dossiers restent intacts sur le disque ; seuls les éléments
+#  explicitement copiés dans assets/ sont publiés.
+# ============================================================
 projet/
+project/
+
+# Au cas où certains dossiers seraient présents à la racine
+challenge-big-data-et-machine-learning/
+data_mining/
+principe_cyber/
+sae_dev/
+Supervision de la sécurité/
+Systeme embarques/
+tp_dev_logiciel/
+
+# --- Secrets / variables d'environnement ---
+.env
+*.env
+*.key
+*.pem
 
 # --- Système / éditeurs ---
 .DS_Store
