@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathias ALY-BERIL — Portfolio</title>
+  <meta name="description" content="Portfolio de Mathias ALY-BERIL, étudiant ingénieur en informatique : développement logiciel, cybersécurité, data, systèmes & réseaux." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="brand">MA<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero container" id="hero">
+      <p class="hero-eyebrow">// portfolio étudiant</p>
+      <h1 class="hero-name">Mathias ALY-BERIL</h1>
+      <p class="hero-title">Étudiant ingénieur en informatique</p>
+      <ul class="hero-domains">
+        <li>Développement logiciel</li>
+        <li>Cybersécurité</li>
+        <li>Data</li>
+        <li>Systèmes &amp; réseaux</li>
+      </ul>
+      <p class="hero-intro">
+        Portfolio regroupant mes projets académiques et personnels autour du développement,
+        de la cybersécurité, de l'analyse de données, de l'administration système et de l'automatisation.
+      </p>
+      <div class="hero-actions">
+        <a href="#projets" class="btn btn-primary">Voir les projets</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+    </section>
+
+    <!-- ================= À PROPOS ================= -->
+    <section class="section container" id="apropos">
+      <h2 class="section-title"><span class="section-index">01</span> À propos</h2>
+      <div class="about">
+        <p>
+          Je suis étudiant ingénieur en informatique (4ᵉ année) à l'ESIROI, l'École Supérieure
+          d'Ingénieurs Réunion Océan Indien (Université de La Réunion). Mon cursus me permet de
+          travailler sur des sujets variés : développement logiciel, cybersécurité, analyse de
+          données, administration de systèmes et automatisation.
+        </p>
+        <p>
+          J'aime comprendre une technologie de bout en bout, du code à son déploiement, et produire
+          des projets qui fonctionnent réellement plutôt que des prototypes inaboutis. Ce portfolio
+          rassemble une sélection de travaux représentatifs de ces différents domaines.
+        </p>
+        <p>
+          Je recherche un <strong>stage</strong>, une <strong>alternance</strong> ou une
+          <strong>mobilité internationale</strong> me permettant de développer ces compétences
+          dans un contexte professionnel.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section container" id="competences">
+      <h2 class="section-title"><span class="section-index">02</span> Compétences</h2>
+      <p class="section-lead">Technologies effectivement utilisées dans les projets présentés ci-dessous.</p>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Développement</h3>
+          <ul class="tags">
+            <li>Python</li><li>Java 17</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>POO</li><li>UML</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Data / IA</h3>
+          <ul class="tags">
+            <li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>statsmodels</li><li>matplotlib / seaborn</li><li>Jupyter</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Cybersécurité</h3>
+          <ul class="tags">
+            <li>Chiffrement AES / PBKDF2</li><li>Supervision &amp; monitoring</li><li>Analyse de logs (Loki)</li><li>Principes de sécurité</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Systèmes &amp; réseaux</h3>
+          <ul class="tags">
+            <li>Linux (Ubuntu)</li><li>Docker / Compose</li><li>MQTT / Mosquitto</li><li>PostgreSQL</li><li>Réseau local / VM</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>DevOps / Observabilité</h3>
+          <ul class="tags">
+            <li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Alloy</li><li>Git / GitLab</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Embarqué / IoT</h3>
+          <ul class="tags">
+            <li>ESP32 / M5Stack</li><li>C++ / Arduino</li><li>BLE (HID)</li><li>Capteurs IMU</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PROJETS ================= -->
+    <section class="section container" id="projets">
+      <h2 class="section-title"><span class="section-index">03</span> Projets</h2>
+      <p class="section-lead">Sélection de cinq projets couvrant développement, cybersécurité, data, systèmes et embarqué.</p>
+
+      <div class="filters" id="filters">
+        <button class="filter is-active" data-filter="all">Tous</button>
+        <button class="filter" data-filter="dev">Développement</button>
+        <button class="filter" data-filter="cyber">Cybersécurité</button>
+        <button class="filter" data-filter="data">Data / IA</button>
+        <button class="filter" data-filter="sys">Systèmes &amp; réseaux</button>
+        <button class="filter" data-filter="embarque">Embarqué</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 : MQTT -->
+        <article class="project-card" data-cat="dev cyber sys">
+          <div class="project-thumb thumb-cyber">
+            <span class="thumb-icon">🔐</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-dev">Développement</span></div>
+            <h3 class="project-title">Transmission sécurisée de données via MQTT</h3>
+            <p class="project-desc">
+              Transmission de données environnementales simulées entre un équipement et une entreprise
+              via un broker MQTT, avec un chiffrement bout-en-bout (AES-CBC). Le broker ne voit jamais
+              les messages en clair.
+            </p>
+            <details class="project-more">
+              <summary>Détails techniques</summary>
+              <div class="more-content">
+                <p><strong>Contexte :</strong> SAE de développement (école d'ingénieur), architecture à 3 VM Ubuntu (équipement, entreprise, broker Mosquitto).</p>
+                <p><strong>Mise en œuvre :</strong> clé AES dérivée d'un identifiant <code>room</code> via PBKDF2-HMAC-SHA256 ; topic MQTT dérivé par SHA-256 ; configuration (IP du broker) externalisée dans un fichier dédié pour éviter le codage en dur.</p>
+                <p><strong>Difficultés :</strong> dérivation de clé correcte, gestion du topic sécurisé, séparation des responsabilités (crypto / réseau / configuration).</p>
+                <p><strong>Résultat :</strong> chaîne complète fonctionnelle — message chiffré côté équipement, déchiffré côté entreprise, illisible au niveau du broker.</p>
+                <p><strong>Améliorations possibles :</strong> sel aléatoire par message, vérification d'intégrité (HMAC), stockage côté entreprise.</p>
+                <p class="project-authors">Réalisé avec Mahé Begnis.</p>
+              </div>
+            </details>
+            <ul class="tags small"><li>Java 17</li><li>Eclipse Paho</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li><li>Ubuntu</li></ul>
+            <div class="project-links">
+              <span class="btn-link disabled" title="Rapport contenant des informations de configuration locale">Rapport sur demande</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 2 : Supervision TAAF -->
+        <article class="project-card" data-cat="cyber sys dev">
+          <div class="project-thumb thumb-sys">
+            <span class="thumb-icon">📊</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
+            <h3 class="project-title">Supervision d'une infrastructure avec Grafana</h3>
+            <p class="project-desc">
+              Stack de monitoring temps réel (métriques système et données métier) déployée avec Docker,
+              dans le cadre du module « Supervision de la sécurité ». Environnement pédagogique fictif
+              (bases polaires TAAF).
+            </p>
+            <details class="project-more">
+              <summary>Détails techniques</summary>
+              <div class="more-content">
+                <p><strong>Architecture :</strong> Prometheus (métriques), Grafana (dashboards), Loki (logs), Alloy (collecte), node_exporter et postgres_exporter, bases PostgreSQL — le tout orchestré via Docker Compose.</p>
+                <p><strong>Travail réalisé :</strong> dashboards de supervision des conteneurs et des données métier, requêtes PromQL et SQL, règles d'alertes (base inaccessible, mémoire, espace disque), analyse des performances I/O disque et corrélation des logs via Loki.</p>
+                <p><strong>Difficultés :</strong> configuration cohérente de services multiples, écriture de requêtes PromQL pertinentes, mise en place d'un alerting utile.</p>
+                <p><strong>Résultat :</strong> rapport de TP de 58 pages documentant la démarche, les requêtes et les interprétations.</p>
+                <p><strong>Améliorations possibles :</strong> suivi des redémarrages de conteneurs, alertes mémoire proactives.</p>
+              </div>
+            </details>
+            <ul class="tags small"><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>PostgreSQL</li><li>PromQL</li></ul>
+            <div class="project-links">
+              <span class="btn-link disabled" title="Le rapport contient des identifiants de laboratoire et des adresses locales — non publié.">Rapport (58 p.) sur demande</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 3 : Data Mining eau -->
+        <article class="project-card" data-cat="data">
+          <div class="project-thumb thumb-data">
+            <span class="thumb-icon">💧</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
+            <h3 class="project-title">Classification de la potabilité de l'eau</h3>
+            <p class="project-desc">
+              Modèle de classification binaire (eau potable / non potable) par régression logistique
+              sur un jeu de données Kaggle « Water Quality » (~6 400 échantillons exploitables),
+              avec une analyse exploratoire complète.
+            </p>
+            <details class="project-more">
+              <summary>Détails techniques</summary>
+              <div class="more-content">
+                <p><strong>Pipeline :</strong> nettoyage des données (valeurs <code>#NUM!</code> → NaN, gestion des manquants), analyse exploratoire (corrélations, boxplots / outliers, pairplot), création de variables de synthèse (ex. somme des métaux lourds), standardisation, puis analyse de la multicolinéarité par VIF.</p>
+                <p><strong>Modélisation :</strong> régression logistique avec lecture des coefficients et des p-values via statsmodels pour interpréter la significativité de chaque contaminant.</p>
+                <p><strong>Résultat :</strong> modèle convergent (pseudo-R² ≈ 0,30) identifiant des variables significatives (aluminium, arsenic, cadmium, perchlorate…). Le jeu de données présente un déséquilibre de classes marqué, pris en compte dans l'interprétation.</p>
+                <p><strong>Améliorations possibles :</strong> rééquilibrage des classes, comparaison avec d'autres modèles (arbres de décision), optimisation du seuil de décision.</p>
+                <p class="project-authors">Réalisé avec Mahé Begnis.</p>
+              </div>
+            </details>
+            <ul class="tags small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>Jupyter</li></ul>
+            <div class="project-links">
+              <a class="btn-link" href="assets/notebooks/data-mining-potabilite-eau.ipynb" download>Notebook (.ipynb)</a>
+              <a class="btn-link ghost" href="assets/reports/data-mining-regression-resultats.txt" target="_blank" rel="noopener">Résultats régression</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 4 : M5Stack BLE -->
+        <article class="project-card" data-cat="embarque dev">
+          <div class="project-thumb thumb-embarque">
+            <span class="thumb-icon">🖱️</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-embarque">Embarqué / IoT</span></div>
+            <h3 class="project-title">Souris Bluetooth gestuelle sur M5Stack Core2</h3>
+            <p class="project-desc">
+              Transformation d'un M5Stack Core2 (ESP32) en souris Bluetooth HID pilotée par l'inclinaison
+              de l'appareil, avec zones de clic à l'écran et retours audio embarqués.
+            </p>
+            <details class="project-more">
+              <summary>Détails techniques</summary>
+              <div class="more-content">
+                <p><strong>Fonctionnement :</strong> lecture de l'IMU (pitch / roll) pour déplacer le curseur, zones gauche / droite de l'écran pour les clics, bouton central pour activer le scroll, et signaux sonores (démarrage, confirmation de connexion).</p>
+                <p><strong>Outils :</strong> développement et flash via arduino-cli, librairies M5Unified (affichage + audio) et un fork patché de la librairie BLE Mouse (T-vK).</p>
+                <p><strong>Difficultés :</strong> librairie BLE absente de l'index Arduino (installation et patch manuels), contraintes mémoire (intégration des sons en Flash via PROGMEM), conversion des fichiers WAV en en-têtes <code>.h</code>, limitation à une seule connexion Bluetooth simultanée.</p>
+                <p><strong>Résultat :</strong> souris BLE fonctionnelle (déplacement par inclinaison, clics, scroll) avec interface et retours audio.</p>
+                <p><strong>Améliorations possibles :</strong> calibration des seuils de sensibilité, scroll horizontal, nettoyage de l'onglet de debug.</p>
+                <p class="project-authors">Réalisé avec Lukas Damour.</p>
+              </div>
+            </details>
+            <ul class="tags small"><li>C++ / Arduino</li><li>ESP32</li><li>M5Unified</li><li>BLE HID</li><li>IMU</li></ul>
+            <div class="project-links">
+              <span class="btn-link disabled" title="Dépôt sur GitLab interne de l'école">Code sur demande</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 5 : Distributeur Java -->
+        <article class="project-card" data-cat="dev">
+          <div class="project-thumb thumb-dev">
+            <span class="thumb-icon">⚙️</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-dev">Développement logiciel</span></div>
+            <h3 class="project-title">Distributeur automatique — simulation Java</h3>
+            <p class="project-desc">
+              Application Java en ligne de commande simulant un distributeur automatique : gestion de
+              stock dynamique, commande multi-produits, paiement (espèces ou carte), ticket et
+              persistance des stocks.
+            </p>
+            <details class="project-more">
+              <summary>Détails techniques</summary>
+              <div class="more-content">
+                <p><strong>Conception :</strong> modélisation orientée objet (produit, commande, ligne de commande, paiement, ticket, distributeur) documentée par des diagrammes UML (classes, séquence, activité) et des états de commande / modes de paiement.</p>
+                <p><strong>Fonctionnalités :</strong> vérification stricte du stock, regroupement des produits identiques, rendu de monnaie, simulation de paiement par carte, persistance du stock dans un fichier texte entre les exécutions.</p>
+                <p><strong>Difficultés :</strong> gestion fiable du stock pendant la commande, modélisation des différents états de paiement.</p>
+                <p><strong>Améliorations possibles :</strong> interface graphique (Swing / JavaFX), historique des commandes, base de données relationnelle.</p>
+                <p class="project-authors">Projet de TP réalisé en équipe.</p>
+              </div>
+            </details>
+            <ul class="tags small"><li>Java</li><li>POO</li><li>UML</li><li>Machine à états</li></ul>
+            <div class="project-links">
+              <a class="btn-link" href="assets/images/distributeur-classe.png" target="_blank" rel="noopener">Diagramme de classes</a>
+              <a class="btn-link ghost" href="assets/images/distributeur-sequence.png" target="_blank" rel="noopener">Diagramme de séquence</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ================= PARCOURS ================= -->
+    <section class="section container" id="parcours">
+      <h2 class="section-title"><span class="section-index">04</span> Parcours</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 – 2026</span>
+            <h3>Cycle ingénieur informatique — 4ᵉ année</h3>
+            <p class="timeline-org">ESIROI — École Supérieure d'Ingénieurs Réunion Océan Indien · Université de La Réunion</p>
+            <p>Formation d'ingénieur en informatique. Projets en développement logiciel, cybersécurité,
+              data, systèmes &amp; réseaux et systèmes embarqués (cf. section Projets).</p>
+          </div>
+        </div>
+        <div class="timeline-item timeline-todo">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">À compléter</span>
+            <h3>Expériences professionnelles</h3>
+            <p>Stages, alternances ou autres expériences à ajouter ici.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CV ================= -->
+    <section class="section container" id="cv">
+      <h2 class="section-title"><span class="section-index">05</span> CV</h2>
+      <div class="cv-box">
+        <p>Mon CV au format PDF sera disponible au téléchargement ici.</p>
+        <p class="cv-note">À compléter : déposez le fichier dans <code>assets/cv/</code> (par ex. <code>CV-Mathias-Aly-Beril.pdf</code>) puis activez le bouton ci-dessous.</p>
+        <span class="btn btn-primary disabled" title="Ajoutez votre CV dans assets/cv/ pour activer ce bouton">Télécharger le CV (à venir)</span>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section container" id="contact">
+      <h2 class="section-title"><span class="section-index">06</span> Contact</h2>
+      <p class="section-lead">N'hésitez pas à me contacter pour un stage, une alternance ou une mobilité internationale.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:alyderil.mathias@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">alyderil.mathias@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Silverwolf974" target="_blank" rel="noopener">
+          <span class="contact-icon">💻</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/Silverwolf974</span>
+        </a>
+        <span class="contact-card disabled">
+          <span class="contact-icon">in</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">à ajouter</span>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY-BERIL</p>
+      <p class="footer-note">Construit en HTML, CSS &amp; JavaScript · déployé avec GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

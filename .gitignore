@@ -1,0 +1,12 @@
+# --- Dépôts de projets imbriqués (cursus) ---
+# Ces dossiers sont des dépôts Git indépendants (GitLab interne de l'école).
+# On ne les versionne PAS ici pour éviter des références de sous-modules cassées
+# et garder le dépôt du portfolio propre. Les projets restent intacts en local.
+projet/
+
+# --- Système / éditeurs ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
