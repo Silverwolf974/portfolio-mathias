@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classification de la potabilité de l'eau — Mathias ALY-BERIL</title>
+  <meta name="description" content="Projet de data mining : classification binaire de la potabilité de l'eau par régression logistique (Python, scikit-learn, statsmodels)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#apropos">À propos</a></li>
+        <li><a href="../index.html#competences">Compétences</a></li>
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#cv">CV</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Potabilité de l'eau</span>
+    </nav>
+    <a class="back-home" href="../index.html#projets">&larr; Retour aux projets</a>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
+      <h1>Classification de la potabilité de l'eau</h1>
+      <p class="project-lead">
+        Construction d'un modèle de classification binaire (eau potable / non potable) par
+        régression logistique sur un jeu de données Kaggle, accompagné d'une analyse exploratoire
+        détaillée et d'une analyse statistique des variables.
+      </p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Catégorie</span><span class="meta-value">Data Mining / ML</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">TP académique</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Outils</span><span class="meta-value">Python / Jupyter</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>
+        Travail réalisé dans le cadre d'un TP de data mining. L'objectif imposé était de construire
+        un modèle de classification binaire par régression logistique, d'en évaluer les performances
+        et d'explorer des stratégies d'optimisation. Le jeu de données retenu est le « Water Quality
+        Dataset » (Kaggle) : chaque ligne représente un échantillon d'eau caractérisé par des mesures
+        chimiques et biologiques, avec une cible indiquant si l'eau est potable.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Choisir et comprendre un jeu de données à cible binaire.</li>
+        <li>Nettoyer les données et mener une analyse exploratoire approfondie.</li>
+        <li>Construire des variables de synthèse pertinentes (feature engineering).</li>
+        <li>Entraîner une régression logistique et interpréter la significativité des variables.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies utilisées</h2>
+      <ul class="tech-badges">
+        <li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li>
+        <li>statsmodels</li><li>matplotlib</li><li>seaborn</li><li>Jupyter Notebook</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <ul>
+        <li><strong>Nettoyage :</strong> conversion des valeurs problématiques (<code>#NUM!</code>) en valeurs manquantes, traitement des NaN, contrôle des types.</li>
+        <li><strong>Analyse exploratoire :</strong> distributions, statistiques descriptives, corrélations (dont matrice de corrélation), détection d'outliers par boxplots, pairplots.</li>
+        <li><strong>Feature engineering :</strong> création de variables de synthèse, par exemple une somme des concentrations de métaux lourds, pour mieux capturer certaines relations.</li>
+        <li><strong>Préparation :</strong> standardisation des variables et analyse de la multicolinéarité par le calcul des VIF.</li>
+        <li><strong>Modélisation :</strong> régression logistique, lecture des coefficients et des p-values via statsmodels pour évaluer l'effet et la significativité de chaque contaminant.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats obtenus</h2>
+      <p>
+        Le modèle de régression logistique converge et identifie plusieurs variables statistiquement
+        significatives (p &lt; 0,05), parmi lesquelles l'aluminium, l'arsenic, le cadmium ou le
+        perchlorate. La qualité d'ajustement reste modérée (pseudo-R² d'environ 0,30), ce qui est
+        cohérent avec la complexité du phénomène. Le jeu de données présente par ailleurs un
+        déséquilibre de classes marqué (davantage d'échantillons non potables), pris en compte dans
+        l'interprétation des résultats.
+      </p>
+      <p>
+        La sortie statistique complète de la régression est disponible en téléchargement ci-dessous.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficultés rencontrées</h2>
+      <ul>
+        <li>Nettoyage d'un jeu de données contenant des erreurs de saisie et des valeurs manquantes.</li>
+        <li>Gestion de la multicolinéarité entre variables chimiques (analyse VIF).</li>
+        <li>Interprétation rigoureuse des coefficients et des p-values dans un contexte déséquilibré.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Compétences développées</h2>
+      <ul>
+        <li>Analyse exploratoire de données et visualisation.</li>
+        <li>Préparation de données : nettoyage, standardisation, feature engineering.</li>
+        <li>Modélisation supervisée et évaluation statistique (régression logistique, VIF, p-values).</li>
+        <li>Manipulation de l'écosystème Python data (pandas, scikit-learn, statsmodels).</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Améliorations possibles</h2>
+      <ul>
+        <li>Rééquilibrage des classes (sur/sous-échantillonnage) pour limiter le biais.</li>
+        <li>Comparaison avec d'autres modèles (arbres de décision, ensembles).</li>
+        <li>Optimisation du seuil de décision selon les objectifs (precision / recall).</li>
+        <li>Calcul des métriques de classification complètes (matrice de confusion, ROC/AUC).</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ressources</h2>
+      <div class="project-resources">
+        <a class="btn-link" href="../assets/notebooks/data-mining-potabilite-eau.ipynb" download>Notebook (.ipynb)</a>
+        <a class="btn-link ghost" href="../assets/reports/data-mining-regression-resultats.txt" target="_blank" rel="noopener">Résultats de la régression</a>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Sources utilisées pour cette page</h2>
+      <ul class="sources-list">
+        <li>Notebook Jupyter du projet (<code>sae_data.ipynb</code>) — analyse complète et commentaires.</li>
+        <li>Sortie statistique de la régression (<code>sae_data-result.txt</code>).</li>
+        <li>Énoncé du TP (<code>tp4.pdf</code>) et jeu de données « Water Quality » (Kaggle).</li>
+      </ul>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn btn-ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn btn-primary" href="../index.html#contact">Me contacter</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY-BERIL</p>
+      <p class="footer-note">Construit en HTML, CSS &amp; JavaScript · déployé avec GitHub Pages</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

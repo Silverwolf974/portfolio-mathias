@@ -47,4 +47,22 @@
       });
     });
   }
+
+  // --- Bouton retour-en-haut (progressive enhancement) ---
+  var toTop = document.createElement("button");
+  toTop.className = "to-top";
+  toTop.setAttribute("aria-label", "Revenir en haut de la page");
+  toTop.innerHTML = "&uarr;";
+  document.body.appendChild(toTop);
+
+  function onScroll() {
+    if (window.scrollY > 500) toTop.classList.add("show");
+    else toTop.classList.remove("show");
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  toTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 })();
