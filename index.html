@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}.hero-text>*,.hero-visual{opacity:1 !important}</style></noscript>
 </head>
 <body>
   <!-- ============ SVG ICON SPRITE (réutilisé via <use>) ============ -->
@@ -44,8 +45,8 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#apropos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
         <li><a href="#cursus">Cursus</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#cv">CV</a></li>
@@ -69,13 +70,14 @@
             <li>Systèmes &amp; réseaux</li>
           </ul>
           <p class="hero-intro">
-            Projets académiques et personnels autour du développement, de la cybersécurité,
-            de l'analyse de données, de la supervision (SOC) et de l'automatisation. À la recherche
+            Profil généraliste orienté développement, cybersécurité, data et systèmes. À la recherche
             d'un stage, d'une alternance ou d'une mobilité internationale.
           </p>
           <div class="hero-actions">
             <a href="#projets" class="btn btn-primary">Voir les projets</a>
-            <a href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" class="btn btn-ghost" target="_blank" rel="noopener" download>Télécharger mon CV</a>
+            <a href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" class="btn btn-ghost" target="_blank" rel="noopener" download>
+              <svg class="ic"><use href="#ic-external"/></svg> Télécharger mon CV
+            </a>
           </div>
           <div class="hero-social">
             <a href="https://github.com/Silverwolf974" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#ic-github"/></svg></a>
@@ -94,26 +96,6 @@
           <span class="hero-blob"></span>
         </div>
       </div>
-
-      <!-- Faits marquants (données réelles du CV) -->
-      <div class="container hero-highlights">
-        <div class="hl">
-          <svg class="ic accent"><use href="#ic-award"/></svg>
-          <div><strong>1ʳᵉ équipe nationale</strong><span>Nuit de l'info 2024 — défi Ubisoft</span></div>
-        </div>
-        <div class="hl">
-          <svg class="ic accent"><use href="#ic-briefcase"/></svg>
-          <div><strong>Stage cybersécurité</strong><span>Observatoire de Cybersécurité (OCOI)</span></div>
-        </div>
-        <div class="hl">
-          <svg class="ic accent"><use href="#ic-globe"/></svg>
-          <div><strong>Anglais B2 — TOEIC 920</strong><span>Mobilité internationale</span></div>
-        </div>
-        <div class="hl">
-          <svg class="ic accent"><use href="#ic-spark"/></svg>
-          <div><strong>2ᵉ régional</strong><span>DataCup 2024 — ATMO Réunion</span></div>
-        </div>
-      </div>
     </section>
 
     <!-- ================= À PROPOS ================= -->
@@ -121,74 +103,21 @@
       <h2 class="section-title"><span class="section-index">01</span> À propos</h2>
       <div class="about">
         <p>
-          Je suis étudiant en quatrième année du cycle ingénieur informatique à l'ESIROI
-          (École Supérieure d'Ingénieurs Réunion Océan Indien, Université de La Réunion). Je
-          m'intéresse particulièrement au développement logiciel, à l'intelligence artificielle,
-          à la cybersécurité et aux systèmes &amp; réseaux.
+          Étudiant en 4ᵉ année du cycle ingénieur informatique à l'ESIROI (Université de La Réunion),
+          j'ai un profil généraliste orienté développement, cybersécurité, data et systèmes. J'aime
+          comprendre une technologie de bout en bout et produire des projets qui fonctionnent réellement.
         </p>
         <p>
-          J'aime comprendre une technologie de bout en bout — du code à son déploiement et à sa
-          supervision — et produire des projets qui fonctionnent réellement. Mon expérience couvre
-          aussi bien des projets académiques que des concours et un stage en cybersécurité.
-        </p>
-        <p>
+          Mon expérience couvre des projets académiques, des concours et un stage en cybersécurité.
           Je recherche un <strong>stage</strong>, une <strong>alternance</strong> ou une
-          <strong>mobilité internationale</strong> pour développer ces compétences dans un
-          environnement professionnel.
+          <strong>mobilité internationale</strong>.
         </p>
       </div>
-    </section>
-
-    <!-- ================= COMPÉTENCES ================= -->
-    <section class="section container reveal" id="competences">
-      <h2 class="section-title"><span class="section-index">02</span> Compétences</h2>
-      <p class="section-lead">Technologies utilisées dans mes projets, mes cours et mon stage.</p>
-      <div class="skills-grid">
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-code"/></svg><h3>Développement</h3></div>
-          <ul class="tags"><li>Python</li><li>Java</li><li>Langage C</li><li>Bash</li><li>JavaScript</li><li>SQL</li><li>HTML / CSS</li><li>POO / UML</li></ul>
-        </article>
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-droplet"/></svg><h3>Data / IA</h3></div>
-          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li><li>Visualisation</li></ul>
-        </article>
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-shield"/></svg><h3>Cybersécurité</h3></div>
-          <ul class="tags"><li>Chiffrement AES / PBKDF2</li><li>Supervision / SOC</li><li>Analyse de logs</li><li>Wireshark</li><li>Analyse de vulnérabilités</li><li>Bonnes pratiques SSI</li></ul>
-        </article>
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-server"/></svg><h3>Systèmes, réseaux &amp; DevOps</h3></div>
-          <ul class="tags"><li>Linux</li><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Nginx</li><li>Git</li><li>MQTT</li></ul>
-        </article>
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-database"/></svg><h3>Bases de données</h3></div>
-          <ul class="tags"><li>MariaDB</li><li>MongoDB</li><li>PhpMyAdmin</li><li>SQL</li></ul>
-        </article>
-        <article class="skill-card">
-          <div class="skill-head"><svg class="ic"><use href="#ic-cpu"/></svg><h3>Embarqué / IoT</h3></div>
-          <ul class="tags"><li>ESP32 / M5Stack</li><li>STM32CubeIDE</li><li>C / Arduino</li><li>BLE (HID)</li><li>Capteurs IMU</li></ul>
-        </article>
-      </div>
-
-      <h3 class="sub-title"><svg class="ic"><use href="#ic-spark"/></svg> Compétences transversales</h3>
-      <p class="section-lead" style="margin-bottom:18px;">Compétences mobilisées au fil des projets, TP, rapports et soutenances de mon cursus.</p>
-      <ul class="soft-tags">
-        <li>Gestion de projet</li>
-        <li>Travail en équipe</li>
-        <li>Rédaction de rapports techniques</li>
-        <li>Communication orale / soutenances</li>
-        <li>Documentation technique</li>
-        <li>Analyse critique des résultats</li>
-        <li>RGPD &amp; protection des données</li>
-        <li>RSE &amp; numérique responsable</li>
-        <li>Gestion de la performance</li>
-        <li>Sécurité &amp; confidentialité</li>
-      </ul>
     </section>
 
     <!-- ================= PROJETS ================= -->
     <section class="section container reveal" id="projets">
-      <h2 class="section-title"><span class="section-index">03</span> Projets</h2>
+      <h2 class="section-title"><span class="section-index">02</span> Projets</h2>
       <p class="section-lead">Cinq projets couvrant développement, cybersécurité, data, systèmes et embarqué. Chaque carte mène à une page détaillée.</p>
 
       <div class="filters" id="filters">
@@ -297,11 +226,43 @@
             <ul class="tags small"><li>Java</li><li>POO</li><li>UML</li><li>Machine à états</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/java-vending-machine.html">Voir le projet</a>
-              <a class="btn-link ghost" href="assets/images/distributeur-classe.png" target="_blank" rel="noopener">Diagramme UML</a>
+              <span class="btn-link disabled" title="Dépôt sur GitLab interne de l'école">Code sur demande</span>
             </div>
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section container reveal" id="competences">
+      <h2 class="section-title"><span class="section-index">03</span> Compétences techniques</h2>
+      <p class="section-lead">Regroupées par domaine — technologies utilisées dans mes projets, mes cours et mon stage.</p>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-code"/></svg><h3>Développement</h3></div>
+          <ul class="tags"><li>Python</li><li>Java</li><li>Langage C</li><li>JavaScript</li><li>SQL</li></ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-droplet"/></svg><h3>Data / IA</h3></div>
+          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li></ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-shield"/></svg><h3>Cybersécurité</h3></div>
+          <ul class="tags"><li>Chiffrement AES</li><li>Supervision / SOC</li><li>Analyse de logs</li><li>Wireshark</li><li>Bonnes pratiques SSI</li></ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-server"/></svg><h3>Systèmes &amp; réseaux / DevOps</h3></div>
+          <ul class="tags"><li>Linux</li><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Git</li></ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-database"/></svg><h3>Bases de données</h3></div>
+          <ul class="tags"><li>MariaDB</li><li>MongoDB</li><li>SQL</li></ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-head"><svg class="ic"><use href="#ic-cpu"/></svg><h3>Embarqué / IoT</h3></div>
+          <ul class="tags"><li>ESP32 / M5Stack</li><li>STM32CubeIDE</li><li>C / Arduino</li><li>BLE (HID)</li></ul>
+        </article>
       </div>
     </section>
 
@@ -356,6 +317,20 @@
           <div><h4>Gestion de projet &amp; communication</h4><p>Travail en équipe, rédaction de rapports techniques et présentation orale lors de soutenances.</p></div>
         </article>
       </div>
+
+      <h3 class="sub-title"><svg class="ic"><use href="#ic-spark"/></svg> Compétences transversales</h3>
+      <p class="section-lead" style="margin-bottom:16px;">Mobilisées au fil des projets, TP, rapports et soutenances.</p>
+      <ul class="soft-tags">
+        <li>Gestion de projet</li>
+        <li>Travail en équipe</li>
+        <li>Rédaction de rapports techniques</li>
+        <li>Communication orale / soutenances</li>
+        <li>Documentation technique</li>
+        <li>Analyse critique des résultats</li>
+        <li>RGPD &amp; protection des données</li>
+        <li>RSE &amp; numérique responsable</li>
+        <li>Sécurité &amp; confidentialité</li>
+      </ul>
     </section>
 
     <!-- ================= PARCOURS ================= -->

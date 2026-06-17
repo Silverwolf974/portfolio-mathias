@@ -4,25 +4,25 @@
    =========================================================== */
 
 :root {
-  --bg:        #0c1420;
-  --bg-soft:   #111c2b;
-  --surface:   #16222f;
-  --surface-2: #1d2c3c;
-  --border:    #25394f;
-  --text:      #e9f1f6;
-  --text-dim:  #a3b6c8;
-  --text-mut:  #6f8497;
-  --accent:    #2dd4bf;   /* teal principal */
-  --accent-2:  #38bdf8;   /* cyan secondaire */
-  --accent-soft: rgba(45, 212, 191, 0.12);
+  --bg:        #0f172a;
+  --bg-soft:   #131c30;
+  --surface:   #1e293b;
+  --surface-2: #243449;
+  --border:    rgba(148, 163, 184, 0.25);
+  --text:      #f8fafc;
+  --text-dim:  #cbd5e1;
+  --text-mut:  #94a3b8;
+  --accent:    #38bdf8;   /* cyan principal */
+  --accent-2:  #8b5cf6;   /* violet secondaire */
+  --accent-soft: rgba(56, 189, 248, 0.13);
   --cyber:  #38bdf8;
-  --dev:    #8b95f6;
+  --dev:    #8b5cf6;
   --data:   #2dd4bf;
   --sys:    #5fa8f5;
   --embarque: #f0b35b;
   --radius: 14px;
-  --maxw: 1100px;
-  --shadow: 0 14px 38px rgba(0, 0, 0, 0.40);
+  --maxw: 1120px;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
   --mono: "JetBrains Mono", ui-monospace, monospace;
   --font: "Inter", system-ui, -apple-system, sans-serif;
   --font-head: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -39,8 +39,8 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   background-image:
-    radial-gradient(900px 500px at 80% -10%, rgba(45,212,191,0.10), transparent 60%),
-    radial-gradient(700px 400px at -10% 10%, rgba(56,189,248,0.09), transparent 55%);
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.10), transparent 30%);
   background-attachment: fixed;
 }
 
@@ -134,7 +134,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   overflow: hidden; display: flex; flex-direction: column; transition: .25s;
 }
-.project-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
+.project-card:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45); }
 .project-card.is-hidden { display: none; }
 
 .project-thumb { height: 120px; display: flex; align-items: center; justify-content: center; position: relative; }
@@ -306,12 +306,13 @@ a { color: inherit; text-decoration: none; }
    V3 — Icônes SVG, hero refondu, parcours, distinctions, anims
    =========================================================== */
 
-/* --- Icône de base --- */
-.ic { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2;
-  stroke-linecap: round; stroke-linejoin: round; flex: none; }
+/* --- Icône de base : toujours visible (accent par défaut) --- */
+.ic { width: 20px; height: 20px; color: var(--accent); fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.ic * { fill: none; stroke: currentColor; }
 
-/* --- Boutons avec icône --- */
-.btn .ic { width: 18px; height: 18px; vertical-align: -3px; margin-right: 7px; }
+/* --- Boutons avec icône : l'icône suit la couleur du texte du bouton --- */
+.btn .ic { width: 18px; height: 18px; vertical-align: -3px; margin-right: 7px; color: currentColor; }
 .cv-actions .btn { display: inline-flex; align-items: center; }
 
 /* --- HERO refondu --- */
@@ -321,14 +322,14 @@ a { color: inherit; text-decoration: none; }
 .hero-title .dot { color: var(--accent); margin: 0 6px; }
 .hero-social { display: flex; gap: 12px; margin-top: 24px; }
 .hero-social a { width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 11px;
-  display: grid; place-items: center; color: var(--text-dim); transition: .2s; }
-.hero-social a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-3px); }
+  display: grid; place-items: center; color: var(--accent); background: var(--surface); transition: .2s; }
+.hero-social a:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-3px); }
 .hero-social .ic { width: 21px; height: 21px; }
 
 .hero-visual { position: relative; display: grid; place-items: center; min-height: 320px; }
 .hero-photo { position: relative; width: 290px; height: 290px; border-radius: 26px; overflow: hidden;
   border: 1px solid var(--border); background: var(--surface); box-shadow: var(--shadow); z-index: 2; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; }
 .hero-mono { display: none; width: 100%; height: 100%; place-items: center; font-size: 5rem; font-weight: 800;
   color: var(--accent); letter-spacing: 3px; background: linear-gradient(135deg, var(--surface), var(--surface-2)); }
 .hero-ring { position: absolute; width: 350px; height: 350px; border-radius: 50%;
@@ -434,3 +435,25 @@ a { color: inherit; text-decoration: none; }
 .soft-tags li { font-size: 0.85rem; color: var(--text); background: var(--surface);
   border: 1px solid var(--border); border-radius: 999px; padding: 8px 15px; transition: .2s; }
 .soft-tags li:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+/* ===========================================================
+   Animation d'entrée du hero (au chargement)
+   =========================================================== */
+.hero-text > * { opacity: 0; animation: hero-in .6s ease forwards; }
+.hero-text > *:nth-child(1) { animation-delay: .05s; }
+.hero-text > *:nth-child(2) { animation-delay: .12s; }
+.hero-text > *:nth-child(3) { animation-delay: .19s; }
+.hero-text > *:nth-child(4) { animation-delay: .26s; }
+.hero-text > *:nth-child(5) { animation-delay: .33s; }
+.hero-text > *:nth-child(6) { animation-delay: .40s; }
+.hero-visual { opacity: 0; animation: hero-in .7s ease .25s forwards; }
+@keyframes hero-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* ===========================================================
+   Accessibilité : réduire les animations si demandé
+   =========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .hero-text > *, .hero-visual { opacity: 1 !important; }
+}

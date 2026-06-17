@@ -96,20 +96,9 @@
         <code>Distributeur</code> et <code>StockManager</code>. Le distributeur centralise la logique
         métier ; une commande regroupe plusieurs lignes, chacune référençant un produit ; le paiement
         est relié au ticket et le système de paiement est traité comme un service externe. Des énumérations
-        gèrent les états de commande et les modes de paiement.
+        gèrent les états de commande et les modes de paiement. La conception s'appuie sur une modélisation
+        UML (classes, séquence et activité) réalisée en amont de l'implémentation.
       </p>
-      <figure class="project-figure">
-        <img src="../assets/images/distributeur-classe.png" alt="Diagramme de classes du distributeur automatique" />
-        <figcaption>Diagramme de classes — structure des entités et de leurs relations.</figcaption>
-      </figure>
-      <figure class="project-figure">
-        <img src="../assets/images/distributeur-sequence.png" alt="Diagramme de séquence d'une commande" />
-        <figcaption>Diagramme de séquence — chronologie d'une commande (sélection, paiement, ticket).</figcaption>
-      </figure>
-      <figure class="project-figure">
-        <img src="../assets/images/distributeur-activite.png" alt="Diagramme d'activité du parcours client" />
-        <figcaption>Diagramme d'activité — parcours client, de la sélection au rendu du produit.</figcaption>
-      </figure>
     </section>
 
     <section class="project-section">
@@ -152,9 +141,7 @@
     <section class="project-section">
       <h2>Ressources</h2>
       <div class="project-resources">
-        <a class="btn-link" href="../assets/images/distributeur-classe.png" target="_blank" rel="noopener">Diagramme de classes</a>
-        <a class="btn-link ghost" href="../assets/images/distributeur-sequence.png" target="_blank" rel="noopener">Diagramme de séquence</a>
-        <a class="btn-link ghost" href="../assets/images/distributeur-activite.png" target="_blank" rel="noopener">Diagramme d'activité</a>
+        <span class="btn-link disabled" title="Dépôt hébergé sur le GitLab interne de l'école">Code sur demande</span>
       </div>
       <p class="note-box" style="margin-top:14px;"><strong>Note :</strong> projet réalisé en équipe dans un cadre pédagogique. Ma contribution exacte au sein du groupe est à préciser.</p>
     </section>
