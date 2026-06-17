@@ -4,13 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mathias ALY-BERIL — Portfolio</title>
-  <meta name="description" content="Portfolio de Mathias ALY-BERIL, étudiant ingénieur en informatique : développement logiciel, cybersécurité, data, systèmes & réseaux." />
+  <meta name="description" content="Portfolio de Mathias ALY-BERIL, étudiant ingénieur en informatique : développement logiciel, cybersécurité, data et systèmes & réseaux." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ============ SVG ICON SPRITE (réutilisé via <use>) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="ic-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+      <symbol id="ic-droplet" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+      <symbol id="ic-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+      <symbol id="ic-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+      <symbol id="ic-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+      <symbol id="ic-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+      <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+      <symbol id="ic-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+      <symbol id="ic-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="ic-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="ic-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="ic-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+      <symbol id="ic-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+      <symbol id="ic-spark" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+    </defs>
+  </svg>
+
   <!-- ================= HEADER / NAV ================= -->
   <header class="site-header" id="top">
     <nav class="nav container">
@@ -22,6 +46,7 @@
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
+        <li><a href="#cursus">Cursus</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -31,97 +56,140 @@
 
   <main>
     <!-- ================= HERO ================= -->
-    <section class="hero container" id="hero">
-      <p class="hero-eyebrow">// portfolio étudiant</p>
-      <h1 class="hero-name">Mathias ALY-BERIL</h1>
-      <p class="hero-title">Étudiant ingénieur en informatique</p>
-      <ul class="hero-domains">
-        <li>Développement logiciel</li>
-        <li>Cybersécurité</li>
-        <li>Data</li>
-        <li>Systèmes &amp; réseaux</li>
-      </ul>
-      <p class="hero-intro">
-        Portfolio regroupant mes projets académiques et personnels autour du développement,
-        de la cybersécurité, de l'analyse de données, de l'administration système et de l'automatisation.
-      </p>
-      <div class="hero-actions">
-        <a href="#projets" class="btn btn-primary">Voir les projets</a>
-        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-eyebrow">// portfolio — étudiant ingénieur</p>
+          <h1 class="hero-name">Mathias<br>ALY-BERIL</h1>
+          <p class="hero-title">Étudiant ingénieur en informatique <span class="dot">·</span> ESIROI 4ᵉ année</p>
+          <ul class="hero-domains">
+            <li>Développement logiciel</li>
+            <li>Cybersécurité</li>
+            <li>Data / IA</li>
+            <li>Systèmes &amp; réseaux</li>
+          </ul>
+          <p class="hero-intro">
+            Projets académiques et personnels autour du développement, de la cybersécurité,
+            de l'analyse de données, de la supervision (SOC) et de l'automatisation. À la recherche
+            d'un stage, d'une alternance ou d'une mobilité internationale.
+          </p>
+          <div class="hero-actions">
+            <a href="#projets" class="btn btn-primary">Voir les projets</a>
+            <a href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" class="btn btn-ghost" target="_blank" rel="noopener" download>Télécharger mon CV</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/Silverwolf974" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#ic-github"/></svg></a>
+            <a href="https://www.linkedin.com/in/mathias-alyberil-572097324/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#ic-linkedin"/></svg></a>
+            <a href="mailto:alyderil.mathias@gmail.com" aria-label="Email"><svg class="ic"><use href="#ic-mail"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img id="profileImg" src="assets/images/profile.jpg" alt="Portrait de Mathias ALY-BERIL"
+                 onerror="this.style.display='none';document.getElementById('heroMono').style.display='grid';" />
+            <span class="hero-mono" id="heroMono">MA</span>
+          </div>
+          <span class="hero-ring"></span>
+          <span class="hero-blob"></span>
+        </div>
+      </div>
+
+      <!-- Faits marquants (données réelles du CV) -->
+      <div class="container hero-highlights">
+        <div class="hl">
+          <svg class="ic accent"><use href="#ic-award"/></svg>
+          <div><strong>1ʳᵉ équipe nationale</strong><span>Nuit de l'info 2024 — défi Ubisoft</span></div>
+        </div>
+        <div class="hl">
+          <svg class="ic accent"><use href="#ic-briefcase"/></svg>
+          <div><strong>Stage cybersécurité</strong><span>Observatoire de Cybersécurité (OCOI)</span></div>
+        </div>
+        <div class="hl">
+          <svg class="ic accent"><use href="#ic-globe"/></svg>
+          <div><strong>Anglais B2 — TOEIC 920</strong><span>Mobilité internationale</span></div>
+        </div>
+        <div class="hl">
+          <svg class="ic accent"><use href="#ic-spark"/></svg>
+          <div><strong>2ᵉ régional</strong><span>DataCup 2024 — ATMO Réunion</span></div>
+        </div>
       </div>
     </section>
 
     <!-- ================= À PROPOS ================= -->
-    <section class="section container" id="apropos">
+    <section class="section container reveal" id="apropos">
       <h2 class="section-title"><span class="section-index">01</span> À propos</h2>
       <div class="about">
         <p>
-          Je suis étudiant ingénieur en informatique (4ᵉ année) à l'ESIROI, l'École Supérieure
-          d'Ingénieurs Réunion Océan Indien (Université de La Réunion). Mon cursus me permet de
-          travailler sur des sujets variés : développement logiciel, cybersécurité, analyse de
-          données, administration de systèmes et automatisation.
+          Je suis étudiant en quatrième année du cycle ingénieur informatique à l'ESIROI
+          (École Supérieure d'Ingénieurs Réunion Océan Indien, Université de La Réunion). Je
+          m'intéresse particulièrement au développement logiciel, à l'intelligence artificielle,
+          à la cybersécurité et aux systèmes &amp; réseaux.
         </p>
         <p>
-          J'aime comprendre une technologie de bout en bout, du code à son déploiement, et produire
-          des projets qui fonctionnent réellement plutôt que des prototypes inaboutis. Ce portfolio
-          rassemble une sélection de travaux représentatifs de ces différents domaines.
+          J'aime comprendre une technologie de bout en bout — du code à son déploiement et à sa
+          supervision — et produire des projets qui fonctionnent réellement. Mon expérience couvre
+          aussi bien des projets académiques que des concours et un stage en cybersécurité.
         </p>
         <p>
           Je recherche un <strong>stage</strong>, une <strong>alternance</strong> ou une
-          <strong>mobilité internationale</strong> me permettant de développer ces compétences
-          dans un contexte professionnel.
+          <strong>mobilité internationale</strong> pour développer ces compétences dans un
+          environnement professionnel.
         </p>
       </div>
     </section>
 
     <!-- ================= COMPÉTENCES ================= -->
-    <section class="section container" id="competences">
+    <section class="section container reveal" id="competences">
       <h2 class="section-title"><span class="section-index">02</span> Compétences</h2>
-      <p class="section-lead">Technologies effectivement utilisées dans les projets présentés ci-dessous.</p>
+      <p class="section-lead">Technologies utilisées dans mes projets, mes cours et mon stage.</p>
       <div class="skills-grid">
         <article class="skill-card">
-          <h3>Développement</h3>
-          <ul class="tags">
-            <li>Python</li><li>Java 17</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>POO</li><li>UML</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-code"/></svg><h3>Développement</h3></div>
+          <ul class="tags"><li>Python</li><li>Java</li><li>Langage C</li><li>Bash</li><li>JavaScript</li><li>SQL</li><li>HTML / CSS</li><li>POO / UML</li></ul>
         </article>
         <article class="skill-card">
-          <h3>Data / IA</h3>
-          <ul class="tags">
-            <li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>statsmodels</li><li>matplotlib / seaborn</li><li>Jupyter</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-droplet"/></svg><h3>Data / IA</h3></div>
+          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li><li>Visualisation</li></ul>
         </article>
         <article class="skill-card">
-          <h3>Cybersécurité</h3>
-          <ul class="tags">
-            <li>Chiffrement AES / PBKDF2</li><li>Supervision &amp; monitoring</li><li>Analyse de logs (Loki)</li><li>Principes de sécurité</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-shield"/></svg><h3>Cybersécurité</h3></div>
+          <ul class="tags"><li>Chiffrement AES / PBKDF2</li><li>Supervision / SOC</li><li>Analyse de logs</li><li>Wireshark</li><li>Analyse de vulnérabilités</li><li>Bonnes pratiques SSI</li></ul>
         </article>
         <article class="skill-card">
-          <h3>Systèmes &amp; réseaux</h3>
-          <ul class="tags">
-            <li>Linux (Ubuntu)</li><li>Docker / Compose</li><li>MQTT / Mosquitto</li><li>PostgreSQL</li><li>Réseau local / VM</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-server"/></svg><h3>Systèmes, réseaux &amp; DevOps</h3></div>
+          <ul class="tags"><li>Linux</li><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Nginx</li><li>Git</li><li>MQTT</li></ul>
         </article>
         <article class="skill-card">
-          <h3>DevOps / Observabilité</h3>
-          <ul class="tags">
-            <li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Alloy</li><li>Git / GitLab</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-database"/></svg><h3>Bases de données</h3></div>
+          <ul class="tags"><li>MariaDB</li><li>MongoDB</li><li>PhpMyAdmin</li><li>SQL</li></ul>
         </article>
         <article class="skill-card">
-          <h3>Embarqué / IoT</h3>
-          <ul class="tags">
-            <li>ESP32 / M5Stack</li><li>C++ / Arduino</li><li>BLE (HID)</li><li>Capteurs IMU</li>
-          </ul>
+          <div class="skill-head"><svg class="ic"><use href="#ic-cpu"/></svg><h3>Embarqué / IoT</h3></div>
+          <ul class="tags"><li>ESP32 / M5Stack</li><li>STM32CubeIDE</li><li>C / Arduino</li><li>BLE (HID)</li><li>Capteurs IMU</li></ul>
         </article>
       </div>
+
+      <h3 class="sub-title"><svg class="ic"><use href="#ic-spark"/></svg> Compétences transversales</h3>
+      <p class="section-lead" style="margin-bottom:18px;">Compétences mobilisées au fil des projets, TP, rapports et soutenances de mon cursus.</p>
+      <ul class="soft-tags">
+        <li>Gestion de projet</li>
+        <li>Travail en équipe</li>
+        <li>Rédaction de rapports techniques</li>
+        <li>Communication orale / soutenances</li>
+        <li>Documentation technique</li>
+        <li>Analyse critique des résultats</li>
+        <li>RGPD &amp; protection des données</li>
+        <li>RSE &amp; numérique responsable</li>
+        <li>Gestion de la performance</li>
+        <li>Sécurité &amp; confidentialité</li>
+      </ul>
     </section>
 
     <!-- ================= PROJETS ================= -->
-    <section class="section container" id="projets">
+    <section class="section container reveal" id="projets">
       <h2 class="section-title"><span class="section-index">03</span> Projets</h2>
-      <p class="section-lead">Sélection de cinq projets couvrant développement, cybersécurité, data, systèmes et embarqué.</p>
+      <p class="section-lead">Cinq projets couvrant développement, cybersécurité, data, systèmes et embarqué. Chaque carte mène à une page détaillée.</p>
 
       <div class="filters" id="filters">
         <button class="filter is-active" data-filter="all">Tous</button>
@@ -136,29 +204,17 @@
 
         <!-- Projet 1 : MQTT -->
         <article class="project-card" data-cat="dev cyber sys">
-          <div class="project-thumb thumb-cyber">
-            <span class="thumb-icon">🔐</span>
-          </div>
+          <a class="project-thumb thumb-cyber" href="projects/secure-mqtt-aes.html" aria-label="Voir le projet MQTT sécurisé">
+            <svg class="thumb-svg"><use href="#ic-shield"/></svg>
+          </a>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-dev">Développement</span></div>
-            <h3 class="project-title">Transmission sécurisée de données via MQTT</h3>
+            <h3 class="project-title"><a href="projects/secure-mqtt-aes.html">Transmission sécurisée via MQTT</a></h3>
             <p class="project-desc">
-              Transmission de données environnementales simulées entre un équipement et une entreprise
-              via un broker MQTT, avec un chiffrement bout-en-bout (AES-CBC). Le broker ne voit jamais
-              les messages en clair.
+              Données environnementales chiffrées de bout en bout (AES) et relayées par un broker MQTT
+              qui ne voit jamais le contenu en clair.
             </p>
-            <details class="project-more">
-              <summary>Détails techniques</summary>
-              <div class="more-content">
-                <p><strong>Contexte :</strong> SAE de développement (école d'ingénieur), architecture à 3 VM Ubuntu (équipement, entreprise, broker Mosquitto).</p>
-                <p><strong>Mise en œuvre :</strong> clé AES dérivée d'un identifiant <code>room</code> via PBKDF2-HMAC-SHA256 ; topic MQTT dérivé par SHA-256 ; configuration (IP du broker) externalisée dans un fichier dédié pour éviter le codage en dur.</p>
-                <p><strong>Difficultés :</strong> dérivation de clé correcte, gestion du topic sécurisé, séparation des responsabilités (crypto / réseau / configuration).</p>
-                <p><strong>Résultat :</strong> chaîne complète fonctionnelle — message chiffré côté équipement, déchiffré côté entreprise, illisible au niveau du broker.</p>
-                <p><strong>Améliorations possibles :</strong> sel aléatoire par message, vérification d'intégrité (HMAC), stockage côté entreprise.</p>
-                <p class="project-authors">Réalisé avec Mahé Begnis.</p>
-              </div>
-            </details>
-            <ul class="tags small"><li>Java 17</li><li>Eclipse Paho</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li><li>Ubuntu</li></ul>
+            <ul class="tags small"><li>Java 17</li><li>Eclipse Paho</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/secure-mqtt-aes.html">Voir le projet</a>
               <span class="btn-link disabled" title="Rapport contenant des informations de configuration locale">Rapport sur demande</span>
@@ -168,27 +224,16 @@
 
         <!-- Projet 2 : Supervision TAAF -->
         <article class="project-card" data-cat="cyber sys dev">
-          <div class="project-thumb thumb-sys">
-            <span class="thumb-icon">📊</span>
-          </div>
+          <a class="project-thumb thumb-sys" href="projects/supervision-security-grafana.html" aria-label="Voir le projet de supervision">
+            <svg class="thumb-svg"><use href="#ic-activity"/></svg>
+          </a>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
-            <h3 class="project-title">Supervision d'une infrastructure avec Grafana</h3>
+            <h3 class="project-title"><a href="projects/supervision-security-grafana.html">Supervision d'infrastructure avec Grafana</a></h3>
             <p class="project-desc">
-              Stack de monitoring temps réel (métriques système et données métier) déployée avec Docker,
-              dans le cadre du module « Supervision de la sécurité ». Environnement pédagogique fictif
-              (bases polaires TAAF).
+              Chaîne d'observabilité (métriques système et données métier) sur une infrastructure
+              conteneurisée. Projet pédagogique du module « Supervision de la sécurité ».
             </p>
-            <details class="project-more">
-              <summary>Détails techniques</summary>
-              <div class="more-content">
-                <p><strong>Architecture :</strong> Prometheus (métriques), Grafana (dashboards), Loki (logs), Alloy (collecte), node_exporter et postgres_exporter, bases PostgreSQL — le tout orchestré via Docker Compose.</p>
-                <p><strong>Travail réalisé :</strong> dashboards de supervision des conteneurs et des données métier, requêtes PromQL et SQL, règles d'alertes (base inaccessible, mémoire, espace disque), analyse des performances I/O disque et corrélation des logs via Loki.</p>
-                <p><strong>Difficultés :</strong> configuration cohérente de services multiples, écriture de requêtes PromQL pertinentes, mise en place d'un alerting utile.</p>
-                <p><strong>Résultat :</strong> rapport de TP de 58 pages documentant la démarche, les requêtes et les interprétations.</p>
-                <p><strong>Améliorations possibles :</strong> suivi des redémarrages de conteneurs, alertes mémoire proactives.</p>
-              </div>
-            </details>
             <ul class="tags small"><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>PostgreSQL</li><li>PromQL</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/supervision-security-grafana.html">Voir le projet</a>
@@ -199,59 +244,36 @@
 
         <!-- Projet 3 : Data Mining eau -->
         <article class="project-card" data-cat="data">
-          <div class="project-thumb thumb-data">
-            <span class="thumb-icon">💧</span>
-          </div>
+          <a class="project-thumb thumb-data" href="projects/data-mining-water-potability.html" aria-label="Voir le projet de data mining">
+            <svg class="thumb-svg"><use href="#ic-droplet"/></svg>
+          </a>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
-            <h3 class="project-title">Classification de la potabilité de l'eau</h3>
+            <h3 class="project-title"><a href="projects/data-mining-water-potability.html">Classification de la potabilité de l'eau</a></h3>
             <p class="project-desc">
-              Modèle de classification binaire (eau potable / non potable) par régression logistique
-              sur un jeu de données Kaggle « Water Quality » (~6 400 échantillons exploitables),
-              avec une analyse exploratoire complète.
+              Classification binaire par régression logistique sur un jeu de données Kaggle,
+              avec analyse exploratoire complète et étude statistique des variables.
             </p>
-            <details class="project-more">
-              <summary>Détails techniques</summary>
-              <div class="more-content">
-                <p><strong>Pipeline :</strong> nettoyage des données (valeurs <code>#NUM!</code> → NaN, gestion des manquants), analyse exploratoire (corrélations, boxplots / outliers, pairplot), création de variables de synthèse (ex. somme des métaux lourds), standardisation, puis analyse de la multicolinéarité par VIF.</p>
-                <p><strong>Modélisation :</strong> régression logistique avec lecture des coefficients et des p-values via statsmodels pour interpréter la significativité de chaque contaminant.</p>
-                <p><strong>Résultat :</strong> modèle convergent (pseudo-R² ≈ 0,30) identifiant des variables significatives (aluminium, arsenic, cadmium, perchlorate…). Le jeu de données présente un déséquilibre de classes marqué, pris en compte dans l'interprétation.</p>
-                <p><strong>Améliorations possibles :</strong> rééquilibrage des classes, comparaison avec d'autres modèles (arbres de décision), optimisation du seuil de décision.</p>
-                <p class="project-authors">Réalisé avec Mahé Begnis.</p>
-              </div>
-            </details>
             <ul class="tags small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>Jupyter</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/data-mining-water-potability.html">Voir le projet</a>
-              <a class="btn-link ghost" href="assets/notebooks/data-mining-potabilite-eau.ipynb" download>Notebook (.ipynb)</a>
-              <a class="btn-link ghost" href="assets/reports/data-mining-regression-resultats.txt" target="_blank" rel="noopener">Résultats</a>
+              <a class="btn-link ghost" href="assets/notebooks/data-mining-potabilite-eau.ipynb" download>Notebook</a>
             </div>
           </div>
         </article>
 
         <!-- Projet 4 : M5Stack BLE -->
         <article class="project-card" data-cat="embarque dev">
-          <div class="project-thumb thumb-embarque">
-            <span class="thumb-icon">🖱️</span>
-          </div>
+          <a class="project-thumb thumb-embarque" href="projects/m5stack-ble-mouse.html" aria-label="Voir le projet embarqué">
+            <svg class="thumb-svg"><use href="#ic-cpu"/></svg>
+          </a>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-embarque">Embarqué / IoT</span></div>
-            <h3 class="project-title">Souris Bluetooth gestuelle sur M5Stack Core2</h3>
+            <h3 class="project-title"><a href="projects/m5stack-ble-mouse.html">Souris Bluetooth gestuelle (M5Stack)</a></h3>
             <p class="project-desc">
-              Transformation d'un M5Stack Core2 (ESP32) en souris Bluetooth HID pilotée par l'inclinaison
-              de l'appareil, avec zones de clic à l'écran et retours audio embarqués.
+              Un M5Stack Core2 (ESP32) transformé en souris Bluetooth HID pilotée par l'inclinaison,
+              avec zones de clic à l'écran et retours audio embarqués.
             </p>
-            <details class="project-more">
-              <summary>Détails techniques</summary>
-              <div class="more-content">
-                <p><strong>Fonctionnement :</strong> lecture de l'IMU (pitch / roll) pour déplacer le curseur, zones gauche / droite de l'écran pour les clics, bouton central pour activer le scroll, et signaux sonores (démarrage, confirmation de connexion).</p>
-                <p><strong>Outils :</strong> développement et flash via arduino-cli, librairies M5Unified (affichage + audio) et un fork patché de la librairie BLE Mouse (T-vK).</p>
-                <p><strong>Difficultés :</strong> librairie BLE absente de l'index Arduino (installation et patch manuels), contraintes mémoire (intégration des sons en Flash via PROGMEM), conversion des fichiers WAV en en-têtes <code>.h</code>, limitation à une seule connexion Bluetooth simultanée.</p>
-                <p><strong>Résultat :</strong> souris BLE fonctionnelle (déplacement par inclinaison, clics, scroll) avec interface et retours audio.</p>
-                <p><strong>Améliorations possibles :</strong> calibration des seuils de sensibilité, scroll horizontal, nettoyage de l'onglet de debug.</p>
-                <p class="project-authors">Réalisé avec Lukas Damour.</p>
-              </div>
-            </details>
             <ul class="tags small"><li>C++ / Arduino</li><li>ESP32</li><li>M5Unified</li><li>BLE HID</li><li>IMU</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/m5stack-ble-mouse.html">Voir le projet</a>
@@ -262,27 +284,16 @@
 
         <!-- Projet 5 : Distributeur Java -->
         <article class="project-card" data-cat="dev">
-          <div class="project-thumb thumb-dev">
-            <span class="thumb-icon">⚙️</span>
-          </div>
+          <a class="project-thumb thumb-dev" href="projects/java-vending-machine.html" aria-label="Voir le projet Java">
+            <svg class="thumb-svg"><use href="#ic-code"/></svg>
+          </a>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-dev">Développement logiciel</span></div>
-            <h3 class="project-title">Distributeur automatique — simulation Java</h3>
+            <h3 class="project-title"><a href="projects/java-vending-machine.html">Distributeur automatique en Java</a></h3>
             <p class="project-desc">
-              Application Java en ligne de commande simulant un distributeur automatique : gestion de
-              stock dynamique, commande multi-produits, paiement (espèces ou carte), ticket et
-              persistance des stocks.
+              Simulation d'un distributeur : gestion de stock dynamique, paiement, ticket et
+              persistance, conçue à partir d'une modélisation UML complète.
             </p>
-            <details class="project-more">
-              <summary>Détails techniques</summary>
-              <div class="more-content">
-                <p><strong>Conception :</strong> modélisation orientée objet (produit, commande, ligne de commande, paiement, ticket, distributeur) documentée par des diagrammes UML (classes, séquence, activité) et des états de commande / modes de paiement.</p>
-                <p><strong>Fonctionnalités :</strong> vérification stricte du stock, regroupement des produits identiques, rendu de monnaie, simulation de paiement par carte, persistance du stock dans un fichier texte entre les exécutions.</p>
-                <p><strong>Difficultés :</strong> gestion fiable du stock pendant la commande, modélisation des différents états de paiement.</p>
-                <p><strong>Améliorations possibles :</strong> interface graphique (Swing / JavaFX), historique des commandes, base de données relationnelle.</p>
-                <p class="project-authors">Projet de TP réalisé en équipe.</p>
-              </div>
-            </details>
             <ul class="tags small"><li>Java</li><li>POO</li><li>UML</li><li>Machine à états</li></ul>
             <div class="project-links">
               <a class="btn-link" href="projects/java-vending-machine.html">Voir le projet</a>
@@ -294,63 +305,199 @@
       </div>
     </section>
 
+    <!-- ================= CURSUS / DOMAINES ABORDÉS ================= -->
+    <section class="section container reveal" id="cursus">
+      <h2 class="section-title"><span class="section-index">04</span> Domaines abordés pendant mon cursus</h2>
+      <p class="section-lead">
+        Au-delà des projets détaillés ci-dessus, mon cursus d'ingénieur m'a permis d'aborder
+        plusieurs dimensions de l'informatique — à travers des projets, des travaux pratiques, des
+        rapports et des soutenances. Un profil généraliste, orienté développement, cybersécurité,
+        data et systèmes.
+      </p>
+      <div class="curriculum-grid">
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-code"/></svg>
+          <div><h4>Développement logiciel</h4><p>Programmation orientée objet, conception UML, tests, structuration de code (Java, Python, C).</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-database"/></svg>
+          <div><h4>Bases de données</h4><p>Modélisation, SQL et requêtes, bases relationnelles (MariaDB) et NoSQL (MongoDB).</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-server"/></svg>
+          <div><h4>Systèmes &amp; réseaux</h4><p>Administration Linux, machines virtuelles, services réseau et communication inter-machines.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-shield"/></svg>
+          <div><h4>Cybersécurité &amp; supervision</h4><p>SOC, monitoring, analyse de logs, chiffrement et bonnes pratiques SSI.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-droplet"/></svg>
+          <div><h4>Data / IA</h4><p>Analyse et traitement de données, machine learning, visualisation et interprétation des résultats.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-cpu"/></svg>
+          <div><h4>Systèmes embarqués / IoT</h4><p>Microcontrôleurs (ESP32, STM32), capteurs, communication sans fil et contraintes temps réel.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-activity"/></svg>
+          <div><h4>DevOps &amp; automatisation</h4><p>Conteneurisation (Docker), observabilité (Prometheus, Grafana, Loki), gestion de version Git.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-badge"/></svg>
+          <div><h4>RGPD &amp; protection des données</h4><p>Cadre légal, sensibilisation CNIL et prise en compte de la confidentialité dans les projets.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-globe"/></svg>
+          <div><h4>RSE &amp; numérique responsable</h4><p>Impact environnemental du numérique et sensibilisation à des pratiques plus sobres.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-briefcase"/></svg>
+          <div><h4>Gestion de projet &amp; communication</h4><p>Travail en équipe, rédaction de rapports techniques et présentation orale lors de soutenances.</p></div>
+        </article>
+      </div>
+    </section>
+
     <!-- ================= PARCOURS ================= -->
-    <section class="section container" id="parcours">
-      <h2 class="section-title"><span class="section-index">04</span> Parcours</h2>
+    <section class="section container reveal" id="parcours">
+      <h2 class="section-title"><span class="section-index">05</span> Parcours</h2>
+
+      <h3 class="sub-title"><svg class="ic"><use href="#ic-briefcase"/></svg> Expérience professionnelle</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">2025 – 2026</span>
-            <h3>Cycle ingénieur informatique — 4ᵉ année</h3>
-            <p class="timeline-org">ESIROI — École Supérieure d'Ingénieurs Réunion Océan Indien · Université de La Réunion</p>
-            <p>Formation d'ingénieur en informatique. Projets en développement logiciel, cybersécurité,
-              data, systèmes &amp; réseaux et systèmes embarqués (cf. section Projets).</p>
+            <span class="timeline-date">2025</span>
+            <h3>Stagiaire en cybersécurité</h3>
+            <p class="timeline-org">Observatoire de Cybersécurité de l'Océan Indien (OCOI)</p>
+            <p>Développement d'outils numériques, présentation d'une conférence (« Matinale IA éthique
+              et sécurisée ») auprès de professionnels réunionnais, et participation à des événements
+              en cybersécurité.</p>
           </div>
         </div>
-        <div class="timeline-item timeline-todo">
+      </div>
+
+      <h3 class="sub-title"><svg class="ic"><use href="#ic-cap"/></svg> Formation</h3>
+      <div class="timeline">
+        <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="timeline-date">À compléter</span>
-            <h3>Expériences professionnelles</h3>
-            <p>Stages, alternances ou autres expériences à ajouter ici.</p>
+            <span class="timeline-date">2026 – aujourd'hui</span>
+            <h3>4ᵉ année — cycle ingénieur informatique</h3>
+            <p class="timeline-org">ESIROI · Université de La Réunion</p>
+            <p>Développement logiciel, cybersécurité, data, systèmes &amp; réseaux et embarqué. Projet
+              principal : conception et exploitation d'un SOC (supervision des logs, monitoring,
+              détection d'incidents de premier niveau).</p>
           </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>3ᵉ année — cycle ingénieur informatique</h3>
+            <p class="timeline-org">ESIROI · Université de La Réunion</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023</span>
+            <h3>2ᵉ année de Licence Informatique</h3>
+            <p class="timeline-org">Université de La Réunion</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022</span>
+            <h3>Baccalauréat général — Mention Bien</h3>
+            <p class="timeline-org">Spécialités Mathématiques &amp; NSI · Lycée Marie Curie, Sainte-Anne</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title"><svg class="ic"><use href="#ic-award"/></svg> Concours &amp; distinctions</h3>
+      <div class="cards-grid">
+        <article class="info-card">
+          <span class="info-badge">1ʳᵉ — national</span>
+          <h4>Nuit de l'info 2024</h4>
+          <p>1ʳᵉ équipe au classement national sur le défi proposé par Ubisoft Bordeaux.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-badge">2ᵉ — régional</span>
+          <h4>DataCup Challenge 2024</h4>
+          <p>2ᵉ au classement régional, en équipe, en partenariat avec ATMO Réunion.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-badge">Événement</span>
+          <h4>Le HACK 2025 — Paris</h4>
+          <p>Participation à l'un des principaux événements de cybersécurité francophones.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-badge">Conférence</span>
+          <h4>Matinale IA éthique &amp; sécurisée</h4>
+          <p>Présentation auprès de professionnels réunionnais, avec l'OCOI (2025).</p>
+        </article>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 class="sub-title"><svg class="ic"><use href="#ic-badge"/></svg> Certifications</h3>
+          <ul class="cert-list">
+            <li><span class="cert-year">2026</span> TOEIC — niveau B2 (score 920)</li>
+            <li><span class="cert-year">2025</span> CLES B1 — Anglais</li>
+            <li><span class="cert-year">2025</span> Learning AI through Visualization — Columbia University</li>
+            <li><span class="cert-year">2025</span> Certification CNIL</li>
+            <li><span class="cert-year">2024</span> SecNumacadémie (ANSSI) — Panorama de la SSI, sécurité de l'authentification</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-title"><svg class="ic"><use href="#ic-globe"/></svg> Langues</h3>
+          <ul class="lang-list">
+            <li><span>Français</span><em>Langue maternelle</em></li>
+            <li><span>Anglais</span><em>B2 — TOEIC 920</em></li>
+            <li><span>Espagnol</span><em>A2</em></li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- ================= CV ================= -->
-    <section class="section container" id="cv">
-      <h2 class="section-title"><span class="section-index">05</span> CV</h2>
+    <section class="section container reveal" id="cv">
+      <h2 class="section-title"><span class="section-index">06</span> CV</h2>
       <div class="cv-box">
         <p>Mon CV est disponible au téléchargement en français et en anglais.</p>
         <div class="cv-actions">
-          <a class="btn btn-primary" href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" target="_blank" rel="noopener" download>Télécharger mon CV (FR)</a>
-          <a class="btn btn-ghost" href="assets/cv/CV_Mathias_Aly_Beril_EN.pdf" target="_blank" rel="noopener" download>Download my CV (EN)</a>
+          <a class="btn btn-primary" href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" target="_blank" rel="noopener" download>
+            <svg class="ic"><use href="#ic-external"/></svg> Télécharger mon CV (FR)
+          </a>
+          <a class="btn btn-ghost" href="assets/cv/CV_Mathias_Aly_Beril_EN.pdf" target="_blank" rel="noopener" download>
+            <svg class="ic"><use href="#ic-external"/></svg> Download my CV (EN)
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section class="section container" id="contact">
-      <h2 class="section-title"><span class="section-index">06</span> Contact</h2>
-      <p class="section-lead">N'hésitez pas à me contacter pour un stage, une alternance ou une mobilité internationale.</p>
+    <section class="section container reveal" id="contact">
+      <h2 class="section-title"><span class="section-index">07</span> Contact</h2>
+      <p class="section-lead">Disponible pour un stage, une alternance ou une mobilité internationale.</p>
       <div class="contact-grid">
         <a class="contact-card" href="mailto:alyderil.mathias@gmail.com">
-          <span class="contact-icon">✉️</span>
+          <svg class="ic"><use href="#ic-mail"/></svg>
           <span class="contact-label">Email</span>
           <span class="contact-value">alyderil.mathias@gmail.com</span>
         </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/mathias-alyberil-572097324/" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#ic-linkedin"/></svg>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">mathias-alyberil</span>
+        </a>
         <a class="contact-card" href="https://github.com/Silverwolf974" target="_blank" rel="noopener">
-          <span class="contact-icon">💻</span>
+          <svg class="ic"><use href="#ic-github"/></svg>
           <span class="contact-label">GitHub</span>
           <span class="contact-value">github.com/Silverwolf974</span>
         </a>
-        <span class="contact-card disabled">
-          <span class="contact-icon">in</span>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">à ajouter</span>
-        </span>
       </div>
     </section>
   </main>
