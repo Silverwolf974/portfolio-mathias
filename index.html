@@ -118,7 +118,7 @@
     <!-- ================= PROJETS ================= -->
     <section class="section container reveal" id="projets">
       <h2 class="section-title"><span class="section-index">02</span> Projets</h2>
-      <p class="section-lead">Cinq projets couvrant développement, cybersécurité, data, systèmes et embarqué. Chaque carte mène à une page détaillée.</p>
+      <p class="section-lead">Cinq projets de mon cursus, couvrant développement, cybersécurité, data, systèmes et embarqué.</p>
 
       <div class="filters" id="filters">
         <button class="filter is-active" data-filter="all">Tous</button>
@@ -133,101 +133,81 @@
 
         <!-- Projet 1 : MQTT -->
         <article class="project-card" data-cat="dev cyber sys">
-          <a class="project-thumb thumb-cyber" href="projects/secure-mqtt-aes.html" aria-label="Voir le projet MQTT sécurisé">
+          <div class="project-thumb thumb-cyber">
             <svg class="thumb-svg"><use href="#ic-shield"/></svg>
-          </a>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-dev">Développement</span></div>
-            <h3 class="project-title"><a href="projects/secure-mqtt-aes.html">Transmission sécurisée via MQTT</a></h3>
+            <h3 class="project-title">Transmission sécurisée via MQTT</h3>
             <p class="project-desc">
               Données environnementales chiffrées de bout en bout (AES) et relayées par un broker MQTT
               qui ne voit jamais le contenu en clair.
             </p>
-            <ul class="tags small"><li>Java 17</li><li>Eclipse Paho</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li></ul>
-            <div class="project-links">
-              <a class="btn-link" href="projects/secure-mqtt-aes.html">Voir le projet</a>
-              <span class="btn-link disabled" title="Rapport contenant des informations de configuration locale">Rapport sur demande</span>
-            </div>
+            <ul class="tags small"><li>Java 17</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li></ul>
           </div>
         </article>
 
-        <!-- Projet 2 : Supervision TAAF -->
+        <!-- Projet 2 : Supervision -->
         <article class="project-card" data-cat="cyber sys dev">
-          <a class="project-thumb thumb-sys" href="projects/supervision-security-grafana.html" aria-label="Voir le projet de supervision">
+          <div class="project-thumb thumb-sys">
             <svg class="thumb-svg"><use href="#ic-activity"/></svg>
-          </a>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
-            <h3 class="project-title"><a href="projects/supervision-security-grafana.html">Supervision d'infrastructure avec Grafana</a></h3>
+            <h3 class="project-title">Supervision d'infrastructure avec Grafana</h3>
             <p class="project-desc">
               Chaîne d'observabilité (métriques système et données métier) sur une infrastructure
               conteneurisée. Projet pédagogique du module « Supervision de la sécurité ».
             </p>
-            <ul class="tags small"><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>PostgreSQL</li><li>PromQL</li></ul>
-            <div class="project-links">
-              <a class="btn-link" href="projects/supervision-security-grafana.html">Voir le projet</a>
-              <span class="btn-link disabled" title="Le rapport contient des identifiants de laboratoire et des adresses locales — non publié.">Rapport (58 p.) sur demande</span>
-            </div>
+            <ul class="tags small"><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>PostgreSQL</li></ul>
           </div>
         </article>
 
         <!-- Projet 3 : Data Mining eau -->
         <article class="project-card" data-cat="data">
-          <a class="project-thumb thumb-data" href="projects/data-mining-water-potability.html" aria-label="Voir le projet de data mining">
+          <div class="project-thumb thumb-data">
             <svg class="thumb-svg"><use href="#ic-droplet"/></svg>
-          </a>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
-            <h3 class="project-title"><a href="projects/data-mining-water-potability.html">Classification de la potabilité de l'eau</a></h3>
+            <h3 class="project-title">Classification de la potabilité de l'eau</h3>
             <p class="project-desc">
               Classification binaire par régression logistique sur un jeu de données Kaggle,
               avec analyse exploratoire complète et étude statistique des variables.
             </p>
-            <ul class="tags small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>Jupyter</li></ul>
-            <div class="project-links">
-              <a class="btn-link" href="projects/data-mining-water-potability.html">Voir le projet</a>
-              <a class="btn-link ghost" href="assets/notebooks/data-mining-potabilite-eau.ipynb" download>Notebook</a>
-            </div>
+            <ul class="tags small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>statsmodels</li></ul>
           </div>
         </article>
 
         <!-- Projet 4 : M5Stack BLE -->
         <article class="project-card" data-cat="embarque dev">
-          <a class="project-thumb thumb-embarque" href="projects/m5stack-ble-mouse.html" aria-label="Voir le projet embarqué">
+          <div class="project-thumb thumb-embarque">
             <svg class="thumb-svg"><use href="#ic-cpu"/></svg>
-          </a>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-embarque">Embarqué / IoT</span></div>
-            <h3 class="project-title"><a href="projects/m5stack-ble-mouse.html">Souris Bluetooth gestuelle (M5Stack)</a></h3>
+            <h3 class="project-title">Souris Bluetooth gestuelle (M5Stack)</h3>
             <p class="project-desc">
               Un M5Stack Core2 (ESP32) transformé en souris Bluetooth HID pilotée par l'inclinaison,
               avec zones de clic à l'écran et retours audio embarqués.
             </p>
-            <ul class="tags small"><li>C++ / Arduino</li><li>ESP32</li><li>M5Unified</li><li>BLE HID</li><li>IMU</li></ul>
-            <div class="project-links">
-              <a class="btn-link" href="projects/m5stack-ble-mouse.html">Voir le projet</a>
-              <span class="btn-link disabled" title="Dépôt sur GitLab interne de l'école">Code sur demande</span>
-            </div>
+            <ul class="tags small"><li>C++ / Arduino</li><li>ESP32</li><li>BLE HID</li><li>IMU</li></ul>
           </div>
         </article>
 
         <!-- Projet 5 : Distributeur Java -->
         <article class="project-card" data-cat="dev">
-          <a class="project-thumb thumb-dev" href="projects/java-vending-machine.html" aria-label="Voir le projet Java">
+          <div class="project-thumb thumb-dev">
             <svg class="thumb-svg"><use href="#ic-code"/></svg>
-          </a>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-dev">Développement logiciel</span></div>
-            <h3 class="project-title"><a href="projects/java-vending-machine.html">Distributeur automatique en Java</a></h3>
+            <h3 class="project-title">Distributeur automatique en Java</h3>
             <p class="project-desc">
               Simulation d'un distributeur : gestion de stock dynamique, paiement, ticket et
-              persistance, conçue à partir d'une modélisation UML complète.
+              persistance, conçue à partir d'une modélisation UML.
             </p>
             <ul class="tags small"><li>Java</li><li>POO</li><li>UML</li><li>Machine à états</li></ul>
-            <div class="project-links">
-              <a class="btn-link" href="projects/java-vending-machine.html">Voir le projet</a>
-              <span class="btn-link disabled" title="Dépôt sur GitLab interne de l'école">Code sur demande</span>
-            </div>
           </div>
         </article>
 
