@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathias ALY-BERIL — Portfolio</title>
-  <meta name="description" content="Portfolio de Mathias ALY-BERIL, étudiant ingénieur en informatique : développement logiciel, cybersécurité, data et systèmes & réseaux." />
+  <title>Mathias ALY BERIL — Portfolio</title>
+  <meta name="description" content="Portfolio de Mathias ALY BERIL, étudiant ingénieur en informatique : développement logiciel, cybersécurité, data et systèmes & réseaux." />
+  <meta property="og:title" content="Mathias ALY BERIL — Portfolio" />
+  <meta property="og:description" content="Étudiant ingénieur en informatique (ESIROI) : développement, cybersécurité, data et systèmes & réseaux." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://silverwolf974.github.io/portfolio-mathias/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -61,7 +66,7 @@
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="hero-eyebrow">// portfolio — étudiant ingénieur</p>
-          <h1 class="hero-name">Mathias<br>ALY-BERIL</h1>
+          <h1 class="hero-name">Mathias<br>ALY BERIL</h1>
           <p class="hero-title">Étudiant ingénieur en informatique <span class="dot">·</span> ESIROI 4ᵉ année</p>
           <ul class="hero-domains">
             <li>Développement logiciel</li>
@@ -81,14 +86,14 @@
           </div>
           <div class="hero-social">
             <a href="https://github.com/Silverwolf974" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#ic-github"/></svg></a>
-            <a href="https://www.linkedin.com/in/mathias-alyberil-572097324/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#ic-linkedin"/></svg></a>
+            <a href="https://www.linkedin.com/in/mathias-aly-beril/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#ic-linkedin"/></svg></a>
             <a href="mailto:alyderil.mathias@gmail.com" aria-label="Email"><svg class="ic"><use href="#ic-mail"/></svg></a>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-photo">
-            <img id="profileImg" src="assets/images/profile.jpg" alt="Portrait de Mathias ALY-BERIL"
+            <img id="profileImg" src="assets/images/profile.jpg" alt="Portrait de Mathias ALY BERIL"
                  onerror="this.style.display='none';document.getElementById('heroMono').style.display='grid';" />
             <span class="hero-mono" id="heroMono">MA</span>
           </div>
@@ -96,6 +101,10 @@
           <span class="hero-blob"></span>
         </div>
       </div>
+
+      <a class="scroll-hint" href="#apropos" aria-label="Descendre vers la section À propos">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
     </section>
 
     <!-- ================= À PROPOS ================= -->
@@ -118,7 +127,7 @@
     <!-- ================= PROJETS ================= -->
     <section class="section container reveal" id="projets">
       <h2 class="section-title"><span class="section-index">02</span> Projets</h2>
-      <p class="section-lead">Cinq projets de mon cursus, couvrant développement, cybersécurité, data, systèmes et embarqué.</p>
+      <p class="section-lead">Neuf projets de mon cursus, couvrant développement, cybersécurité, data/IA, systèmes et embarqué. Chaque carte mène à une page détaillée.</p>
 
       <div class="filters" id="filters">
         <button class="filter is-active" data-filter="all">Tous</button>
@@ -131,83 +140,304 @@
 
       <div class="projects-grid">
 
+        <!-- Projet 0 : SOC ESIROI -->
+        <article class="project-card pc-soc" data-cat="cyber sys">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g fill="none" stroke="rgba(96,165,250,.3)" stroke-width="1.5">
+                <circle cx="160" cy="70" r="52"/>
+                <circle cx="160" cy="70" r="35"/>
+                <circle cx="160" cy="70" r="18"/>
+                <path d="M160 18v104M108 70h104"/>
+              </g>
+              <path class="fx-sweep" d="M160 70L160 18A52 52 0 0 1 204 42Z" fill="rgba(96,165,250,.3)"/>
+              <circle cx="160" cy="70" r="3" fill="#60a5fa"/>
+              <circle class="fx-blip fx-bp1" cx="190" cy="48" r="4" fill="#93c5fd"/>
+              <circle class="fx-blip fx-bp2" cx="134" cy="92" r="4" fill="#93c5fd"/>
+              <circle class="fx-blip fx-bp3" cx="178" cy="98" r="3" fill="#93c5fd"/>
+              <g fill="none" stroke="rgba(96,165,250,.5)" stroke-width="2">
+                <path d="M36 30h-14v14M284 30h14v14M36 110h-14v-14M284 110h14v-14"/>
+              </g>
+              <g fill="none" stroke="rgba(147,197,253,.5)" stroke-width="1.5">
+                <path d="M248 60h48M248 70h34M248 80h42"/>
+              </g>
+              <g fill="none" stroke="rgba(147,197,253,.5)" stroke-width="1.5">
+                <path d="M24 60h48M24 70h34M24 80h42"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
+            <h3 class="project-title"><a href="projects/soc-esiroi.html">Conception d'un SOC pour l'ESIROI</a></h3>
+            <p class="project-desc">
+              Projet principal de 4ᵉ année : architecture complète d'un SOC — SIEM Wazuh, IDS Suricata,
+              collecte de logs multi-sources et 8 use cases de détection alignés MITRE ATT&amp;CK.
+            </p>
+            <ul class="tags small"><li>Wazuh</li><li>Suricata</li><li>MITRE ATT&amp;CK</li><li>OPNsense</li><li>Proxmox</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/soc-esiroi.html">Voir le détail</a></div>
+          </div>
+        </article>
+
         <!-- Projet 1 : MQTT -->
-        <article class="project-card" data-cat="dev cyber sys">
-          <div class="project-thumb thumb-cyber">
-            <svg class="thumb-svg"><use href="#ic-shield"/></svg>
+        <article class="project-card pc-mqtt" data-cat="dev cyber sys">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g fill="none" stroke="rgba(125,211,252,.22)" stroke-width="1.5">
+                <path d="M38 26l15 9v17l-15 9-15-9V35z"/>
+                <path d="M282 88l13 8v15l-13 8-13-8V96z"/>
+                <path d="M258 22l10 6v12l-10 6-10-6V28z"/>
+              </g>
+              <path d="M14 70h110" stroke="rgba(56,189,248,.35)" stroke-dasharray="5 7" fill="none"/>
+              <path d="M196 70h110" stroke="rgba(56,189,248,.35)" stroke-dasharray="5 7" fill="none"/>
+              <circle class="fx-pkt fx-pkt-a" cy="70" r="4" fill="#38bdf8"/>
+              <circle class="fx-pkt fx-pkt-b" cy="70" r="4" fill="#38bdf8"/>
+              <path d="M160 30l28 11v16c0 21-14 34-28 42-14-8-28-21-28-42V41z" fill="rgba(56,189,248,.12)" stroke="#38bdf8" stroke-width="2"/>
+              <rect x="149" y="63" width="22" height="17" rx="3" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+              <path d="M154 63v-6a6 6 0 0 1 12 0v6" fill="none" stroke="#7dd3fc" stroke-width="2"/>
+            </svg>
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-dev">Développement</span></div>
-            <h3 class="project-title">Transmission sécurisée via MQTT</h3>
+            <h3 class="project-title"><a href="projects/transmission-securisee-mqtt.html">Transmission sécurisée via MQTT</a></h3>
             <p class="project-desc">
               Données environnementales chiffrées de bout en bout (AES) et relayées par un broker MQTT
               qui ne voit jamais le contenu en clair.
             </p>
             <ul class="tags small"><li>Java 17</li><li>Mosquitto</li><li>AES-CBC</li><li>PBKDF2</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/transmission-securisee-mqtt.html">Voir le détail</a></div>
           </div>
         </article>
 
         <!-- Projet 2 : Supervision -->
-        <article class="project-card" data-cat="cyber sys dev">
-          <div class="project-thumb thumb-sys">
-            <svg class="thumb-svg"><use href="#ic-activity"/></svg>
+        <article class="project-card pc-super" data-cat="cyber sys dev">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <rect x="24" y="22" width="172" height="96" rx="9" fill="rgba(251,146,60,.07)" stroke="rgba(251,146,60,.4)" stroke-width="1.5"/>
+              <path d="M38 100h144" stroke="rgba(251,146,60,.25)" stroke-width="1"/>
+              <polyline class="fx-chart" points="38,98 58,78 78,88 98,62 118,72 140,50 160,60 182,40" fill="none" stroke="#fb923c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="fx-alert" cx="182" cy="40" r="4.5" fill="#fb923c"/>
+              <g fill="rgba(251,146,60,.75)">
+                <rect class="fx-bar fx-b1" x="216" y="60" width="15" height="58" rx="3"/>
+                <rect class="fx-bar fx-b2" x="240" y="42" width="15" height="76" rx="3"/>
+                <rect class="fx-bar fx-b3" x="264" y="74" width="15" height="44" rx="3"/>
+                <rect class="fx-bar fx-b4" x="288" y="54" width="15" height="64" rx="3"/>
+              </g>
+            </svg>
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
-            <h3 class="project-title">Supervision d'infrastructure avec Grafana</h3>
+            <h3 class="project-title"><a href="projects/supervision-infrastructure-grafana.html">Supervision d'infrastructure avec Grafana</a></h3>
             <p class="project-desc">
               Chaîne d'observabilité (métriques système et données métier) sur une infrastructure
               conteneurisée. Projet pédagogique du module « Supervision de la sécurité ».
             </p>
             <ul class="tags small"><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>PostgreSQL</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/supervision-infrastructure-grafana.html">Voir le détail</a></div>
           </div>
         </article>
 
         <!-- Projet 3 : Data Mining eau -->
-        <article class="project-card" data-cat="data">
-          <div class="project-thumb thumb-data">
-            <svg class="thumb-svg"><use href="#ic-droplet"/></svg>
+        <article class="project-card pc-eau" data-cat="data">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <path d="M160 22c13 17 22 28 22 39a22 22 0 1 1-44 0c0-11 9-22 22-39z" fill="rgba(45,212,191,.12)" stroke="#2dd4bf" stroke-width="2"/>
+              <g class="fx-bubble fx-bb1"><circle cx="118" cy="102" r="3" fill="rgba(94,234,212,.7)"/></g>
+              <g class="fx-bubble fx-bb2"><circle cx="212" cy="106" r="2.5" fill="rgba(94,234,212,.6)"/></g>
+              <g class="fx-bubble fx-bb3"><circle cx="248" cy="100" r="2" fill="rgba(94,234,212,.55)"/></g>
+              <g class="fx-wave fx-w1"><path d="M-320 106c27-9 53-9 80 0s53 9 80 0 53-9 80 0 53 9 80 0 53-9 80 0 53 9 80 0 53-9 80 0 53 9 80 0 53-9 80 0 53 9 80 0v34H-320z" fill="rgba(45,212,191,.22)"/></g>
+              <g class="fx-wave fx-w2"><path d="M-320 114c27-8 53-8 80 0s53 8 80 0 53-8 80 0 53 8 80 0 53-8 80 0 53 8 80 0 53-8 80 0 53 8 80 0 53-8 80 0 53 8 80 0v26H-320z" fill="rgba(45,212,191,.16)"/></g>
+            </svg>
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
-            <h3 class="project-title">Classification de la potabilité de l'eau</h3>
+            <h3 class="project-title"><a href="projects/data-mining-potabilite-eau.html">Classification de la potabilité de l'eau</a></h3>
             <p class="project-desc">
               Classification binaire par régression logistique sur un jeu de données Kaggle,
               avec analyse exploratoire complète et étude statistique des variables.
             </p>
             <ul class="tags small"><li>Python</li><li>pandas</li><li>scikit-learn</li><li>statsmodels</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/data-mining-potabilite-eau.html">Voir le détail</a></div>
           </div>
         </article>
 
         <!-- Projet 4 : M5Stack BLE -->
-        <article class="project-card" data-cat="embarque dev">
-          <div class="project-thumb thumb-embarque">
-            <svg class="thumb-svg"><use href="#ic-cpu"/></svg>
+        <article class="project-card pc-ble" data-cat="embarque dev">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g fill="none" stroke="rgba(74,222,128,.45)" stroke-width="1.5">
+                <path d="M118 50H86V32M118 70H44M118 90H86v18M202 50h32V32M202 70h56M202 90h32v18"/>
+              </g>
+              <g fill="#4ade80">
+                <circle class="fx-node fx-n1" cx="86" cy="30" r="3.5"/>
+                <circle class="fx-node fx-n2" cx="44" cy="70" r="3.5"/>
+                <circle class="fx-node fx-n3" cx="86" cy="110" r="3.5"/>
+                <circle class="fx-node fx-n4" cx="234" cy="30" r="3.5"/>
+                <circle class="fx-node fx-n5" cx="260" cy="70" r="3.5"/>
+                <circle class="fx-node fx-n6" cx="234" cy="110" r="3.5"/>
+              </g>
+              <circle class="fx-ring" cx="160" cy="70" r="30" fill="none" stroke="rgba(74,222,128,.5)" stroke-width="1.5"/>
+              <rect x="118" y="38" width="84" height="64" rx="10" fill="rgba(74,222,128,.1)" stroke="#4ade80" stroke-width="2"/>
+              <g transform="translate(160,70) scale(1.7) translate(-12,-12)">
+                <path d="m7 7 10 10-5 5V2l5 5L7 17" fill="none" stroke="#86efac" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-embarque">Embarqué / IoT</span></div>
-            <h3 class="project-title">Souris Bluetooth gestuelle (M5Stack)</h3>
+            <h3 class="project-title"><a href="projects/souris-ble-m5stack.html">Souris Bluetooth gestuelle (M5Stack)</a></h3>
             <p class="project-desc">
               Un M5Stack Core2 (ESP32) transformé en souris Bluetooth HID pilotée par l'inclinaison,
               avec zones de clic à l'écran et retours audio embarqués.
             </p>
             <ul class="tags small"><li>C++ / Arduino</li><li>ESP32</li><li>BLE HID</li><li>IMU</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/souris-ble-m5stack.html">Voir le détail</a></div>
           </div>
         </article>
 
         <!-- Projet 5 : Distributeur Java -->
-        <article class="project-card" data-cat="dev">
-          <div class="project-thumb thumb-dev">
-            <svg class="thumb-svg"><use href="#ic-code"/></svg>
+        <article class="project-card pc-java" data-cat="dev">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <text x="34" y="98" font-family="'JetBrains Mono', monospace" font-size="64" fill="rgba(167,139,250,.16)">{</text>
+              <text x="252" y="98" font-family="'JetBrains Mono', monospace" font-size="64" fill="rgba(167,139,250,.16)">}</text>
+              <rect x="118" y="16" width="84" height="108" rx="10" fill="rgba(167,139,250,.1)" stroke="#a78bfa" stroke-width="2"/>
+              <g fill="rgba(196,181,253,.4)">
+                <rect class="fx-slot fx-s1" x="128" y="28" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s2" x="151" y="28" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s3" x="174" y="28" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s4" x="128" y="50" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s5" x="151" y="50" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s6" x="174" y="50" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s7" x="128" y="72" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s8" x="151" y="72" width="18" height="15" rx="3"/>
+                <rect class="fx-slot fx-s9" x="174" y="72" width="18" height="15" rx="3"/>
+              </g>
+              <rect x="128" y="98" width="64" height="14" rx="3" fill="none" stroke="rgba(167,139,250,.5)" stroke-width="1.5"/>
+              <g class="fx-coin">
+                <circle cx="226" cy="30" r="7" fill="none" stroke="#c4b5fd" stroke-width="2"/>
+                <path d="M226 27v6" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-dev">Développement logiciel</span></div>
-            <h3 class="project-title">Distributeur automatique en Java</h3>
+            <h3 class="project-title"><a href="projects/distributeur-automatique-java.html">Distributeur automatique en Java</a></h3>
             <p class="project-desc">
               Simulation d'un distributeur : gestion de stock dynamique, paiement, ticket et
               persistance, conçue à partir d'une modélisation UML.
             </p>
             <ul class="tags small"><li>Java</li><li>POO</li><li>UML</li><li>Machine à états</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/distributeur-automatique-java.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet 6 : Challenge Big Data Vélib' -->
+        <article class="project-card pc-velib" data-cat="data">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g class="fx-wheel" fill="none" stroke="#f472b6" stroke-width="2">
+                <circle cx="66" cy="72" r="30"/>
+                <path d="M66 42v60M36 72h60M45 51l42 42M87 51l-42 42"/>
+              </g>
+              <circle cx="66" cy="72" r="5" fill="#f472b6"/>
+              <g fill="none" stroke="rgba(244,114,182,.4)" stroke-width="1.5">
+                <path d="M96 72h44M140 72l38-26M140 72l38 26M178 46l44 10M178 98l44-10M222 56v32M222 56l20-2"/>
+              </g>
+              <circle class="fx-data" cy="72" r="3.5" fill="#fbcfe8"/>
+              <g fill="#f472b6">
+                <circle cx="140" cy="72" r="4.5"/>
+                <circle cx="178" cy="46" r="4.5"/>
+                <circle cx="178" cy="98" r="4.5"/>
+                <circle cx="222" cy="56" r="4.5"/>
+                <circle cx="222" cy="88" r="4.5"/>
+              </g>
+              <g fill="none" stroke="#f472b6" stroke-width="2">
+                <ellipse cx="276" cy="52" rx="17" ry="6.5"/>
+                <path d="M259 52v34c0 3.6 7.6 6.5 17 6.5s17-2.9 17-6.5V52"/>
+                <path d="M259 69c0 3.6 7.6 6.5 17 6.5s17-2.9 17-6.5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-data">Data / Big Data</span><span class="chip chip-proto">Prototype</span></div>
+            <h3 class="project-title"><a href="projects/challenge-big-data-velib.html">Challenge Big Data — prédiction Vélib'</a></h3>
+            <p class="project-desc">
+              Cadrage d'un pipeline Big Data (Spark) pour prédire l'usage des vélos en libre-service
+              à partir de données ouvertes Vélib' et météo. Resté au stade du prototype.
+            </p>
+            <ul class="tags small"><li>Python</li><li>Apache Spark</li><li>HDFS</li><li>APIs publiques</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/challenge-big-data-velib.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet 8 : IA Pierre-Feuille-Ciseaux -->
+        <article class="project-card pc-rps" data-cat="data dev">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <rect x="26" y="46" width="52" height="40" rx="7" fill="rgba(250,204,21,.1)" stroke="#facc15" stroke-width="2"/>
+              <circle cx="52" cy="66" r="11" fill="none" stroke="#fde047" stroke-width="2"/>
+              <circle class="fx-lens" cx="52" cy="66" r="5" fill="rgba(253,224,71,.8)"/>
+              <g stroke="rgba(250,204,21,.35)" stroke-width="1.5">
+                <path class="fx-syn fx-sy1" d="M78 66L134 34M78 66L134 66M78 66L134 106"/>
+                <path class="fx-syn fx-sy2" d="M134 34L194 50M134 66L194 50M134 106L194 50M134 34L194 90M134 66L194 90M134 106L194 90"/>
+                <path class="fx-syn fx-sy3" d="M194 50L254 34M194 50L254 70M194 90L254 70M194 90L254 106M194 50L254 106M194 90L254 34"/>
+              </g>
+              <g fill="#facc15">
+                <circle cx="134" cy="34" r="6"/><circle cx="134" cy="66" r="6"/><circle cx="134" cy="106" r="6"/>
+                <circle cx="194" cy="50" r="6"/><circle cx="194" cy="90" r="6"/>
+              </g>
+              <g stroke="#fde047" stroke-width="2" fill="rgba(250,204,21,.15)">
+                <circle class="fx-out fx-o1" cx="254" cy="34" r="8"/>
+                <circle class="fx-out fx-o2" cx="254" cy="70" r="8"/>
+                <circle class="fx-out fx-o3" cx="254" cy="106" r="8"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-dev">Développement</span></div>
+            <h3 class="project-title"><a href="projects/ia-pierre-feuille-ciseaux.html">IA de reconnaissance de gestes (webcam)</a></h3>
+            <p class="project-desc">
+              CNN et transfer learning pour reconnaître les gestes pierre-feuille-ciseaux en temps
+              réel via webcam — pipeline complet, de l'acquisition des données à la démo interactive.
+            </p>
+            <ul class="tags small"><li>Python</li><li>TensorFlow / Keras</li><li>CNN</li><li>OpenCV</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/ia-pierre-feuille-ciseaux.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet 9 : Forensique réseau CTF -->
+        <article class="project-card pc-ctf" data-cat="cyber">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g fill="rgba(248,113,113,.28)">
+                <rect x="30" y="26" width="34" height="7" rx="2"/><rect x="70" y="26" width="58" height="7" rx="2"/><rect x="134" y="26" width="42" height="7" rx="2"/>
+                <rect x="30" y="42" width="52" height="7" rx="2"/><rect x="88" y="42" width="30" height="7" rx="2"/><rect x="124" y="42" width="60" height="7" rx="2"/>
+                <rect x="30" y="58" width="40" height="7" rx="2"/><rect x="76" y="58" width="66" height="7" rx="2"/><rect x="148" y="58" width="28" height="7" rx="2"/>
+                <rect x="30" y="74" width="62" height="7" rx="2"/><rect x="98" y="74" width="36" height="7" rx="2"/><rect x="140" y="74" width="46" height="7" rx="2"/>
+                <rect x="30" y="90" width="30" height="7" rx="2"/><rect x="66" y="90" width="54" height="7" rx="2"/><rect x="126" y="90" width="38" height="7" rx="2"/>
+                <rect x="30" y="106" width="48" height="7" rx="2"/><rect x="84" y="106" width="40" height="7" rx="2"/><rect x="130" y="106" width="56" height="7" rx="2"/>
+              </g>
+              <rect class="fx-scanrow" x="24" y="54" width="170" height="15" rx="3" fill="rgba(248,113,113,.22)" stroke="rgba(248,113,113,.6)" stroke-width="1"/>
+              <g class="fx-loupe">
+                <circle cx="240" cy="66" r="26" fill="rgba(248,113,113,.08)" stroke="#f87171" stroke-width="2.5"/>
+                <path d="M259 85l18 18" stroke="#f87171" stroke-width="4" stroke-linecap="round"/>
+                <path d="M230 66h20M240 56v20" stroke="rgba(252,165,165,.7)" stroke-width="1.5"/>
+              </g>
+              <g class="fx-flag">
+                <path d="M282 28v26" stroke="#fca5a5" stroke-width="2" stroke-linecap="round"/>
+                <path d="M282 28l22 6-22 6z" fill="#f87171"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span></div>
+            <h3 class="project-title"><a href="projects/forensique-reseau-ctf.html">Forensique réseau — CTF</a></h3>
+            <p class="project-desc">
+              Investigation d'une capture réseau : détection d'une exfiltration de données par DNS
+              et décodage automatisé des flags avec des scripts Python (dpkt) et PowerShell.
+            </p>
+            <ul class="tags small"><li>Python</li><li>dpkt</li><li>Wireshark</li><li>PowerShell</li><li>DNS</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/forensique-reseau-ctf.html">Voir le détail</a></div>
           </div>
         </article>
 
@@ -221,23 +451,23 @@
       <div class="skills-grid">
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-code"/></svg><h3>Développement</h3></div>
-          <ul class="tags"><li>Python</li><li>Java</li><li>Langage C</li><li>JavaScript</li><li>SQL</li></ul>
+          <ul class="tags"><li>Python</li><li>Java</li><li>Langage C</li><li>JavaScript</li><li>Node.js</li><li>SQL</li><li>LaTeX</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-droplet"/></svg><h3>Data / IA</h3></div>
-          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li></ul>
+          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>TensorFlow / Keras</li><li>Deep Learning (CNN)</li><li>OpenCV</li><li>Spark / Hadoop</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-shield"/></svg><h3>Cybersécurité</h3></div>
-          <ul class="tags"><li>Chiffrement AES</li><li>Supervision / SOC</li><li>Analyse de logs</li><li>Wireshark</li><li>Bonnes pratiques SSI</li></ul>
+          <ul class="tags"><li>Wazuh (SIEM)</li><li>Suricata (IDS/IPS)</li><li>MITRE ATT&amp;CK</li><li>Supervision / SOC</li><li>Forensique réseau</li><li>Wireshark</li><li>Chiffrement AES</li><li>Analyse de logs</li><li>OSINT</li><li>Bonnes pratiques SSI</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-server"/></svg><h3>Systèmes &amp; réseaux / DevOps</h3></div>
-          <ul class="tags"><li>Linux</li><li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Git</li></ul>
+          <ul class="tags"><li>Linux</li><li>Docker / Compose</li><li>Proxmox</li><li>OPNsense</li><li>Prometheus</li><li>Grafana</li><li>Zabbix</li><li>BGP / MPLS / VPN</li><li>Git</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-database"/></svg><h3>Bases de données</h3></div>
-          <ul class="tags"><li>MariaDB</li><li>MongoDB</li><li>SQL</li></ul>
+          <ul class="tags"><li>MariaDB</li><li>PostgreSQL</li><li>MongoDB</li><li>SQL</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-cpu"/></svg><h3>Embarqué / IoT</h3></div>
@@ -293,6 +523,22 @@
           <div><h4>RSE &amp; numérique responsable</h4><p>Impact environnemental du numérique et sensibilisation à des pratiques plus sobres.</p></div>
         </article>
         <article class="curr-card">
+          <svg class="ic"><use href="#ic-globe"/></svg>
+          <div><h4>Réseaux avancés &amp; sans fil</h4><p>Routage BGP, MPLS/VPN, réseaux sans fil et sécurité Wi-Fi, DNS et architecture des réseaux nouvelle génération.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-spark"/></svg>
+          <div><h4>IA &amp; deep learning</h4><p>Vision par ordinateur, CNN et transfer learning (TensorFlow/Keras), pipeline complet de la donnée au modèle déployé.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-shield"/></svg>
+          <div><h4>Analyse de menaces &amp; reverse</h4><p>Analyse de code malveillant (payloads, stéganographie), initiation au reverse engineering, forensique réseau et CTF.</p></div>
+        </article>
+        <article class="curr-card">
+          <svg class="ic"><use href="#ic-server"/></svg>
+          <div><h4>Programmation serveur</h4><p>Serveurs HTTP en Node.js, échanges client-serveur, manipulation de fichiers et services web côté serveur.</p></div>
+        </article>
+        <article class="curr-card">
           <svg class="ic"><use href="#ic-briefcase"/></svg>
           <div><h4>Gestion de projet &amp; communication</h4><p>Travail en équipe, rédaction de rapports techniques et présentation orale lors de soutenances.</p></div>
         </article>
@@ -319,6 +565,17 @@
 
       <h3 class="sub-title"><svg class="ic"><use href="#ic-briefcase"/></svg> Expérience professionnelle</h3>
       <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 — aujourd'hui</span>
+            <h3>SOC Analyst junior — stage <span class="badge-now">en cours</span></h3>
+            <p class="timeline-org">eBuilder Security · Kista Science Tower, Stockholm (Suède)</p>
+            <p>Stage en cours au sein du SOC : surveillance et analyse des alertes de sécurité,
+              qualification d'incidents de premier niveau et participation aux activités
+              opérationnelles de l'équipe, dans un environnement international.</p>
+          </div>
+        </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -443,10 +700,10 @@
           <span class="contact-label">Email</span>
           <span class="contact-value">alyderil.mathias@gmail.com</span>
         </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/mathias-alyberil-572097324/" target="_blank" rel="noopener">
+        <a class="contact-card" href="https://www.linkedin.com/in/mathias-aly-beril/" target="_blank" rel="noopener">
           <svg class="ic"><use href="#ic-linkedin"/></svg>
           <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">mathias-alyberil</span>
+          <span class="contact-value">mathias-aly-beril</span>
         </a>
         <a class="contact-card" href="https://github.com/Silverwolf974" target="_blank" rel="noopener">
           <svg class="ic"><use href="#ic-github"/></svg>
@@ -460,7 +717,7 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Mathias ALY-BERIL</p>
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
       <p class="footer-note">Construit en HTML, CSS &amp; JavaScript · déployé avec GitHub Pages</p>
     </div>
   </footer>

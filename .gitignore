@@ -30,3 +30,15 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# --- Dépendances / environnements ---
+node_modules/
+__pycache__/
+.venv/
+venv/
+*.p12
+
+# --- Fichiers temporaires ---
+*.tmp
+*.bak
+*~

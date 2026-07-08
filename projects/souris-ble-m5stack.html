@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Souris Bluetooth gestuelle sur M5Stack Core2 — Mathias ALY BERIL</title>
+  <meta name="description" content="Transformer un M5Stack Core2 (ESP32) en souris Bluetooth HID pilotée par l'inclinaison, avec zones de clic tactiles et retours audio embarqués." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="pp-theme pc-ble">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Souris Bluetooth gestuelle sur M5Stac…</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-embarque">Embarqué / IoT</span><span class="chip chip-dev">Développement</span></div>
+      <h1>Souris Bluetooth gestuelle sur M5Stack Core2</h1>
+      <p class="project-lead">Transformer un M5Stack Core2 (ESP32) en souris Bluetooth HID pilotée par l'inclinaison, avec zones de clic tactiles et retours audio embarqués.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">TP académique (2025)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Cible</span><span class="meta-value">M5Stack Core2 (ESP32)</span></div>
+        <div class="meta-item"><span class="meta-label">Statut</span><span class="meta-value">Terminé, fonctionnel</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>Concevoir une interface utilisateur sur M5Stack Core2 qui se comporte comme une souris Bluetooth HID, pilotée par les boutons, l'écran tactile et le capteur d'inclinaison (IMU).</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <ul>
+        <li>Chaîne de compilation avec arduino-cli et flash en ligne de commande.</li>
+        <li>Validation du BLE HID : la carte est reconnue comme une souris par l'hôte.</li>
+        <li>Lecture IMU (pitch/roll) pour le déplacement du curseur ; zones d'écran pour les clics ; bouton central pour le scroll.</li>
+        <li>Intégration audio : fichiers WAV convertis en en-têtes C stockés en Flash (PROGMEM).</li>
+        <li>Code modulaire : <code>BleMouseModule</code>, <code>ImuDirectionModule</code>, <code>ButtonUI</code>.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficultés surmontées</h2>
+      <ul>
+        <li>Librairie BLE Mouse absente de l'index Arduino : installation et patch manuels d'un fork.</li>
+        <li>Contraintes mémoire de l'ESP32 : sons embarqués en Flash via PROGMEM.</li>
+        <li>Conversion des fichiers audio WAV en en-têtes C.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats</h2>
+      <p>Souris Bluetooth opérationnelle : déplacement par inclinaison, clics par zones tactiles, mode scroll et retours audio aux moments clés.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que ce projet démontre</h2>
+      <p>Programmation embarquée C++ sur ESP32, maîtrise du Bluetooth Low Energy (profil HID), exploitation de capteurs inertiels et gestion fine de la mémoire d'un microcontrôleur.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>C++ / Arduino</li>
+        <li>ESP32</li>
+        <li>M5Stack Core2</li>
+        <li>BLE HID</li>
+        <li>M5Unified</li>
+        <li>IMU</li>
+        <li>arduino-cli</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ressources</h2>
+      <div class="project-resources">
+        <a class="btn-link ghost" href="../project-archives/04_souris-ble-m5stack.ipynb" download>
+          Télécharger la synthèse (notebook Jupyter)
+        </a>
+      </div>
+      <p style="font-size:.85rem;color:var(--text-mut);margin-top:10px;">
+        Le code source complet est hébergé sur le GitLab interne de l'école et peut être présenté sur demande.
+      </p>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="data-mining-potabilite-eau.html">&larr; Classification de la potabilité de l'eau</a>
+      <a class="btn-link ghost" href="distributeur-automatique-java.html">Distributeur automatique — simulation Java &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

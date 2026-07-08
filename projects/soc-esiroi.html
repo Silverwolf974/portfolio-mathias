@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conception d'un SOC pour l'ESIROI — Mathias ALY BERIL</title>
+  <meta name="description" content="Conception de l'architecture complète d'un SOC : SIEM Wazuh, IDS Suricata, collecte de logs multi-sources et use cases de détection alignés MITRE ATT&CK." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="pp-theme pc-soc">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Conception d'un SOC pour l'ESIROI</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
+      <h1>Conception d'un SOC pour l'ESIROI</h1>
+      <p class="project-lead">Concevoir l'architecture complète d'un Security Operations Center pour l'infrastructure de l'école : collecte de logs, détection, corrélation, visualisation et procédures de réponse.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Projet principal de 4ᵉ année (ESIROI)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Groupe</span></div>
+        <div class="meta-item"><span class="meta-label">Période</span><span class="meta-value">2025 – 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Livrables</span><span class="meta-value">3 étapes (analyse, benchmark, architecture)</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>L'infrastructure de l'ESIROI (hyperviseur Proxmox, bastions SSH et HTTP, Gitea, DNS interne, pare-feu OPNsense) ne disposait pas de supervision de sécurité centralisée. Le projet consiste à concevoir un SOC adapté à ce périmètre : quelles sources de logs collecter, avec quels outils les analyser, et quelles menaces détecter en priorité.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Analyser les risques pesant sur l'infrastructure et prioriser les menaces.</li>
+        <li>Comparer les solutions SIEM / IDS du marché (benchmark) et justifier une stack.</li>
+        <li>Concevoir une architecture en couches : collecte, détection, corrélation, visualisation, réponse.</li>
+        <li>Formaliser des use cases de détection actionnables, alignés sur MITRE ATT&amp;CK.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture retenue</h2>
+      <p>Architecture en couches construite autour d'une stack open-source : <strong>Wazuh</strong> comme SIEM tout-en-un (Elasticsearch + Kibana intégrés, mapping MITRE ATT&amp;CK natif), <strong>Suricata</strong> en IDS/IPS, <strong>Prometheus + Grafana</strong> pour la supervision infrastructure, et une collecte multi-sources via agents Wazuh, Syslog (RFC 5424) et Filebeat. L'alerting combine les notifications natives Wazuh, l'e-mail et un webhook Discord scripté.</p>
+      <ul>
+        <li><strong>Sources couvertes</strong> : bastions SSH/HTTP, Gitea, DNS interne (Bind9), pare-feu OPNsense, hyperviseur Proxmox.</li>
+        <li><strong>Détection</strong> : 8 use cases prioritaires couvrant 17 techniques MITRE ATT&amp;CK (brute-force SSH, mouvements latéraux, exfiltration…).</li>
+        <li><strong>Réponse</strong> : alertes qualifiées et procédures manuelles documentées (pas de SOAR dans le périmètre).</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <ul>
+        <li>Étape 1 — analyse de l'existant et des risques sur l'infrastructure ESIROI.</li>
+        <li>Étape 2 — benchmark comparatif des solutions SIEM / IDS / supervision (rapport LaTeX).</li>
+        <li>Étape 3 — architecture détaillée : synoptique du SOC, inventaire des sources de logs, méthodes de collecte par machine, et rédaction des 8 use cases de détection (criticité, technique MITRE, sources de données, logique de détection).</li>
+        <li>Maquette d'environnement : déploiement d'OPNsense virtualisé via Docker Compose (KVM).</li>
+        <li>Présentations orales de chaque livrable devant un jury.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que ce projet démontre</h2>
+      <p>Démarche complète d'architecte sécurité : analyse de risque, choix d'outils justifiés par un benchmark, conception d'une collecte de logs réaliste et écriture de règles de détection exploitables par des analystes. C'est ce socle qui m'a mené vers mon stage de SOC Analyst.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Wazuh (SIEM)</li>
+        <li>Suricata (IDS/IPS)</li>
+        <li>MITRE ATT&amp;CK</li>
+        <li>Prometheus / Grafana</li>
+        <li>OPNsense</li>
+        <li>Proxmox</li>
+        <li>Syslog / Filebeat</li>
+        <li>Docker Compose</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note :</strong> Les rapports détaillés contiennent l'adressage réseau réel de l'école et ne sont pas publiés ici. Ils peuvent être présentés sur demande.</div>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="transmission-securisee-mqtt.html">Transmission sécurisée via MQTT &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

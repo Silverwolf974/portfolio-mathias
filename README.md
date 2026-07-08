@@ -23,17 +23,17 @@ Aucune étape de compilation : il suffit d'ouvrir `index.html`.
 
 ```text
 portfolio-mathias/
-├── index.html          # Page unique (hero, à propos, compétences, projets, parcours, CV, contact)
-├── style.css           # Thème sombre, accent cyan/bleu, responsive
-├── script.js           # Menu mobile, filtres projets, année dynamique
+├── index.html            # Page d'accueil (hero, à propos, projets, compétences, parcours, CV, contact)
+├── style.css             # Thème « Ocean Depths », responsive
+├── script.js             # Menu mobile, filtres projets, scroll-spy, année dynamique
 ├── README.md
-├── .nojekyll           # Sert les fichiers tels quels sur GitHub Pages
+├── .nojekyll             # Sert les fichiers tels quels sur GitHub Pages
+├── projects/             # Pages détaillées des projets (une par projet)
+├── project-archives/     # Synthèses Jupyter des projets (téléchargeables depuis les pages)
 ├── assets/
-│   ├── images/         # Diagrammes UML (projet Distributeur Java)
-│   ├── reports/        # Résultats / extraits techniques publiables
-│   ├── notebooks/      # Notebook Jupyter (projet Data Mining)
-│   └── cv/             # Emplacement du CV PDF (à ajouter)
-└── projet/             # Dépôts de projets du cursus (voir note ci-dessous)
+│   ├── images/           # Photo de profil
+│   └── cv/               # CV PDF (FR / EN)
+└── projet/               # Dépôts de projets du cursus, non versionnés (voir note ci-dessous)
 ```
 
 ## Lancer en local

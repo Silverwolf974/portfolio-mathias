@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forensique réseau — CTF — Mathias ALY BERIL</title>
+  <meta name="description" content="Investigation d'une capture réseau : détection d'une exfiltration de données par DNS et décodage automatisé des flags avec Python (dpkt) et PowerShell." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="pp-theme pc-ctf">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Forensique réseau — CTF</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span></div>
+      <h1>Forensique réseau — CTF</h1>
+      <p class="project-lead">Investigation d'une capture réseau dans le cadre d'un exercice de type CTF : identifier une exfiltration de données dissimulée dans du trafic DNS et automatiser le décodage des flags.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Exercice pratique — module cybersécurité</span></div>
+        <div class="meta-item"><span class="meta-label">Format</span><span class="meta-value">CTF / analyse forensique</span></div>
+        <div class="meta-item"><span class="meta-label">Outils</span><span class="meta-value">Wireshark, Python, PowerShell</span></div>
+        <div class="meta-item"><span class="meta-label">Statut</span><span class="meta-value">Flags récupérés</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>À partir d'une capture réseau (<code>.pcapng</code>), l'exercice consistait à retrouver des informations dissimulées dans le trafic. L'analyse s'appuyait aussi sur des rapports de menace réels (CERT-FR) pour ancrer la démarche dans un contexte professionnel.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Démarche d'investigation</h2>
+      <ul>
+        <li>Analyse exploratoire de la capture dans <strong>Wireshark</strong> : identification des protocoles, des conversations et des volumes anormaux.</li>
+        <li>Repérage d'un canal d'<strong>exfiltration DNS</strong> : des données encodées en hexadécimal dans les labels des requêtes vers un domaine contrôlé par l'attaquant.</li>
+        <li>Écriture d'un script <strong>Python avec dpkt</strong> parcourant la capture, extrayant les labels DNS, les décodant (hex → UTF-8) et exportant le tout en TSV horodaté.</li>
+        <li>Scripts <strong>PowerShell</strong> complémentaires pour le décodage d'autres flags et la reconstruction de fichiers.</li>
+        <li>Vérification et corrélation des résultats (fichiers reconstruits, flags validés).</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que ce projet démontre</h2>
+      <p>Réflexes d'analyste : lire une capture réseau, reconnaître un canal d'exfiltration discret, puis <strong>automatiser</strong> l'extraction plutôt que de décoder à la main. C'est exactement le type d'investigation menée en SOC lors d'une suspicion d'incident.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Wireshark</li>
+        <li>Python 3</li>
+        <li>dpkt</li>
+        <li>PowerShell</li>
+        <li>DNS</li>
+        <li>Rapports CERT-FR</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note :</strong> Exercice réalisé dans un cadre pédagogique, sur une capture fournie par l'enseignant. Les scripts peuvent être présentés sur demande.</div>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="soc-esiroi.html">Conception d'un SOC pour l'ESIROI &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

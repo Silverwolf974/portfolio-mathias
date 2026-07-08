@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transmission sécurisée de données via MQTT — Mathias ALY BERIL</title>
+  <meta name="description" content="Chiffrer des données environnementales de bout en bout (AES) et les relayer via un broker MQTT qui ne voit jamais le contenu en clair." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="pp-theme pc-mqtt">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Transmission sécurisée de données via…</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-dev">Développement</span></div>
+      <h1>Transmission sécurisée de données via MQTT</h1>
+      <p class="project-lead">Chiffrer des données environnementales de bout en bout (AES) et les relayer via un broker MQTT qui ne voit jamais le contenu en clair.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">SAE — projet académique (ESIROI)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Langage</span><span class="meta-value">Java 17</span></div>
+        <div class="meta-item"><span class="meta-label">Statut</span><span class="meta-value">Terminé, fonctionnel</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>Simuler la transmission de données environnementales (température, humidité) d'un équipement vers un poste « entreprise » via un broker MQTT, en garantissant la confidentialité des données, y compris vis-à-vis du broker lui-même.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Comprendre le modèle publish/subscribe de MQTT.</li>
+        <li>Implémenter un chiffrement bout-en-bout AES.</li>
+        <li>Appliquer une dérivation de clé robuste (PBKDF2) à partir d'un secret partagé.</li>
+        <li>Structurer une application Java modulaire et isoler la configuration.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture et fonctionnement</h2>
+      <p>Trois machines virtuelles Ubuntu sur un même réseau local : émetteur (équipement), récepteur (entreprise) et broker Mosquitto. La clé AES est dérivée d'un identifiant partagé via PBKDF2 ; le topic MQTT est dérivé par SHA-256. L'émetteur chiffre un message JSON et le publie ; le récepteur, abonné au même topic, déchiffre et affiche. Le broker ne manipule que du chiffré. L'adresse du broker est externalisée dans un fichier de configuration.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <ul>
+        <li>Mise en place d'un broker Mosquitto local et validation de la chaîne publish/subscribe.</li>
+        <li>Classes Java : <code>CryptoUtils</code> (dérivation + chiffrement), <code>ClientPublisher</code>, <code>ClientSubscriber</code>.</li>
+        <li>Chiffrement AES-CBC des messages JSON avant publication.</li>
+        <li>Topic dérivé du secret partagé (cloisonnement des échanges).</li>
+        <li>Externalisation de la configuration réseau.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats</h2>
+      <p>Chaîne complète fonctionnelle : message chiffré côté équipement, relayé sans être lisible par le broker, déchiffré et affiché côté entreprise. Objectif de confidentialité bout-en-bout atteint dans le périmètre du projet.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que ce projet démontre</h2>
+      <p>Cryptographie appliquée (AES, PBKDF2, SHA-256), maîtrise du protocole MQTT, développement Java structuré et administration Linux en réseau local.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Java 17</li>
+        <li>Eclipse Paho MQTT</li>
+        <li>Mosquitto</li>
+        <li>AES-CBC</li>
+        <li>PBKDF2-HMAC-SHA256</li>
+        <li>SHA-256</li>
+        <li>Ubuntu Server</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note :</strong> Le rapport détaillé mentionne des adresses réseau de l'environnement de test ; elles ne sont pas publiées ici. Code source hébergé sur le GitLab interne de l'école, disponible sur demande.</div>
+    </section>
+
+    <section class="project-section">
+      <h2>Ressources</h2>
+      <div class="project-resources">
+        <a class="btn-link ghost" href="../project-archives/01_transmission-securisee-mqtt.ipynb" download>
+          Télécharger la synthèse (notebook Jupyter)
+        </a>
+      </div>
+      <p style="font-size:.85rem;color:var(--text-mut);margin-top:10px;">
+        Le code source complet est hébergé sur le GitLab interne de l'école et peut être présenté sur demande.
+      </p>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="supervision-infrastructure-grafana.html">Supervision d'infrastructure avec Grafana &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

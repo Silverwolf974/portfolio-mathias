@@ -457,3 +457,406 @@ a { color: inherit; text-decoration: none; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .hero-text > *, .hero-visual { opacity: 1 !important; }
 }
+
+/* ===========================================================
+   V6 — Cartes projets liées + badge Prototype
+   =========================================================== */
+.chip-proto { color: var(--text-mut); border-color: var(--text-mut); background: rgba(148, 163, 184, .1); }
+.project-links { margin-top: 2px; }
+
+/* --- Nav simplifiée des pages projets : toujours visible, y compris mobile --- */
+.nav-links-static { position: static !important; flex-direction: row !important; max-height: none !important;
+  overflow: visible !important; background: none !important; border: 0 !important; gap: 18px !important; }
+.nav-links-static li { width: auto !important; border: 0 !important; }
+.nav-links-static a { padding: 0 !important; display: inline !important; }
+.nav-links-static .nav-cta { border: 1px solid var(--accent) !important; border-radius: 999px !important; padding: 7px 16px !important; }
+
+/* ===========================================================
+   V7 — Cyber FX : fond animé, identités par projet, tilt 3D,
+   scanlines, glitch, cascades, barre de progression
+   =========================================================== */
+
+/* --- Fond : grille cyber statique + halos + particules (toutes pages).
+       La grille ne bouge plus (repaint plein écran trop coûteux) ; les
+       particules dérivent via transform, composité par le GPU. --- */
+body::before {
+  content: ""; position: fixed; inset: 0;
+  z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-line, rgba(56, 189, 248, .09)) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line, rgba(56, 189, 248, .09)) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 0%, #000 25%, transparent 78%);
+  mask-image: radial-gradient(ellipse 95% 80% at 50% 0%, #000 25%, transparent 78%);
+}
+
+body::after {
+  content: ""; position: fixed; inset: -12%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(360px 360px at 18% 22%, var(--orb-a, rgba(56, 189, 248, .14)), transparent 70%),
+    radial-gradient(460px 460px at 84% 64%, rgba(139, 92, 246, .13), transparent 70%),
+    radial-gradient(330px 330px at 58% 108%, rgba(45, 212, 191, .10), transparent 70%);
+  animation: orb-drift 16s ease-in-out infinite alternate;
+}
+@keyframes orb-drift { to { transform: translate(4%, 5%) scale(1.09); } }
+
+/* Particules qui dérivent lentement en diagonale (transform seamless) */
+html::before {
+  content: ""; position: fixed; top: -340px; right: -340px; bottom: 0; left: 0;
+  z-index: -1; pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 40px 62px, rgba(125, 211, 252, .55), transparent 55%),
+    radial-gradient(1.5px 1.5px at 168px 124px, rgba(167, 139, 250, .5), transparent 55%),
+    radial-gradient(1px 1px at 252px 40px, rgba(148, 163, 184, .5), transparent 55%),
+    radial-gradient(1.5px 1.5px at 92px 210px, rgba(94, 234, 212, .45), transparent 55%),
+    radial-gradient(1px 1px at 300px 178px, rgba(125, 211, 252, .4), transparent 55%),
+    radial-gradient(1.5px 1.5px at 210px 268px, rgba(244, 114, 182, .35), transparent 55%);
+  background-size: 340px 340px;
+  animation: stars-drift 80s linear infinite;
+}
+@keyframes stars-drift { to { transform: translate(-340px, 340px); } }
+
+/* --- Barre de progression de lecture (créée en JS) --- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 120;
+  transform: scaleX(0); transform-origin: 0 50%; pointer-events: none;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #f472b6);
+  box-shadow: 0 0 8px rgba(56, 189, 248, .5);
+}
+
+/* --- Hero : curseur terminal + glitch léger au survol du nom --- */
+.hero-eyebrow::after {
+  content: "▌"; margin-left: 6px; color: var(--accent);
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }
+
+.hero-name:hover {
+  animation: glitch-shift .72s steps(2, jump-none) infinite;
+  text-shadow: 2px 0 rgba(56, 189, 248, .75), -2px 0 rgba(244, 114, 182, .65);
+}
+@keyframes glitch-shift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(1.5px, -1px); }
+  50% { transform: translate(-1.5px, 1px); }
+  75% { transform: translate(1px, 1.5px); }
+}
+
+/* --- Nav : soulignement animé --- */
+@media (min-width: 761px) {
+  .nav-links a:not(.nav-cta) { position: relative; }
+  .nav-links a:not(.nav-cta)::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+    border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+  }
+  .nav-links a:not(.nav-cta):hover::after,
+  .nav-links a.active:not(.nav-cta)::after { transform: scaleX(1); }
+}
+
+/* --- Boutons : lueur néon douce --- */
+.btn-primary { box-shadow: 0 0 18px rgba(56, 189, 248, .28); }
+.btn-primary:hover { box-shadow: 0 0 28px rgba(56, 189, 248, .45); }
+.section-index { text-shadow: 0 0 14px rgba(56, 189, 248, .55); }
+
+/* --- Identités par projet : couleur, fond de vignette, lueur --- */
+.project-card { --pc: var(--accent); --pc-glow: rgba(56, 189, 248, .3); --pc-soft: rgba(56, 189, 248, .12); position: relative; }
+.pc-mqtt  { --pc: #38bdf8; --pc-glow: rgba(56, 189, 248, .32);  --pc-soft: rgba(56, 189, 248, .12);  --pc-bg1: #0b2a44; --pc-bg2: #0e3a5c; }
+.pc-super { --pc: #fb923c; --pc-glow: rgba(251, 146, 60, .30);  --pc-soft: rgba(251, 146, 60, .12);  --pc-bg1: #2b1a08; --pc-bg2: #43290e; }
+.pc-eau   { --pc: #2dd4bf; --pc-glow: rgba(45, 212, 191, .30);  --pc-soft: rgba(45, 212, 191, .12);  --pc-bg1: #06302c; --pc-bg2: #0d4a44; }
+.pc-ble   { --pc: #4ade80; --pc-glow: rgba(74, 222, 128, .28);  --pc-soft: rgba(74, 222, 128, .12);  --pc-bg1: #0a2e18; --pc-bg2: #124424; }
+.pc-java  { --pc: #a78bfa; --pc-glow: rgba(167, 139, 250, .32); --pc-soft: rgba(167, 139, 250, .12); --pc-bg1: #1f1b4a; --pc-bg2: #2b2668; }
+.pc-velib { --pc: #f472b6; --pc-glow: rgba(244, 114, 182, .30); --pc-soft: rgba(244, 114, 182, .12); --pc-bg1: #3a102e; --pc-bg2: #521a41; }
+.pc-soc   { --pc: #60a5fa; --pc-glow: rgba(96, 165, 250, .32);  --pc-soft: rgba(96, 165, 250, .12);  --pc-bg1: #0a1f3d; --pc-bg2: #123362; }
+.pc-rps   { --pc: #facc15; --pc-glow: rgba(250, 204, 21, .26);  --pc-soft: rgba(250, 204, 21, .12);  --pc-bg1: #2e2606; --pc-bg2: #48390a; }
+.pc-ctf   { --pc: #f87171; --pc-glow: rgba(248, 113, 113, .30); --pc-soft: rgba(248, 113, 113, .12); --pc-bg1: #3a0d12; --pc-bg2: #57161c; }
+
+/* Liseré lumineux en haut de chaque carte, aux couleurs du projet */
+.project-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 3;
+  background: linear-gradient(90deg, transparent, var(--pc), transparent); opacity: .75;
+}
+.project-card:hover {
+  border-color: var(--pc);
+  box-shadow: 0 18px 44px rgba(2, 8, 20, .5), 0 0 26px var(--pc-glow);
+}
+.project-title a:hover { color: var(--pc); }
+.project-card .btn-link.ghost { color: var(--pc); border-color: var(--pc); }
+.project-card .btn-link.ghost:hover { background: var(--pc-soft); }
+
+/* Vignette : fond du projet + scanlines + balayage lumineux au survol */
+.project-thumb { height: 136px; overflow: hidden; background: linear-gradient(135deg, var(--pc-bg1, #0c2740), var(--pc-bg2, #123a5a)); }
+.project-thumb .scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+.project-thumb::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 2;
+  background: repeating-linear-gradient(0deg, rgba(4, 10, 20, .22) 0 1px, transparent 1px 3px);
+}
+.project-thumb::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -40px; height: 34px; z-index: 2;
+  background: linear-gradient(180deg, transparent, var(--pc-glow), transparent);
+  opacity: 0; pointer-events: none;
+}
+.project-card:hover .project-thumb::before { opacity: 1; animation: scan-sweep 1.6s ease-in-out infinite; }
+@keyframes scan-sweep { to { transform: translateY(210px); } }
+
+/* Reflet lumineux qui suit le curseur (tilt 3D, variables posées en JS) */
+.project-card::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  opacity: 0; transition: opacity .3s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .09), transparent 55%);
+}
+.project-card:hover::after { opacity: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .project-card { transition: border-color .25s, box-shadow .25s; }
+  .project-card:hover { transform: none; } /* le tilt JS pilote la transformation */
+}
+
+/* --- Animations des scènes SVG des vignettes --- */
+/* MQTT : paquets chiffrés qui circulent */
+.fx-pkt { opacity: 0; }
+.fx-pkt-a { animation: pkt-a 2.6s linear infinite; }
+.fx-pkt-b { animation: pkt-b 2.6s linear infinite 1.3s; }
+@keyframes pkt-a { 0% { transform: translateX(14px); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateX(124px); opacity: 0; } }
+@keyframes pkt-b { 0% { transform: translateX(196px); opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateX(306px); opacity: 0; } }
+
+/* Supervision : courbe qui se trace, barres qui respirent, alerte */
+.fx-chart { stroke-dasharray: 300; animation: chart-draw 4.5s ease-in-out infinite alternate; }
+@keyframes chart-draw { from { stroke-dashoffset: 300; } 60%, 100% { stroke-dashoffset: 0; } }
+.fx-alert { animation: alert-blink 1.6s ease-in-out infinite; }
+@keyframes alert-blink { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+.fx-bar { transform-box: fill-box; transform-origin: 50% 100%; animation: bar-pulse 2.8s ease-in-out infinite; }
+.fx-b2 { animation-delay: .4s; } .fx-b3 { animation-delay: .8s; } .fx-b4 { animation-delay: 1.2s; }
+@keyframes bar-pulse { 0%, 100% { transform: scaleY(.72); } 50% { transform: scaleY(1); } }
+
+/* Eau : vagues qui glissent, bulles qui remontent */
+.fx-w1 { animation: wave-slide 9s linear infinite; }
+.fx-w2 { animation: wave-slide-r 13s linear infinite; }
+@keyframes wave-slide { to { transform: translateX(160px); } }
+@keyframes wave-slide-r { to { transform: translateX(-160px); } }
+.fx-bubble { animation: bubble-up 3.4s ease-in infinite; opacity: 0; }
+.fx-bb2 { animation-delay: 1.1s; } .fx-bb3 { animation-delay: 2.2s; }
+@keyframes bubble-up { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 85% { opacity: .9; } 100% { transform: translateY(-34px); opacity: 0; } }
+
+/* Embarqué : nœuds du circuit qui clignotent, onde BLE */
+.fx-node { animation: node-blip 2.4s ease-in-out infinite; }
+.fx-n2 { animation-delay: .4s; } .fx-n3 { animation-delay: .8s; }
+.fx-n4 { animation-delay: 1.2s; } .fx-n5 { animation-delay: 1.6s; } .fx-n6 { animation-delay: 2s; }
+@keyframes node-blip { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+.fx-ring { transform-box: fill-box; transform-origin: 50% 50%; animation: ring-ping 2.6s ease-out infinite; }
+@keyframes ring-ping { 0% { transform: scale(.75); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
+
+/* Java : casiers qui s'allument tour à tour, pièce qui tombe */
+.fx-slot { animation: slot-glow 2.7s linear infinite; }
+.fx-s2 { animation-delay: .3s; } .fx-s3 { animation-delay: .6s; }
+.fx-s4 { animation-delay: .9s; } .fx-s5 { animation-delay: 1.2s; } .fx-s6 { animation-delay: 1.5s; }
+.fx-s7 { animation-delay: 1.8s; } .fx-s8 { animation-delay: 2.1s; } .fx-s9 { animation-delay: 2.4s; }
+@keyframes slot-glow { 0%, 20%, 100% { opacity: .45; } 8% { opacity: 1; } }
+.fx-coin { animation: coin-drop 2.8s cubic-bezier(.5, 0, .8, .4) infinite; }
+@keyframes coin-drop { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 1; } 70% { opacity: 1; } 100% { transform: translateY(76px); opacity: 0; } }
+
+/* SOC : balayage radar, échos détectés */
+.fx-sweep { transform-box: fill-box; transform-origin: 0% 100%; animation: sweep-spin 4s linear infinite; }
+@keyframes sweep-spin { to { transform: rotate(360deg); } }
+.fx-blip { animation: blip-ping 4s ease-out infinite; opacity: 0; }
+.fx-bp1 { animation-delay: .6s; } .fx-bp2 { animation-delay: 2.4s; } .fx-bp3 { animation-delay: 3.2s; }
+@keyframes blip-ping { 0%, 4% { opacity: 0; } 8% { opacity: 1; } 55% { opacity: .25; } 100% { opacity: 0; } }
+
+/* IA gestes : synapses qui pulsent, sorties qui s'activent tour à tour */
+.fx-syn { animation: syn-pulse 2.4s ease-in-out infinite; }
+.fx-sy2 { animation-delay: .3s; } .fx-sy3 { animation-delay: .6s; }
+@keyframes syn-pulse { 0%, 100% { opacity: .3; } 50% { opacity: 1; } }
+.fx-out { animation: out-fire 3.6s ease-in-out infinite; }
+.fx-o2 { animation-delay: 1.2s; } .fx-o3 { animation-delay: 2.4s; }
+@keyframes out-fire { 0%, 25%, 100% { fill-opacity: .15; stroke-opacity: .5; } 10% { fill-opacity: .85; stroke-opacity: 1; } }
+.fx-lens { animation: lens-blink 2.4s ease-in-out infinite; }
+@keyframes lens-blink { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+
+/* Forensique : ligne scannée dans le dump, loupe qui inspecte, flag trouvé */
+.fx-scanrow { animation: scanrow-move 4.2s steps(6) infinite; }
+@keyframes scanrow-move { 0% { transform: translateY(-32px); } 100% { transform: translateY(64px); } }
+.fx-loupe { transform-box: fill-box; transform-origin: 50% 50%; animation: loupe-look 5s ease-in-out infinite; }
+@keyframes loupe-look {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-8px, -6px); }
+  55% { transform: translate(4px, 8px); }
+  80% { transform: translate(-3px, 2px); }
+}
+.fx-flag { animation: flag-found 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes flag-found { 0%, 55% { opacity: 0; transform: scale(.6); } 65%, 90% { opacity: 1; transform: scale(1); } 100% { opacity: 0; } }
+
+/* Vélib' : roue qui tourne, donnée qui voyage vers le graphe */
+.fx-wheel { transform-box: fill-box; transform-origin: 50% 50%; animation: wheel-spin 9s linear infinite; }
+@keyframes wheel-spin { to { transform: rotate(360deg); } }
+.fx-data { animation: data-run 2.2s ease-in-out infinite; opacity: 0; }
+@keyframes data-run { 0% { transform: translateX(96px); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(140px); opacity: 0; } }
+
+/* Perf : les scènes SVG ne s'animent que quand leur carte est visible
+   (classe .live posée en JS via IntersectionObserver) */
+.projects-grid .scene * { animation-play-state: paused; }
+.project-card.live .scene * { animation-play-state: running; }
+
+/* --- Cartes compétences : accent par domaine --- */
+.skill-card { --pc: var(--accent); }
+.skill-card:nth-child(1) { --pc: #a78bfa; }  /* Développement */
+.skill-card:nth-child(2) { --pc: #2dd4bf; }  /* Data / IA */
+.skill-card:nth-child(3) { --pc: #38bdf8; }  /* Cybersécurité */
+.skill-card:nth-child(4) { --pc: #60a5fa; }  /* Systèmes & réseaux */
+.skill-card:nth-child(5) { --pc: #f472b6; }  /* Bases de données */
+.skill-card:nth-child(6) { --pc: #4ade80; }  /* Embarqué / IoT */
+.skill-card { border-top: 2px solid color-mix(in srgb, var(--pc) 55%, transparent); }
+.skill-head .ic { color: var(--pc); }
+.skill-card:hover { border-color: var(--pc); box-shadow: 0 8px 26px rgba(2, 8, 20, .4), 0 0 18px color-mix(in srgb, var(--pc) 22%, transparent); }
+
+/* --- Badge « en cours » (stage actuel) --- */
+.badge-now {
+  display: inline-block; font-family: var(--mono); font-size: .64rem; font-weight: 600;
+  color: #4ade80; background: rgba(74, 222, 128, .12); border: 1px solid rgba(74, 222, 128, .5);
+  border-radius: 999px; padding: 2px 9px; margin-left: 8px; vertical-align: 2px;
+  letter-spacing: .4px; text-transform: uppercase;
+  animation: now-pulse 2.2s ease-in-out infinite;
+}
+@keyframes now-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, .3); }
+  50% { box-shadow: 0 0 10px 2px rgba(74, 222, 128, .16); }
+}
+
+/* --- Timeline : pulsation limitée au premier point (perf + sobriété) --- */
+.timeline-item:first-child .timeline-dot { animation: dot-ping 2.6s ease-out infinite; }
+@keyframes dot-ping {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, .4); }
+  70%, 100% { box-shadow: 0 0 0 11px rgba(56, 189, 248, 0); }
+}
+
+/* --- Révélation en cascade (classes posées en JS) --- */
+.stagger > * { opacity: 0; }
+.stagger.in > * {
+  opacity: 1;
+  animation: stag-in .55s cubic-bezier(.2, .7, .3, 1) backwards;
+  animation-delay: var(--d, 0s);
+}
+@keyframes stag-in { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: none; } }
+
+/* --- Filtres : apparition des cartes filtrées --- */
+.project-card.pop { animation: card-pop .38s ease backwards; }
+@keyframes card-pop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+
+/* ===========================================================
+   V8 — Scroll FX : header réactif, décodage des titres,
+   timeline dessinée, parallaxe, indicateur & anneau de scroll
+   =========================================================== */
+
+/* --- Header qui réagit au scroll --- */
+.site-header { transition: box-shadow .3s ease, background .3s ease; }
+.site-header.scrolled {
+  background: rgba(11, 17, 32, .9);
+  box-shadow: 0 6px 24px rgba(2, 8, 20, .45), 0 1px 0 rgba(56, 189, 248, .2);
+}
+
+/* --- Indicateur de scroll (souris) en bas du hero --- */
+.scroll-hint {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  opacity: .7; transition: opacity .4s ease; z-index: 3;
+}
+.scroll-hint.hide { opacity: 0; pointer-events: none; }
+.scroll-hint .mouse {
+  display: block; width: 25px; height: 40px; position: relative;
+  border: 2px solid var(--text-mut); border-radius: 13px; transition: border-color .25s;
+}
+.scroll-hint:hover .mouse { border-color: var(--accent); }
+.scroll-hint .wheel {
+  position: absolute; left: 50%; top: 7px; width: 4px; height: 8px; margin-left: -2px;
+  border-radius: 2px; background: var(--accent);
+  animation: wheel-drop 1.6s ease-in-out infinite;
+}
+@keyframes wheel-drop {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(13px); opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (max-width: 880px) { .scroll-hint { display: none; } }
+
+/* --- Soulignement des titres de section, tracé au reveal --- */
+.section-title { position: relative; padding-bottom: 4px; }
+.section-title::after {
+  content: ""; position: absolute; left: 0; bottom: -3px; width: 130px; height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .9s cubic-bezier(.2, .7, .3, 1) .15s;
+}
+.reveal.in .section-title::after { transform: scaleX(1); }
+
+/* --- Timeline : ligne qui se dessine, étapes qui glissent (classes JS) --- */
+.tl-anim::before { transform: scaleY(0); transform-origin: top; transition: transform 1.1s ease .1s; }
+.tl-anim.in::before { transform: scaleY(1); }
+.tl-anim .timeline-item {
+  opacity: 0; transform: translateX(-18px);
+  transition: opacity .5s ease, transform .5s ease;
+  transition-delay: calc(var(--i, 0) * .16s);
+}
+.tl-anim.in .timeline-item { opacity: 1; transform: none; }
+.tl-anim .timeline-dot { transform: scale(0); transition: transform .35s ease; transition-delay: calc(var(--i, 0) * .16s + .2s); }
+.tl-anim.in .timeline-dot { transform: scale(1); }
+
+/* --- Bouton retour-en-haut : anneau de progression de lecture --- */
+.to-top { overflow: visible; }
+.to-top .ring {
+  position: absolute; inset: -5px; width: 56px; height: 56px;
+  transform: rotate(-90deg); pointer-events: none;
+}
+.to-top .ring circle { fill: none; stroke: rgba(56, 189, 248, .22); stroke-width: 2.5; }
+.to-top .ring .ring-val { stroke: #38bdf8; stroke-dasharray: 163.4; stroke-dashoffset: 163.4; stroke-linecap: round; }
+
+/* --- Micro-interactions : icônes qui réagissent au survol des cartes --- */
+.skill-head .ic, .curr-card .ic, .contact-card .ic { transition: transform .3s ease; }
+.skill-card:hover .skill-head .ic,
+.curr-card:hover .ic,
+.contact-card:hover .ic { transform: scale(1.18) rotate(-8deg); }
+
+/* ===========================================================
+   V9 — Pages projets thématisées : chaque page reprend la
+   couleur et la DA de sa carte (classe pp-theme + pc-* sur body)
+   =========================================================== */
+.pp-theme { --grid-line: var(--pc-soft); --orb-a: var(--pc-soft); }
+.pp-theme .brand span { color: var(--pc); }
+.pp-theme .breadcrumb a { color: var(--pc); }
+.pp-theme .nav-links-static .nav-cta { border-color: var(--pc) !important; color: var(--pc) !important; }
+.pp-theme .nav-links-static .nav-cta:hover { background: var(--pc-soft); }
+
+/* Bannière hero aux couleurs de la carte (gradient + liseré + scanlines) */
+.pp-theme .project-hero {
+  background: linear-gradient(135deg, var(--pc-bg1), var(--pc-bg2));
+  border: 1px solid var(--pc-glow);
+  border-radius: 16px; padding: 26px 28px 30px; margin-top: 18px;
+  position: relative; overflow: hidden;
+}
+.pp-theme .project-hero::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pc), transparent); opacity: .85;
+}
+.pp-theme .project-hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(4, 10, 20, .14) 0 1px, transparent 1px 3px);
+}
+.pp-theme .project-hero > * { position: relative; z-index: 1; }
+.pp-theme .project-hero h1 { text-shadow: 0 0 26px var(--pc-glow); }
+.pp-theme .project-meta .meta-item { background: rgba(15, 23, 42, .5); border-color: var(--pc-glow); }
+.pp-theme .project-meta .meta-label { color: var(--pc); opacity: .85; }
+
+/* Accents de contenu */
+.pp-theme .project-section h2::before { background: var(--pc); box-shadow: 0 0 10px var(--pc-glow); }
+.pp-theme .project-section code { color: var(--pc); }
+.pp-theme .note-box { border-left-color: var(--pc); }
+.pp-theme .tech-badges li { transition: border-color .2s, color .2s, transform .2s; }
+.pp-theme .tech-badges li:hover { border-color: var(--pc); color: var(--pc); transform: translateY(-2px); }
+.pp-theme .btn-link.ghost { color: var(--pc); border-color: var(--pc); }
+.pp-theme .btn-link.ghost:hover { background: var(--pc-soft); }
+
+/* --- Accessibilité : le bloc prefers-reduced-motion global (plus haut)
+       neutralise déjà toutes ces animations ; on fige aussi le fond. --- */
+@media (prefers-reduced-motion: reduce) {
+  body::before, body::after { animation: none !important; }
+  .stagger > * { opacity: 1 !important; }
+  .fx-bubble { opacity: 1 !important; }
+  .fx-pkt, .fx-data { opacity: 0 !important; } /* positionnés par transform animée */
+}

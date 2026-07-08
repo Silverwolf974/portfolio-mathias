@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA de reconnaissance de gestes (webcam) — Mathias ALY BERIL</title>
+  <meta name="description" content="Système de deep learning reconnaissant les gestes pierre-feuille-ciseaux en temps réel via webcam : CNN, transfer learning et démo interactive." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body class="pp-theme pc-rps">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>IA de reconnaissance de gestes</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-dev">Développement</span></div>
+      <h1>IA de reconnaissance de gestes (webcam)</h1>
+      <p class="project-lead">Un système de deep learning capable de reconnaître les gestes du jeu pierre-feuille-ciseaux à partir d'images capturées par une webcam, en temps réel.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Data challenge — module IA (ESIROI)</span></div>
+        <div class="meta-item"><span class="meta-label">Langage</span><span class="meta-value">Python</span></div>
+        <div class="meta-item"><span class="meta-label">Domaine</span><span class="meta-value">Vision par ordinateur</span></div>
+        <div class="meta-item"><span class="meta-label">Dataset</span><span class="meta-value">Rock Paper Scissors (TensorFlow Datasets)</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>Dans le cadre du module d'intelligence artificielle, l'objectif était de construire un pipeline complet de vision par ordinateur : l'utilisateur effectue un geste devant la caméra et le modèle prédit automatiquement <strong>pierre</strong>, <strong>feuille</strong> ou <strong>ciseaux</strong>.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Construire un système de classification d'images de bout en bout.</li>
+        <li>Entraîner un modèle CNN performant (avec transfer learning).</li>
+        <li>Analyser les performances du modèle et ses limites.</li>
+        <li>Implémenter une démonstration interactive en temps réel avec webcam.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Pipeline</h2>
+      <p>Le projet suit un pipeline classique de vision par ordinateur : capture d'image (webcam), preprocessing (redimensionnement, normalisation), classification par un CNN entraîné par transfer learning, puis affichage du geste prédit en direct.</p>
+      <ul>
+        <li><strong>Données</strong> : dataset Rock Paper Scissors de TensorFlow Datasets, complété et prétraité (<code>data/raw</code> → <code>data/processed</code>).</li>
+        <li><strong>Exploration &amp; entraînement</strong> : notebooks Jupyter dédiés à l'analyse du dataset et à l'entraînement des modèles.</li>
+        <li><strong>Structure projet</strong> : séparation claire <code>src</code> / <code>models</code> / <code>demo</code> / <code>report</code>, pour un code réutilisable.</li>
+        <li><strong>Démo temps réel</strong> : capture webcam avec OpenCV et prédiction affichée en direct.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que ce projet démontre</h2>
+      <p>Maîtrise de la chaîne complète d'un projet de deep learning : préparation des données, entraînement et évaluation d'un CNN, transfer learning, et surtout passage du notebook à une démonstration temps réel utilisable — l'étape qui manque souvent aux projets académiques.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Python</li>
+        <li>TensorFlow / Keras</li>
+        <li>CNN / Transfer learning</li>
+        <li>OpenCV</li>
+        <li>NumPy</li>
+        <li>Jupyter</li>
+      </ul>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="forensique-reseau-ctf.html">Forensique réseau — CTF &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
