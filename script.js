@@ -5,6 +5,50 @@
 (function () {
   "use strict";
 
+  // ===========================================================
+  // GSAP + Lenis : moteur d'animation et défilement fluide.
+  // Lenis est piloté par le ticker GSAP (une seule boucle rAF),
+  // et n'est activé que si l'utilisateur accepte les animations
+  // (gsap.matchMedia + prefers-reduced-motion).
+  // ===========================================================
+  var hasGsap = typeof window.gsap !== "undefined";
+  var lenis = null;
+
+  if (hasGsap && typeof window.ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  if (hasGsap && typeof window.Lenis !== "undefined") {
+    gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", function () {
+      lenis = new Lenis({
+        duration: 1.1,
+        smoothWheel: true
+      });
+      if (window.ScrollTrigger) lenis.on("scroll", ScrollTrigger.update);
+
+      function lenisRaf(time) { lenis.raf(time * 1000); }
+      gsap.ticker.add(lenisRaf);
+      gsap.ticker.lagSmoothing(0);
+
+      // Nettoyage si la préférence de mouvement change en cours de session
+      return function () {
+        gsap.ticker.remove(lenisRaf);
+        lenis.destroy();
+        lenis = null;
+      };
+    });
+  }
+
+  // Ancres internes : défilement fluide via Lenis (fallback natif sinon)
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link || !lenis) return;
+    var target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+    e.preventDefault();
+    lenis.scrollTo(target, { offset: -70 });
+  });
+
   // --- Année dynamique dans le footer ---
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -76,103 +120,16 @@
   onScroll();
 
   toTop.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (lenis) lenis.scrollTo(0);
+    else window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // --- Révélation au défilement (IntersectionObserver) ---
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var revealEls = document.querySelectorAll(".reveal");
+  // --- Révélations au scroll, cascades, timeline, parallaxe : désormais
+  //     gérées par GSAP + ScrollTrigger (voir l'initialisation plus haut).
 
-  // Effet « décodage » du titre de section (façon terminal)
-  function decodeTitle(section) {
-    var title = section.querySelector(".section-title");
-    if (!title || title.dataset.decoded) return;
-    title.dataset.decoded = "1";
-    var node = title.lastChild;
-    if (!node || node.nodeType !== 3) return;
-    var finalText = node.textContent;
-    var glyphs = "▓▒░<>/\\|=+*#";
-    var frame = 0, total = 18;
-    (function tick() {
-      frame++;
-      var keep = Math.floor((finalText.length * frame) / total);
-      var out = finalText.slice(0, keep);
-      for (var i = keep; i < finalText.length; i++) {
-        out += finalText[i] === " " ? " " : glyphs[Math.floor(Math.random() * glyphs.length)];
-      }
-      node.textContent = out;
-      if (frame < total) requestAnimationFrame(tick);
-      else node.textContent = finalText;
-    })();
-  }
-
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    revealEls.forEach(function (el) { el.classList.add("in"); });
-  } else {
-    var revObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          decodeTitle(entry.target);
-          revObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    revealEls.forEach(function (el) { revObs.observe(el); });
-  }
-
-  // --- Révélation en cascade des grilles de cartes ---
-  var staggerGrids = document.querySelectorAll(
-    ".projects-grid, .skills-grid, .curriculum-grid, .cards-grid, .contact-grid, .soft-tags"
-  );
-  if (!reduceMotion && "IntersectionObserver" in window && staggerGrids.length) {
-    var stagObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var grid = entry.target;
-          grid.classList.add("in");
-          stagObs.unobserve(grid);
-          // Une fois la cascade jouée, on retire les classes pour ne pas
-          // interférer avec les filtres et le tilt 3D.
-          setTimeout(function () {
-            grid.classList.remove("stagger", "in");
-          }, grid.children.length * 70 + 700);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
-    staggerGrids.forEach(function (grid) {
-      Array.prototype.forEach.call(grid.children, function (child, i) {
-        child.style.setProperty("--d", (i * 70) + "ms");
-      });
-      grid.classList.add("stagger");
-      stagObs.observe(grid);
-    });
-  }
-
-  // --- Timeline : ligne dessinée + étapes en cascade ---
-  var timelines = document.querySelectorAll(".timeline");
-  if (!reduceMotion && "IntersectionObserver" in window && timelines.length) {
-    var tlObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          tlObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    timelines.forEach(function (tl) {
-      Array.prototype.forEach.call(tl.querySelectorAll(".timeline-item"), function (item, i) {
-        item.style.setProperty("--i", i);
-      });
-      tl.classList.add("tl-anim");
-      tlObs.observe(tl);
-    });
-  }
-
-  // --- Effets liés au scroll : header, indicateur, parallaxe, anneau ---
+  // --- Effets liés au scroll : header, indicateur, anneau ---
   var header = document.querySelector(".site-header");
   var scrollHint = document.querySelector(".scroll-hint");
-  var heroPhoto = document.querySelector(".hero-photo");
   var ringVal = toTop.querySelector(".ring-val");
   var RING_LEN = 163.4;
   var fxTicking = false;
@@ -182,9 +139,6 @@
     var y = window.scrollY;
     if (header) header.classList.toggle("scrolled", y > 10);
     if (scrollHint) scrollHint.classList.toggle("hide", y > 90);
-    if (heroPhoto && !reduceMotion && y < 900) {
-      heroPhoto.style.transform = "translateY(" + (y * 0.1).toFixed(1) + "px)";
-    }
     if (ringVal) {
       var doc = document.documentElement;
       var max = doc.scrollHeight - doc.clientHeight;

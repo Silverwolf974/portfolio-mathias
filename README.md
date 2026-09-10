@@ -1,6 +1,6 @@
 # Portfolio — Mathias ALY BERIL
 
-Portfolio personnel de Mathias ALY BERIL, étudiant ingénieur en informatique à l'ESIROI
+Portfolio personnel de Mathias ALY BERIL, étudiant ingénieur en informatique en 5ᵉ année à l'ESIROI
 (Université de La Réunion) : projets, compétences et parcours en développement logiciel,
 cybersécurité, data/IA, systèmes & réseaux et embarqué.
 

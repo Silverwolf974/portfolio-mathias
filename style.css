@@ -30,7 +30,14 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+/* Le défilement fluide est géré par Lenis (script.js) ; scroll-padding
+   reste utile pour le fallback natif des ancres. */
+html { scroll-padding-top: 80px; }
+
+/* Réglages recommandés par Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
 
 body {
   font-family: var(--font);
@@ -397,14 +404,10 @@ a { color: inherit; text-decoration: none; }
 /* --- Nav : lien actif (scroll-spy) --- */
 .nav-links a.active { color: var(--accent); }
 
-/* --- Révélation au défilement --- */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* --- Révélations au défilement : gérées par GSAP/ScrollTrigger (script.js) --- */
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
   .hero-ring, .hero-blob { animation: none; }
-  html { scroll-behavior: auto; }
 }
 
 /* --- Responsive V3 --- */
@@ -454,7 +457,6 @@ a { color: inherit; text-decoration: none; }
    =========================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .reveal { opacity: 1 !important; transform: none !important; }
   .hero-text > *, .hero-visual { opacity: 1 !important; }
 }
 
@@ -727,15 +729,6 @@ html::before {
   70%, 100% { box-shadow: 0 0 0 11px rgba(56, 189, 248, 0); }
 }
 
-/* --- Révélation en cascade (classes posées en JS) --- */
-.stagger > * { opacity: 0; }
-.stagger.in > * {
-  opacity: 1;
-  animation: stag-in .55s cubic-bezier(.2, .7, .3, 1) backwards;
-  animation-delay: var(--d, 0s);
-}
-@keyframes stag-in { from { opacity: 0; transform: translateY(20px) scale(.98); } to { opacity: 1; transform: none; } }
-
 /* --- Filtres : apparition des cartes filtrées --- */
 .project-card.pop { animation: card-pop .38s ease backwards; }
 @keyframes card-pop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
@@ -775,28 +768,13 @@ html::before {
 }
 @media (max-width: 880px) { .scroll-hint { display: none; } }
 
-/* --- Soulignement des titres de section, tracé au reveal --- */
+/* --- Soulignement des titres de section (animé par GSAP à terme) --- */
 .section-title { position: relative; padding-bottom: 4px; }
 .section-title::after {
   content: ""; position: absolute; left: 0; bottom: -3px; width: 130px; height: 2px;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--accent), var(--accent-2), transparent);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .9s cubic-bezier(.2, .7, .3, 1) .15s;
 }
-.reveal.in .section-title::after { transform: scaleX(1); }
-
-/* --- Timeline : ligne qui se dessine, étapes qui glissent (classes JS) --- */
-.tl-anim::before { transform: scaleY(0); transform-origin: top; transition: transform 1.1s ease .1s; }
-.tl-anim.in::before { transform: scaleY(1); }
-.tl-anim .timeline-item {
-  opacity: 0; transform: translateX(-18px);
-  transition: opacity .5s ease, transform .5s ease;
-  transition-delay: calc(var(--i, 0) * .16s);
-}
-.tl-anim.in .timeline-item { opacity: 1; transform: none; }
-.tl-anim .timeline-dot { transform: scale(0); transition: transform .35s ease; transition-delay: calc(var(--i, 0) * .16s + .2s); }
-.tl-anim.in .timeline-dot { transform: scale(1); }
 
 /* --- Bouton retour-en-haut : anneau de progression de lecture --- */
 .to-top { overflow: visible; }
@@ -856,7 +834,6 @@ html::before {
        neutralise déjà toutes ces animations ; on fige aussi le fond. --- */
 @media (prefers-reduced-motion: reduce) {
   body::before, body::after { animation: none !important; }
-  .stagger > * { opacity: 1 !important; }
   .fx-bubble { opacity: 1 !important; }
   .fx-pkt, .fx-data { opacity: 0 !important; } /* positionnés par transform animée */
 }
