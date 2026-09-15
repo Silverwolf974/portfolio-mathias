@@ -42,3 +42,17 @@ venv/
 *.tmp
 *.bak
 *~
+
+# --- Fichiers de travail locaux, absents du site publié ---
+/.build/
+/.codex-finalizer/
+/output/
+/.claude/
+/.codex/
+.ipynb_checkpoints/
+*.log
+
+# --- Présentations : hors du périmètre du portfolio ---
+*.ppt
+*.pptx
+*.potx
