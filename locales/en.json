@@ -221,13 +221,10 @@
   "Mon CV est disponible au téléchargement en français et en anglais.": "My CV is available to download in French and English.",
   "Télécharger mon CV (FR)": "Download my CV (FR)",
   "Download my CV (EN)": "Download my CV (EN)",
-  "Scanner pour ouvrir le CV français": "Scan to open my English CV",
   "07": "07",
   "Actuellement en semestre d'échange à l'INSA Lyon. Contactez-moi pour échanger sur mes projets ou mon parcours.": "Currently on an exchange semester at INSA Lyon. Get in touch to discuss my projects or background.",
   "Email": "Email",
-  "alyderil.mathias@gmail.com": "alyderil.mathias@gmail.com",
   "LinkedIn": "LinkedIn",
-  "mathias-aly-beri": "mathias-aly-beri",
   "GitHub": "GitHub",
   "github.com/Silverwolf974": "github.com/Silverwolf974",
   "©": "©",
@@ -238,8 +235,6 @@
   "Ouvrir le menu": "Open menu",
   "Portrait de Mathias ALY BERIL": "Portrait of Mathias ALY BERIL",
   "Descendre vers la section À propos": "Scroll to the About section",
-  "Ouvrir le CV français": "Open my English CV",
-  "QR code vers le CV français de Mathias ALY BERIL": "QR code for Mathias ALY BERIL’s English CV",
   "Challenge Big Data — prédiction Vélib' — Mathias ALY BERIL": "Big Data Challenge — Vélib’ demand prediction — Mathias ALY BERIL",
   "Accueil": "Home",
   "/": "/",
@@ -515,5 +510,7 @@
   "SHA-256": "SHA-256",
   "Ubuntu Server": "Ubuntu Server",
   "Le rapport détaillé mentionne des adresses réseau de l'environnement de test ; elles ne sont pas publiées ici. Code source hébergé sur le GitLab interne de l'école, disponible sur demande.": "The detailed report includes test-network addresses, which are not published here. Source code is hosted on the school’s internal GitLab and is available on request.",
-  "Supervision d'infrastructure avec Grafana →": "Infrastructure monitoring with Grafana →"
+  "Supervision d'infrastructure avec Grafana →": "Infrastructure monitoring with Grafana →",
+  "mathias.aly-beril@esiroi.re": "mathias.aly-beril@esiroi.re",
+  "mathias-aly-beril": "mathias-aly-beril"
 }

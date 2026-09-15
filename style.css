@@ -211,11 +211,8 @@ a { color: inherit; text-decoration: none; }
 .timeline-todo .timeline-date { color: var(--text-mut); }
 
 /* ---------------- CV ---------------- */
-.cv-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; max-width: 780px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 28px; }
+.cv-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; max-width: 780px; display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; gap: 28px; }
 .cv-copy { display: grid; gap: 12px; }
-.cv-qr { display: grid; justify-items: center; gap: 8px; width: 146px; color: var(--text-mut); font-size: .75rem; line-height: 1.25; text-align: center; }
-.cv-qr img { display: block; width: 132px; height: 132px; padding: 7px; border-radius: 10px; background: #fff; }
-.cv-qr:hover { color: var(--accent); }
 .cv-note { color: var(--text-mut); font-size: 0.85rem; }
 .cv-box code { font-family: var(--mono); font-size: 0.82em; background: var(--bg-soft); padding: 1px 6px; border-radius: 5px; color: var(--accent); }
 
@@ -257,7 +254,6 @@ a { color: inherit; text-decoration: none; }
 .cv-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 @media (max-width: 640px) {
   .cv-box { grid-template-columns: 1fr; justify-items: start; }
-  .cv-qr { justify-self: center; }
 }
 
 /* ===========================================================

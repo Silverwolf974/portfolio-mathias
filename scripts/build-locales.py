@@ -88,10 +88,8 @@ def english_page(source, page):
     if page == Path('index.html'):
         fr = '../assets/cv/CV_Mathias_ALY_BERIL_FR.pdf'
         en = '../assets/cv/CV_Mathias_Aly_Beril_EN.pdf'
-        # Primary hero download and QR follow the current language. Both CV buttons remain.
+        # Primary hero download follows the current language. Both CV buttons remain.
         result = result.replace(fr, en, 1)
-        result = result.replace('class="cv-qr" href="' + fr, 'class="cv-qr" href="' + en)
-        result = result.replace('../assets/images/cv-qr-fr.svg', '../assets/images/cv-qr-en.svg')
     return controls(result, page, True)
 
 
