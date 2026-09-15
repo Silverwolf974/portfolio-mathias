@@ -1,0 +1,731 @@
+{"kind":"deck","id":"pr/vv18v6","name":"Deck"}
+{"kind":"layout","layoutId":"966de0bd-7aa9-42ce-819b-5f14161f93ad","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"6250f8de-9ecb-497e-9553-b59693d20cd4","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/cl52ro","slide":1,"title":"ENGINEERING INTERNSHIP DEFENSE","textShapes":5}
+{"kind":"shape","id":"sh/8ridovqp","slide":1,"bbox":[625,0,160,720]}
+{"kind":"shape","id":"sh/tsruhgra","slide":1,"bbox":[640,0,10,720]}
+{"kind":"textbox","id":"sh/ut0vql8v","slide":1,"text":"ENGINEERING INTERNSHIP DEFENSE","textPreview":"ENGINEERING INTERNSHIP DEFENSE","textChars":30,"textLines":1,"bbox":[70,70,480,24]}
+{"kind":"textbox","id":"sh/vu9cjq9g","slide":1,"text":"Protein Enrichment\nof an Oat-Based Beverage","textPreview":"Protein Enrichment | of an Oat-Based Beverage","textChars":43,"textLines":2,"bbox":[70,116,545,170]}
+{"kind":"textbox","id":"sh/gvidsvql","slide":1,"text":"Engineering Internship at Auckland University of Technology","textPreview":"Engineering Internship at Auckland University of Technology","textChars":59,"textLines":1,"bbox":[70,305,520,70]}
+{"kind":"textbox","id":"sh/hwrel076","slide":1,"text":"Kali Mana","textPreview":"Kali Mana","textChars":9,"textLines":1,"bbox":[70,420,300,38]}
+{"kind":"textbox","id":"sh/ix0vu58r","slide":1,"text":"Food Engineering, ESIROI\nAuckland, New Zealand\nApril – August 2026","textPreview":"Food Engineering, ESIROI | Auckland, New Zealand | April – August 2026","textChars":66,"textLines":3,"bbox":[70,462,420,92]}
+{"kind":"image","id":"im/69krylsr","slide":1,"name":"","geometry":"rect","alt":"AUT Food Science laboratory","bbox":[690,0,590,720]}
+{"kind":"image","id":"im/ih4rq5sz","slide":1,"name":"","geometry":"rect","alt":"ESIROI logo","bbox":[70,618,155,54]}
+{"kind":"image","id":"im/8jul4zad","slide":1,"name":"","geometry":"rect","alt":"Université de La Réunion logo","bbox":[250,618,190,54]}
+{"kind":"image","id":"im/tk32x4ry","slide":1,"name":"","geometry":"rect","alt":"AUT logo","bbox":[475,610,120,66]}
+{"kind":"notes","id":"nt/cl52ro","slide":1,"text":"Good morning. My name is Kali Mana, and I completed this engineering internship at Auckland University of Technology from 24 April to 24 August 2026. The internship began with a virtual-reality research project and then moved to food formulation. Today I will focus mainly on the development of a protein-enriched oat-based beverage, from process design and protein incorporation to analytical characterisation and sensory evaluation.\n\nSource: Kali Mana, AUT Internship Report, 2026, cover page and pp. 1–3."}
+{"kind":"slide","id":"sl/nszs9g","slide":2,"title":"INTRODUCTION","textShapes":13}
+{"kind":"shape","id":"sh/e1szq98z","slide":2,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/143y1o7q","slide":2,"text":"INTRODUCTION","textPreview":"INTRODUCTION","textChars":12,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/03uhsjq5","slide":2,"text":"Presentation overview","textPreview":"Presentation overview","textChars":21,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/ry1gvupo","slide":2,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/qxsfm983","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[70,190,100,70]}
+{"kind":"shape","id":"sh/d0jyx47u","slide":2,"bbox":[70,270,250,1]}
+{"kind":"textbox","id":"sh/szaxozq9","slide":2,"text":"AUT and internship context","textPreview":"AUT and internship context","textChars":26,"textLines":1,"bbox":[70,294,250,112]}
+{"kind":"shape","id":"sh/bu5g7yps","slide":2,"bbox":[320,260,32,0]}
+{"kind":"shape","id":"sh/atwzyto7","slide":2,"bbox":[344,254,14,12]}
+{"kind":"textbox","id":"sh/036doj2h","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[368,190,100,70]}
+{"kind":"shape","id":"sh/14fuxoj2","slide":2,"bbox":[368,270,250,1]}
+{"kind":"textbox","id":"sh/e1obmtkb","slide":2,"text":"From virtual reality to oat beverage development","textPreview":"From virtual reality to oat beverage development","textChars":48,"textLines":1,"bbox":[368,294,250,112]}
+{"kind":"shape","id":"sh/f2xcvy1w","slide":2,"bbox":[618,260,32,0]}
+{"kind":"shape","id":"sh/sfmtkj2l","slide":2,"bbox":[642,254,14,12]}
+{"kind":"textbox","id":"sh/d0futojq","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[666,190,100,70]}
+{"kind":"shape","id":"sh/qd4bi9kf","slide":2,"bbox":[666,270,250,1]}
+{"kind":"textbox","id":"sh/redcre10","slide":2,"text":"Protein-enriched oat beverage project","textPreview":"Protein-enriched oat beverage project","textChars":37,"textLines":1,"bbox":[666,294,250,112]}
+{"kind":"shape","id":"sh/4bmtgz29","slide":2,"bbox":[916,260,32,0]}
+{"kind":"shape","id":"sh/5cvup4ju","slide":2,"bbox":[940,254,14,12]}
+{"kind":"textbox","id":"sh/lw3ixwrm","slide":2,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[964,190,100,70]}
+{"kind":"shape","id":"sh/kvu14bq1","slide":2,"bbox":[964,270,250,1]}
+{"kind":"textbox","id":"sh/jul0v69g","slide":2,"text":"Results, recommendations and professional outcomes","textPreview":"Results, recommendations and professional outcomes","textChars":50,"textLines":1,"bbox":[964,294,250,112]}
+{"kind":"textbox","id":"sh/ytcj218v","slide":2,"text":"The oat beverage project forms the core of this defense.","textPreview":"The oat beverage project forms the core of this defense.","textChars":56,"textLines":1,"bbox":[70,520,1140,64]}
+{"kind":"textbox","id":"sh/xs3itwra","slide":2,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/wru10rqp","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/nszs9g","slide":2,"text":"I will begin by presenting the host environment and the overall trajectory of the internship. I will then explain why the initial virtual-reality project could not continue under reliable conditions. The main part of the presentation covers the oat beverage process, protein enrichment, Kjeldahl analysis and sensory evaluation. I will finish with the selected development candidate, the limitations of the study and the professional skills I developed.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 1–4."}
+{"kind":"slide","id":"sl/bgfpyw","slide":3,"title":"CONTEXT","textShapes":10}
+{"kind":"shape","id":"sh/hwz2pobi","slide":3,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/u98ju9sr","slide":3,"text":"CONTEXT","textPreview":"CONTEXT","textChars":7,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/vah0netc","slide":3,"text":"Internship environment: Auckland University of Technology","textPreview":"Internship environment: Auckland University of Technology","textChars":57,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/87q1sjal","slide":3,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/m58jq9sf","slide":3,"text":"NEW ZEALAND","textPreview":"NEW ZEALAND","textChars":11,"textLines":1,"bbox":[86,598,250,28]}
+{"kind":"shape","id":"sh/76h0jet0","slide":3,"bbox":[375,380,65,0]}
+{"kind":"shape","id":"sh/0361ozup","slide":3,"bbox":[432,374,14,12]}
+{"kind":"textbox","id":"sh/lsbqx8f6","slide":3,"text":"AUT","textPreview":"AUT","textChars":3,"textLines":1,"bbox":[925,170,240,58]}
+{"kind":"textbox","id":"sh/0r2943el","slide":3,"text":"School of Science","textPreview":"School of Science","textChars":17,"textLines":1,"bbox":[925,222,240,42]}
+{"kind":"textbox","id":"sh/zqt8vyx0","slide":3,"text":"Food Science and Microbiology\nCity Campus, Auckland\nSupervised by Dr Nazimah Hamid","textPreview":"Food Science and Microbiology | City Campus, Auckland | Supervised by Dr Nazimah Hamid","textChars":82,"textLines":3,"bbox":[925,285,250,115]}
+{"kind":"shape","id":"sh/epkr2twf","slide":3,"bbox":[455,500,720,120]}
+{"kind":"shape","id":"sh/dobqt8fu","slide":3,"bbox":[455,500,7,120]}
+{"kind":"textbox","id":"sh/cn2903e9","slide":3,"text":"Experimental setting","textPreview":"Experimental setting","textChars":20,"textLines":1,"bbox":[477,512,684,30]}
+{"kind":"textbox","id":"sh/rmt8ryxo","slide":3,"text":"Food processing, rheology, centrifugation, freeze-drying, Kjeldahl analysis and sensory preparation within AUT Food Science facilities.","textPreview":"Food processing, rheology, centrifugation, freeze-drying, Kjeldahl analysis and sensory preparation within AUT Food Science facilities.","textChars":135,"textLines":1,"bbox":[477,544,684,66]}
+{"kind":"textbox","id":"sh/ql0rytw3","slide":3,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/pkrqpofy","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/wvmpkjqt","slide":3,"name":"","geometry":"rect","alt":"Stylised map of New Zealand with Auckland marker","bbox":[60,145,300,470]}
+{"kind":"image","id":"im/4j69o3qp","slide":3,"name":"","geometry":"roundRect","alt":"AUT Food Science laboratory","bbox":[455,165,430,300]}
+{"kind":"notes","id":"nt/bgfpyw","slide":3,"text":"The placement took place in Auckland, New Zealand, within AUT’s School of Science. I worked in the Food Science and Microbiology environment at the City Campus under the supervision of Dr Nazimah Hamid. The facilities gave me access to food processing equipment and analytical methods that were new to me. I also had to learn how to organise work around shared laboratory equipment and AUT procedures, which became important when the project changed direction.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 1–2."}
+{"kind":"slide","id":"sl/yv9lkn","slide":4,"title":"TRAJECTORY","textShapes":12}
+{"kind":"shape","id":"sh/vmt4b650","slide":4,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/gn254bml","slide":4,"text":"TRAJECTORY","textPreview":"TRAJECTORY","textChars":10,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/hov6dgn6","slide":4,"text":"One internship, two successive projects","textPreview":"One internship, two successive projects","textChars":39,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/ip4n6l4r","slide":4,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/3qdofq5c","slide":4,"text":"24 APRIL","textPreview":"24 APRIL","textChars":8,"textLines":1,"bbox":[75,160,150,28]}
+{"kind":"textbox","id":"sh/4rm58bmx","slide":4,"text":"24 AUGUST","textPreview":"24 AUGUST","textChars":9,"textLines":1,"bbox":[1050,160,150,28]}
+{"kind":"shape","id":"sh/5sv6hgni","slide":4,"bbox":[95,220,1080,1]}
+{"kind":"shape","id":"sh/yt0nuhon","slide":4,"bbox":[190,207,26,26]}
+{"kind":"shape","id":"sh/zu943m5s","slide":4,"bbox":[610,203,34,34]}
+{"kind":"shape","id":"sh/bq5wrahk","slide":4,"bbox":[1080,207,26,26]}
+{"kind":"shape","id":"sh/apcvi5gz","slide":4,"bbox":[80,275,390,250]}
+{"kind":"shape","id":"sh/xsnetkzq","slide":4,"bbox":[80,275,7,250]}
+{"kind":"textbox","id":"sh/credkfy5","slide":4,"text":"Phase 1 · April to mid-June","textPreview":"Phase 1 · April to mid-June","textChars":27,"textLines":1,"bbox":[102,287,354,30]}
+{"kind":"textbox","id":"sh/nmlwnqho","slide":4,"text":"Virtual Reality and Eating Behaviour\n\nUnity familiarisation\nPrevious project review\nHeadset testing\nFeasibility assessment","textPreview":"Virtual Reality and Eating Behaviour |  | Unity familiarisation | Previous project review | Headset testing | Feasibility assessment","textChars":122,"textLines":6,"bbox":[102,319,354,196]}
+{"kind":"textbox","id":"sh/2lcvel03","slide":4,"text":"PROJECT REDIRECTION","textPreview":"PROJECT REDIRECTION","textChars":19,"textLines":1,"bbox":[500,320,180,66]}
+{"kind":"shape","id":"sh/po3ep0zu","slide":4,"bbox":[505,420,170,0]}
+{"kind":"shape","id":"sh/onudgvi9","slide":4,"bbox":[667,414,14,12]}
+{"kind":"shape","id":"sh/fi1wjqhc","slide":4,"bbox":[700,250,490,300]}
+{"kind":"shape","id":"sh/exsval07","slide":4,"bbox":[700,250,7,300]}
+{"kind":"textbox","id":"sh/itsfmlkz","slide":4,"text":"Phase 2 · Late June to 24 August","textPreview":"Phase 2 · Late June to 24 August","textChars":32,"textLines":1,"bbox":[722,262,454,30]}
+{"kind":"textbox","id":"sh/3u1wvq1k","slide":4,"text":"Protein-enriched oat beverage\n\nProcess trials and formulation screening\nRheology and Kjeldahl analysis\nSensory test and candidate selection","textPreview":"Protein-enriched oat beverage |  | Process trials and formulation screening | Rheology and Kjeldahl analysis | Sensory test and candidate...","textChars":139,"textLines":5,"bbox":[722,294,454,246]}
+{"kind":"textbox","id":"sh/4vaxov2p","slide":4,"text":"Phase 2 became the main experimental project.","textPreview":"Phase 2 became the main experimental project.","textChars":45,"textLines":1,"bbox":[700,575,490,42]}
+{"kind":"textbox","id":"sh/5gjexgja","slide":4,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/qhsfqlkv","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/yv9lkn","slide":4,"text":"The internship had two distinct phases. From April to mid-June, I prepared the virtual-reality project by reviewing previous work, learning Unity and testing the available headsets. In mid-June, the technical feasibility review showed that the planned protocol could not be implemented reliably. The internship then shifted to an existing oat beverage project. From late June until 24 August, I carried out the main experimental work presented here, including formulation trials, rheology, Kjeldahl analysis and sensory testing.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 2–3."}
+{"kind":"slide","id":"sl/jphuo7","slide":5,"title":"ENGINEERING DECISION","textShapes":12}
+{"kind":"shape","id":"sh/f658nu9w","slide":5,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/g7e9gzah","slide":5,"text":"ENGINEERING DECISION","textPreview":"ENGINEERING DECISION","textChars":20,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/hsnqpkr2","slide":5,"text":"Why the original project changed","textPreview":"Why the original project changed","textChars":32,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/2twrips7","slide":5,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/4ve9kzad","slide":5,"text":"Initial VR study","textPreview":"Initial VR study","textChars":16,"textLines":1,"bbox":[70,338,210,32]}
+{"kind":"shape","id":"sh/pw7qt4ry","slide":5,"bbox":[295,245,60,0]}
+{"kind":"shape","id":"sh/ixs765s3","slide":5,"bbox":[347,239,14,12]}
+{"kind":"shape","id":"sh/jyl8fa9o","slide":5,"bbox":[370,150,430,250]}
+{"kind":"shape","id":"sh/fmhwrapg","slide":5,"bbox":[370,150,7,250]}
+{"kind":"textbox","id":"sh/ul8fi5ob","slide":5,"text":"Technical constraints","textPreview":"Technical constraints","textChars":21,"textLines":1,"bbox":[392,162,394,30]}
+{"kind":"textbox","id":"sh/hozetk7m","slide":5,"text":"Access delayed by about six weeks\nHigh-resolution headset incompatible with the system\nCustom Unity player unavailable\nOlder headset provided insufficient image quality\nICT troubleshooting could not restore the setup in time","textPreview":"Access delayed by about six weeks | High-resolution headset incompatible with the system | Custom Unity player unavailable | Older headse...","textChars":224,"textLines":5,"bbox":[392,194,394,196]}
+{"kind":"shape","id":"sh/gnqxkf61","slide":5,"bbox":[815,275,60,0]}
+{"kind":"shape","id":"sh/7ihwnqpk","slide":5,"bbox":[867,269,14,12]}
+{"kind":"shape","id":"sh/6hoveloz","slide":5,"bbox":[890,190,300,170]}
+{"kind":"shape","id":"sh/tkzep07q","slide":5,"bbox":[890,190,7,170]}
+{"kind":"textbox","id":"sh/sjqxgv65","slide":5,"text":"Scientific consequence","textPreview":"Scientific consequence","textChars":22,"textLines":1,"bbox":[912,202,264,30]}
+{"kind":"textbox","id":"sh/juxwjqpo","slide":5,"text":"Experimental reliability and reproducibility could not be guaranteed. No participants were recruited and no usable VR dataset was produced.","textPreview":"Experimental reliability and reproducibility could not be guaranteed. No participants were recruited and no usable VR dataset was produced.","textChars":139,"textLines":1,"bbox":[912,234,264,116]}
+{"kind":"shape","id":"sh/itovalo3","slide":5,"bbox":[640,420,0,55]}
+{"kind":"shape","id":"sh/mp4f2lsv","slide":5,"bbox":[632,469,14,12]}
+{"kind":"textbox","id":"sh/nqdgvq9g","slide":5,"text":"ENGINEERING DECISION","textPreview":"ENGINEERING DECISION","textChars":20,"textLines":1,"bbox":[475,475,330,30]}
+{"kind":"textbox","id":"sh/8r6x4ba1","slide":5,"text":"Redirect the internship toward an experimentally feasible oat beverage project","textPreview":"Redirect the internship toward an experimentally feasible oat beverage project","textChars":78,"textLines":1,"bbox":[280,520,720,60]}
+{"kind":"textbox","id":"sh/9sfyxgr6","slide":5,"text":"The change preserved experimental reliability and allowed usable results within the remaining time.","textPreview":"The change preserved experimental reliability and allowed usable results within the remaining time.","textChars":99,"textLines":1,"bbox":[245,596,790,44]}
+{"kind":"textbox","id":"sh/adof6l8r","slide":5,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/vexgzq9c","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/atgbaho3","slide":5,"name":"","geometry":"roundRect","alt":"Virtual-reality headset assessed during the internship","bbox":[70,160,210,165]}
+{"kind":"notes","id":"nt/jphuo7","slide":5,"text":"This change was an engineering decision rather than a failure. Access to the VR room was delayed by around one and a half months. When I could finally test the system, the higher-resolution headset was incompatible with the available computer, the previous Unity player was no longer accessible and the older Oculus headset did not provide sufficient image quality. Continuing would have produced a protocol that differed from the intended study and could not guarantee reliable data. We therefore redirected the project before recruiting participants.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 2–3."}
+{"kind":"slide","id":"sl/7tk9lc","slide":6,"title":"PROBLEM STATEMENT","textShapes":13}
+{"kind":"shape","id":"sh/8329obi9","slide":6,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/n2tsf6ho","slide":6,"text":"PROBLEM STATEMENT","textPreview":"PROBLEM STATEMENT","textChars":17,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/m1krm10j","slide":6,"text":"Protein enrichment as a formulation challenge","textPreview":"Protein enrichment as a formulation challenge","textChars":45,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/l0badwzy","slide":6,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/0z29krid","slide":6,"text":"How can the protein content be increased while acceptable sensory properties are maintained?","textPreview":"How can the protein content be increased while acceptable sensory properties are maintained?","textChars":92,"textLines":1,"bbox":[145,150,990,80]}
+{"kind":"shape","id":"sh/zy98bmhs","slide":6,"bbox":[520,265,240,240]}
+{"kind":"textbox","id":"sh/ex0rih07","slide":6,"text":"2.39","textPreview":"2.39","textChars":4,"textLines":1,"bbox":[555,302,170,65]}
+{"kind":"textbox","id":"sh/dwrq9czm","slide":6,"text":"g protein / 100 mL\nselected base","textPreview":"g protein / 100 mL | selected base","textChars":32,"textLines":2,"bbox":[555,365,170,55]}
+{"kind":"textbox","id":"sh/cvi9g7i1","slide":6,"text":"≈4.85%","textPreview":"≈4.85%","textChars":6,"textLines":1,"bbox":[555,424,170,48]}
+{"kind":"shape","id":"sh/mh4rq90j","slide":6,"bbox":[80,280,350,150]}
+{"kind":"shape","id":"sh/nidsze14","slide":6,"bbox":[80,280,7,150]}
+{"kind":"textbox","id":"sh/oj6tszip","slide":6,"text":"Nutritional objective","textPreview":"Nutritional objective","textChars":21,"textLines":1,"bbox":[102,292,314,30]}
+{"kind":"textbox","id":"sh/9kfa14ja","slide":6,"text":"Increase plant protein using soy, rice and pea powders while keeping the formulations comparable.","textPreview":"Increase plant protein using soy, rice and pea powders while keeping the formulations comparable.","textChars":97,"textLines":1,"bbox":[102,324,314,96]}
+{"kind":"shape","id":"sh/et4rmp0n","slide":6,"bbox":[850,260,350,190]}
+{"kind":"shape","id":"sh/zudsvu18","slide":6,"bbox":[850,260,7,190]}
+{"kind":"textbox","id":"sh/0vm9ozit","slide":6,"text":"Formulation risks","textPreview":"Formulation risks","textChars":17,"textLines":1,"bbox":[872,272,314,30]}
+{"kind":"textbox","id":"sh/1wvax4je","slide":6,"text":"Poor dispersion and lumps\nHigher viscosity\nPowdery or gritty mouthfeel\nBitterness and flavour changes","textPreview":"Poor dispersion and lumps | Higher viscosity | Powdery or gritty mouthfeel | Bitterness and flavour changes","textChars":101,"textLines":4,"bbox":[872,304,314,136]}
+{"kind":"textbox","id":"sh/qpkrip0r","slide":6,"text":"The target must balance composition, process feasibility and sensory acceptance.","textPreview":"The target must balance composition, process feasibility and sensory acceptance.","textChars":80,"textLines":1,"bbox":[210,555,860,56]}
+{"kind":"textbox","id":"sh/rqtsru1w","slide":6,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/fu9ozqho","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/7tk9lc","slide":6,"text":"The new project involved more than adding a calculated mass of protein. Commercial plant protein powders can change dispersion, viscosity, flavour and mouthfeel. The selected oat beverage base later measured 2.39 grams of protein per 100 millilitres. The final enriched samples were estimated at approximately 4.85 percent protein. The engineering challenge was therefore to increase protein while controlling lumps, thickening, bitterness and particle-related sensations. This balance guided every stage of the experimental strategy.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 3–4 and 16–18."}
+{"kind":"slide","id":"sl/laj1gx","slide":7,"title":"PROJECT LOGIC","textShapes":22}
+{"kind":"shape","id":"sh/9g7ulc3q","slide":7,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/mdgbqhkf","slide":7,"text":"PROJECT LOGIC","textPreview":"PROJECT LOGIC","textChars":13,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/nepcj2lk","slide":7,"text":"Experimental strategy","textPreview":"Experimental strategy","textChars":21,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/wjydwr2h","slide":7,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/xkrupw32","slide":7,"bbox":[55,230,72,72]}
+{"kind":"textbox","id":"sh/ahgvuhkb","slide":7,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[55,230,72,72]}
+{"kind":"textbox","id":"sh/bipcnmlw","slide":7,"text":"Oat beverage\nproduction","textPreview":"Oat beverage | production","textChars":23,"textLines":2,"bbox":[27,320,128,72]}
+{"kind":"shape","id":"sh/cnetkn2x","slide":7,"bbox":[133,266,62,0]}
+{"kind":"shape","id":"sh/donuds3i","slide":7,"bbox":[187,260,14,12]}
+{"kind":"shape","id":"sh/58fa5w7m","slide":7,"bbox":[206,230,72,72]}
+{"kind":"textbox","id":"sh/k7m9wr61","slide":7,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[206,230,72,72]}
+{"kind":"textbox","id":"sh/j6ds3mpw","slide":7,"text":"Preliminary\nprotein trials","textPreview":"Preliminary | protein trials","textChars":26,"textLines":2,"bbox":[178,320,128,72]}
+{"kind":"shape","id":"sh/i54ruhob","slide":7,"bbox":[284,266,62,0]}
+{"kind":"shape","id":"sh/twfa9w7y","slide":7,"bbox":[338,260,14,12]}
+{"kind":"shape","id":"sh/sv690r6d","slide":7,"bbox":[357,230,72,72]}
+{"kind":"textbox","id":"sh/7axs7mps","slide":7,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[357,230,72,72]}
+{"kind":"textbox","id":"sh/69ory1o7","slide":7,"text":"pH and rheology\nscreening","textPreview":"pH and rheology | screening","textChars":25,"textLines":2,"bbox":[329,320,128,72]}
+{"kind":"shape","id":"sh/h0zadg7u","slide":7,"bbox":[435,266,62,0]}
+{"kind":"shape","id":"sh/gz6t4b69","slide":7,"bbox":[489,260,14,12]}
+{"kind":"shape","id":"sh/03etgfel","slide":7,"bbox":[508,230,72,72]}
+{"kind":"textbox","id":"sh/147u9kv6","slide":7,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[508,230,72,72]}
+{"kind":"textbox","id":"sh/ehwbe5wf","slide":7,"text":"Kjeldahl\nanalysis","textPreview":"Kjeldahl | analysis","textChars":17,"textLines":2,"bbox":[480,320,128,72]}
+{"kind":"shape","id":"sh/z25c7ax0","slide":7,"bbox":[586,266,62,0]}
+{"kind":"shape","id":"sh/o7ydkzeh","slide":7,"bbox":[640,260,14,12]}
+{"kind":"shape","id":"sh/987ud4v2","slide":7,"bbox":[659,230,72,72]}
+{"kind":"textbox","id":"sh/m5gbipwr","slide":7,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[659,230,72,72]}
+{"kind":"textbox","id":"sh/n6pcbudc","slide":7,"text":"Protein basis\ncorrection","textPreview":"Protein basis | correction","textChars":24,"textLines":2,"bbox":[631,320,128,72]}
+{"kind":"shape","id":"sh/4but8ved","slide":7,"bbox":[737,266,62,0]}
+{"kind":"shape","id":"sh/5cnu10fy","slide":7,"bbox":[791,260,14,12]}
+{"kind":"shape","id":"sh/76tw7yxg","slide":7,"bbox":[810,230,72,72]}
+{"kind":"textbox","id":"sh/65kfetgv","slide":7,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[810,230,72,72]}
+{"kind":"textbox","id":"sh/tsbe98fm","slide":7,"text":"Final\nformulations","textPreview":"Final | formulations","textChars":18,"textLines":2,"bbox":[782,320,128,72]}
+{"kind":"shape","id":"sh/872xg3y1","slide":7,"bbox":[888,266,62,0]}
+{"kind":"shape","id":"sh/j29w3yxk","slide":7,"bbox":[942,260,14,12]}
+{"kind":"shape","id":"sh/y10fatgz","slide":7,"bbox":[961,230,72,72]}
+{"kind":"textbox","id":"sh/l4be5ofa","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[961,230,72,72]}
+{"kind":"textbox","id":"sh/k32xc3yp","slide":7,"text":"Sensory\nevaluation","textPreview":"Sensory | evaluation","textChars":18,"textLines":2,"bbox":[933,320,128,72]}
+{"kind":"shape","id":"sh/by9wzeh8","slide":7,"bbox":[1039,266,62,0]}
+{"kind":"shape","id":"sh/ax0f69gn","slide":7,"bbox":[1093,260,14,12]}
+{"kind":"shape","id":"sh/q5kjahc7","slide":7,"bbox":[1112,230,72,72]}
+{"kind":"textbox","id":"sh/r6t03mds","slide":7,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1112,230,72,72]}
+{"kind":"textbox","id":"sh/c721crud","slide":7,"text":"Candidate\nselection","textPreview":"Candidate | selection","textChars":19,"textLines":2,"bbox":[1084,320,128,72]}
+{"kind":"shape","id":"sh/d8bi5wvy","slide":7,"bbox":[190,480,900,110]}
+{"kind":"shape","id":"sh/2hkj6xcb","slide":7,"bbox":[190,480,7,110]}
+{"kind":"textbox","id":"sh/3it0z2dw","slide":7,"text":"Sequential decision logic","textPreview":"Sequential decision logic","textChars":25,"textLines":1,"bbox":[212,492,864,30]}
+{"kind":"textbox","id":"sh/4j2187uh","slide":7,"text":"Each stage reduced uncertainty before the next formulation decision. Preliminary nominal protein levels were interpreted separately from the corrected final protein estimates.","textPreview":"Each stage reduced uncertainty before the next formulation decision. Preliminary nominal protein levels were interpreted separately from ...","textChars":175,"textLines":1,"bbox":[212,524,864,56]}
+{"kind":"textbox","id":"sh/p4bi1cv2","slide":7,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/ud0z2xcf","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/laj1gx","slide":7,"text":"The work followed a sequential strategy. I first established a workable oat beverage process and explored how the protein powders behaved. pH and rheology screening identified the main formulation constraints. I then used Kjeldahl analysis to replace the approximate one-percent protein assumption with an experimental value for the selected base. Using this corrected basis, I recalculated the final formulations, conducted a sensory evaluation and selected the strongest enriched candidate. This sequence helped separate early screening assumptions from the final interpretation.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 4–12."}
+{"kind":"slide","id":"sl/4mgu5i","slide":8,"title":"PROCESSING","textShapes":17}
+{"kind":"shape","id":"sh/dovex8vu","slide":8,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/q1kv2tw3","slide":8,"text":"PROCESSING","textPreview":"PROCESSING","textChars":10,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/rmtwbydo","slide":8,"text":"Oat beverage process","textPreview":"Oat beverage process","textChars":20,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/4z2d0jex","slide":8,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/ov6xcnuh","slide":8,"text":"600 g + 3 L","textPreview":"600 g + 3 L","textChars":11,"textLines":1,"bbox":[880,170,300,58]}
+{"kind":"textbox","id":"sh/9wfe5sv2","slide":8,"text":"rolled oats + water","textPreview":"rolled oats + water","textChars":19,"textLines":1,"bbox":[880,222,300,42]}
+{"kind":"textbox","id":"sh/pszud0ja","slide":8,"text":"BAN 528 µL\nAMG 198 µL","textPreview":"BAN 528 µL | AMG 198 µL","textChars":21,"textLines":2,"bbox":[880,270,260,65]}
+{"kind":"shape","id":"sh/orqtkf2p","slide":8,"bbox":[60,430,135,74]}
+{"kind":"textbox","id":"sh/nqhcba14","slide":8,"text":"Mix","textPreview":"Mix","textChars":3,"textLines":1,"bbox":[68,438,119,58]}
+{"kind":"shape","id":"sh/2p8bi5kj","slide":8,"bbox":[200,467,20,0]}
+{"kind":"shape","id":"sh/14fa90je","slide":8,"bbox":[212,461,14,12]}
+{"kind":"shape","id":"sh/036tgv2t","slide":8,"bbox":[228,430,135,74]}
+{"kind":"textbox","id":"sh/f2xs7q18","slide":8,"text":"Enzymatic\nhydrolysis","textPreview":"Enzymatic | hydrolysis","textChars":20,"textLines":2,"bbox":[236,438,119,58]}
+{"kind":"shape","id":"sh/e1obelkn","slide":8,"bbox":[368,467,20,0]}
+{"kind":"shape","id":"sh/lkjulkji","slide":8,"bbox":[380,461,14,12]}
+{"kind":"shape","id":"sh/kzatsz2x","slide":8,"bbox":[396,430,135,74]}
+{"kind":"textbox","id":"sh/k3ido3q9","slide":8,"text":"Empirical final\nheating","textPreview":"Empirical final | heating","textChars":23,"textLines":2,"bbox":[404,438,119,58]}
+{"kind":"shape","id":"sh/54rex8ru","slide":8,"bbox":[536,467,20,0]}
+{"kind":"shape","id":"sh/i10vmt83","slide":8,"bbox":[548,461,14,12]}
+{"kind":"shape","id":"sh/j29wvy9o","slide":8,"bbox":[564,430,135,74]}
+{"kind":"textbox","id":"sh/wzydkjqx","slide":8,"text":"Hot\nfiltration","textPreview":"Hot | filtration","textChars":14,"textLines":2,"bbox":[572,438,119,58]}
+{"kind":"shape","id":"sh/x07etori","slide":8,"bbox":[704,467,20,0]}
+{"kind":"shape","id":"sh/axgvit87","slide":8,"bbox":[716,461,14,12]}
+{"kind":"shape","id":"sh/vypwre9c","slide":8,"bbox":[732,430,135,74]}
+{"kind":"textbox","id":"sh/8vydgjq1","slide":8,"text":"Rapid\ncooling","textPreview":"Rapid | cooling","textChars":13,"textLines":2,"bbox":[740,438,119,58]}
+{"kind":"shape","id":"sh/9w7eporm","slide":8,"bbox":[872,467,20,0]}
+{"kind":"shape","id":"sh/b65wzet8","slide":8,"bbox":[884,461,14,12]}
+{"kind":"shape","id":"sh/q5wfq9cn","slide":8,"bbox":[900,430,135,74]}
+{"kind":"textbox","id":"sh/d8ne1obe","slide":8,"text":"Functional\nformulation","textPreview":"Functional | formulation","textChars":22,"textLines":2,"bbox":[908,438,119,58]}
+{"kind":"shape","id":"sh/c7exsjut","slide":8,"bbox":[1040,467,20,0]}
+{"kind":"shape","id":"sh/zupw3etk","slide":8,"bbox":[1052,461,14,12]}
+{"kind":"shape","id":"sh/y9gfu9cz","slide":8,"bbox":[1068,430,135,74]}
+{"kind":"textbox","id":"sh/lw7e5oba","slide":8,"text":"Protein\nenrichment","textPreview":"Protein | enrichment","textChars":18,"textLines":2,"bbox":[1076,438,119,58]}
+{"kind":"textbox","id":"sh/0vyxwju5","slide":8,"text":"67 °C oven setpoint for 90 min","textPreview":"67 °C oven setpoint for 90 min","textChars":30,"textLines":1,"bbox":[200,530,350,38]}
+{"kind":"textbox","id":"sh/nypw7ytg","slide":8,"text":"Final heating: oven set to 200 °C, stopped at visible boiling. Product temperature was not measured.","textPreview":"Final heating: oven set to 200 °C, stopped at visible boiling. Product temperature was not measured.","textChars":100,"textLines":1,"bbox":[580,525,610,54]}
+{"kind":"textbox","id":"sh/mxgfytcv","slide":8,"text":"≈2.5 L filtered beverage recovered","textPreview":"≈2.5 L filtered beverage recovered","textChars":34,"textLines":1,"bbox":[420,602,440,34]}
+{"kind":"textbox","id":"sh/6d87q14j","slide":8,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/7eh8j654","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/kb6pkbu5","slide":8,"name":"","geometry":"roundRect","alt":"Shallow trays during oat beverage heating","bbox":[65,160,245,190]}
+{"kind":"image","id":"im/zqx8r6dk","slide":8,"name":"","geometry":"roundRect","alt":"Oat beverage process overview from the internship report","bbox":[330,160,245,190]}
+{"kind":"image","id":"im/ypo7i1cz","slide":8,"name":"","geometry":"roundRect","alt":"Refrigerated storage of prepared samples","bbox":[595,160,245,190]}
+{"kind":"notes","id":"nt/4mgu5i","slide":8,"text":"The selected base used 600 grams of oats and 3 litres of water with BAN and AMG enzymes. The trays remained in an oven set to 67 degrees Celsius for 90 minutes to approach the intended hydrolysis conditions. A short empirical final heating step followed, with the oven set to 200 degrees and the process stopped after visible boiling as the display approached 180 degrees. This does not mean the beverage reached 180 degrees. Product temperature was not measured, so this was not a validated pasteurisation schedule.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 5–6."}
+{"kind":"slide","id":"sl/k1ff5y","slide":9,"title":"FORMULATION","textShapes":15}
+{"kind":"shape","id":"sh/g3m94v65","slide":9,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/f2d8vq5k","slide":9,"text":"FORMULATION","textPreview":"FORMULATION","textChars":11,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/e14r2loz","slide":9,"text":"From selected base to functional beverage","textPreview":"From selected base to functional beverage","textChars":41,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/psfa10nm","slide":9,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/3qdsza5w","slide":9,"bbox":[535,230,220,220]}
+{"kind":"textbox","id":"sh/2p4r65ob","slide":9,"text":"≈2.5 L","textPreview":"≈2.5 L","textChars":6,"textLines":1,"bbox":[560,272,170,52]}
+{"kind":"textbox","id":"sh/dwfa5kny","slide":9,"text":"selected oat-beverage base","textPreview":"selected oat-beverage base","textChars":26,"textLines":1,"bbox":[560,330,170,60]}
+{"kind":"shape","id":"sh/cv69cf6d","slide":9,"bbox":[850,165,105,105]}
+{"kind":"textbox","id":"sh/yx8nyxgn","slide":9,"text":"375 g","textPreview":"375 g","textChars":5,"textLines":1,"bbox":[858,187,89,30]}
+{"kind":"textbox","id":"sh/jyho72h8","slide":9,"text":"Coconut caramel","textPreview":"Coconut caramel","textChars":15,"textLines":1,"bbox":[830,273,145,42]}
+{"kind":"shape","id":"sh/kzq507yt","slide":9,"bbox":[950,275,105,105]}
+{"kind":"textbox","id":"sh/l0z69cze","slide":9,"text":"50 mL","textPreview":"50 mL","textChars":5,"textLines":1,"bbox":[958,297,89,30]}
+{"kind":"textbox","id":"sh/61s72hgz","slide":9,"text":"Tulsi extract","textPreview":"Tulsi extract","textChars":13,"textLines":1,"bbox":[930,383,145,42]}
+{"kind":"shape","id":"sh/721obmh4","slide":9,"bbox":[865,390,105,105]}
+{"kind":"textbox","id":"sh/83ap4ryp","slide":9,"text":"3.25 g","textPreview":"3.25 g","textChars":6,"textLines":1,"bbox":[873,412,89,30]}
+{"kind":"textbox","id":"sh/t4j6dcza","slide":9,"text":"Xanthan gum","textPreview":"Xanthan gum","textChars":11,"textLines":1,"bbox":[845,498,145,42]}
+{"kind":"shape","id":"sh/25onqd0f","slide":9,"bbox":[735,500,105,105]}
+{"kind":"textbox","id":"sh/n6xozih0","slide":9,"text":"5.00 g","textPreview":"5.00 g","textChars":6,"textLines":1,"bbox":[743,522,89,30]}
+{"kind":"textbox","id":"sh/ratkrexs","slide":9,"text":"Salt","textPreview":"Salt","textChars":4,"textLines":1,"bbox":[715,608,145,42]}
+{"kind":"shape","id":"sh/q9k3y9w7","slide":9,"bbox":[425,315,95,0]}
+{"kind":"shape","id":"sh/dcv2tofy","slide":9,"bbox":[512,309,14,12]}
+{"kind":"shape","id":"sh/sbml0jed","slide":9,"bbox":[760,340,75,0]}
+{"kind":"shape","id":"sh/3mtknexw","slide":9,"bbox":[827,334,14,12]}
+{"kind":"textbox","id":"sh/ilk3u9gb","slide":9,"text":"Protein powders were added after the common functional base had been prepared.","textPreview":"Protein powders were added after the common functional base had been prepared.","textChars":78,"textLines":1,"bbox":[145,590,980,44]}
+{"kind":"textbox","id":"sh/58b2p4fm","slide":9,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/4n2lwjy1","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/dsfq9kn6","slide":9,"name":"","geometry":"roundRect","alt":"Coconut caramel preparation","bbox":[70,170,350,290]}
+{"kind":"notes","id":"nt/k1ff5y","slide":9,"text":"After filtration and cooling, the selected oat beverage became a common functional base. For approximately 2.5 litres, the formulation included coconut caramel, Tulsi extract, xanthan gum and salt. The protein powders were not added during enzymatic hydrolysis. They were incorporated only after the common functional beverage had been prepared. This order meant that the final sensory samples shared the same base and differed mainly in the source and quantity of the protein powders.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 6–7."}
+{"kind":"slide","id":"sl/9fahzt","slide":10,"title":"FORMULATION","textShapes":16}
+{"kind":"shape","id":"sh/y98rq5sb","slide":10,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/lwza1kb2","slide":10,"text":"FORMULATION","textPreview":"FORMULATION","textChars":11,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/kvq9sfah","slide":10,"text":"Protein incorporation: trial and error","textPreview":"Protein incorporation: trial and error","textChars":38,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/7yhsnu9s","slide":10,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/t0japkry","slide":10,"bbox":[60,420,240,150]}
+{"kind":"shape","id":"sh/8za9wfad","slide":10,"bbox":[60,420,7,150]}
+{"kind":"textbox","id":"sh/v21sru94","slide":10,"text":"Ultra-Turrax","textPreview":"Ultra-Turrax","textChars":12,"textLines":1,"bbox":[82,432,204,30]}
+{"kind":"textbox","id":"sh/u1sbypsj","slide":10,"text":"High shear was useful for small-volume trials, but persistent lumps and powdery sensations remained. The available head was poorly suited to large batches.","textPreview":"High shear was useful for small-volume trials, but persistent lumps and powdery sensations remained. The available head was poorly suited...","textChars":155,"textLines":1,"bbox":[82,464,204,96]}
+{"kind":"shape","id":"sh/14vad8b6","slide":10,"bbox":[350,420,240,150]}
+{"kind":"shape","id":"sh/e14bitcv","slide":10,"bbox":[350,420,7,150]}
+{"kind":"textbox","id":"sh/f2dsbytg","slide":10,"text":"Sonication","textPreview":"Sonication","textChars":10,"textLines":1,"bbox":[372,432,204,30]}
+{"kind":"textbox","id":"sh/o76to3ux","slide":10,"text":"Considered and tested during preliminary work. Undesirable flavour changes and persistent agglomerates prevented selection.","textPreview":"Considered and tested during preliminary work. Undesirable flavour changes and persistent agglomerates prevented selection.","textChars":123,"textLines":1,"bbox":[372,464,204,96]}
+{"kind":"shape","id":"sh/p8fuh8bi","slide":10,"bbox":[660,150,550,420]}
+{"kind":"textbox","id":"sh/25obmtcr","slide":10,"text":"SELECTED PRACTICAL METHOD","textPreview":"SELECTED PRACTICAL METHOD","textChars":25,"textLines":1,"bbox":[700,180,460,24]}
+{"kind":"textbox","id":"sh/36xsfytc","slide":10,"text":"Mortar + sieve","textPreview":"Mortar + sieve","textChars":14,"textLines":1,"bbox":[700,216,460,48]}
+{"kind":"shape","id":"sh/cv6tsnut","slide":10,"bbox":[688,300,140,72]}
+{"kind":"textbox","id":"sh/xwzulsbe","slide":10,"text":"1  Powder + small\nbeverage volume","textPreview":"1  Powder + small | beverage volume","textChars":33,"textLines":2,"bbox":[695,308,126,56]}
+{"kind":"shape","id":"sh/lsva583i","slide":10,"bbox":[831,336,17,0]}
+{"kind":"shape","id":"sh/krmtwnmx","slide":10,"bbox":[840,330,14,12]}
+{"kind":"shape","id":"sh/jqts3ils","slide":10,"bbox":[853,300,140,72]}
+{"kind":"textbox","id":"sh/ypkbud47","slide":10,"text":"2  Paste\nformation","textPreview":"2  Paste | formation","textChars":18,"textLines":2,"bbox":[860,308,126,56]}
+{"kind":"shape","id":"sh/tgva9s3u","slide":10,"bbox":[996,336,17,0]}
+{"kind":"shape","id":"sh/8fmt0nm9","slide":10,"bbox":[1005,330,14,12]}
+{"kind":"shape","id":"sh/7eds7ilo","slide":10,"bbox":[1018,300,140,72]}
+{"kind":"textbox","id":"sh/6t4byd43","slide":10,"text":"3  Progressive\ndispersion","textPreview":"3  Progressive | dispersion","textChars":25,"textLines":2,"bbox":[1025,308,126,56]}
+{"kind":"shape","id":"sh/pkbaxo3a","slide":10,"bbox":[688,430,140,72]}
+{"kind":"textbox","id":"sh/oji9ojm5","slide":10,"text":"4  Sieve and crush\nagglomerates","textPreview":"4  Sieve and crush | agglomerates","textChars":31,"textLines":2,"bbox":[695,438,126,56]}
+{"kind":"shape","id":"sh/epg7ypkn","slide":10,"bbox":[831,466,17,0]}
+{"kind":"shape","id":"sh/fqp87u18","slide":10,"bbox":[840,460,14,12]}
+{"kind":"shape","id":"sh/0ryp0z2t","slide":10,"bbox":[853,430,140,72]}
+{"kind":"textbox","id":"sh/1srq94je","slide":10,"text":"5  Reincorporate\ninto full beverage","textPreview":"5  Reincorporate | into full beverage","textChars":35,"textLines":2,"bbox":[860,438,126,56]}
+{"kind":"textbox","id":"sh/2t0729kz","slide":10,"text":"The most sophisticated equipment was not the most effective option under the available conditions.","textPreview":"The most sophisticated equipment was not the most effective option under the available conditions.","textChars":98,"textLines":1,"bbox":[190,608,900,38]}
+{"kind":"textbox","id":"sh/nu98be1k","slide":10,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/ovi94j2p","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/zi18bmxk","slide":10,"name":"","geometry":"roundRect","alt":"IKA T25 Ultra-Turrax","bbox":[60,160,240,240]}
+{"kind":"image","id":"im/rmx0bm90","slide":10,"name":"","geometry":"roundRect","alt":"Protein powder preparation","bbox":[350,160,240,240]}
+{"kind":"notes","id":"nt/9fahzt","slide":10,"text":"Direct powder addition produced strong agglomeration, so I compared several dispersion approaches. The Ultra-Turrax provided high shear for small volumes but did not remove the powdery sensation or lumps sufficiently, and the small head was not adapted to the full batch size. Sonication also produced undesirable changes and was not retained. The most practical method was to form a concentrated paste in a mortar, add beverage progressively, pass the dispersion through a sieve and crush the remaining agglomerates before reincorporation.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 7 and 15."}
+{"kind":"slide","id":"sl/5e4w5h","slide":11,"title":"SCREENING","textShapes":12}
+{"kind":"shape","id":"sh/4fm5ormh","slide":11,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/3ed4fmlw","slide":11,"text":"SCREENING","textPreview":"SCREENING","textChars":9,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/id4nmh4b","slide":11,"text":"Preliminary screening changed the formulation strategy","textPreview":"Preliminary screening changed the formulation strategy","textChars":54,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/dkfmlg3y","slide":11,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/rix4j6l8","slide":11,"text":"SOY PROTEIN SCREENING","textPreview":"SOY PROTEIN SCREENING","textChars":21,"textLines":1,"bbox":[95,175,300,24]}
+{"kind":"shape","id":"sh/qhonq14n","slide":11,"bbox":[750,165,420,110]}
+{"kind":"shape","id":"sh/18f6pg3a","slide":11,"bbox":[750,165,7,110]}
+{"kind":"textbox","id":"sh/0765wbmp","slide":11,"text":"Viscosity","textPreview":"Viscosity","textChars":9,"textLines":1,"bbox":[772,177,384,30]}
+{"kind":"textbox","id":"sh/qh43axgj","slide":11,"text":"Soy addition increased apparent viscosity from 30.0 to 136.6 mPa·s across the nominal screening range.","textPreview":"Soy addition increased apparent viscosity from 30.0 to 136.6 mPa·s across the nominal screening range.","textChars":102,"textLines":1,"bbox":[772,209,384,56]}
+{"kind":"shape","id":"sh/rid432h4","slide":11,"bbox":[750,300,420,110]}
+{"kind":"shape","id":"sh/cj6lc7yp","slide":11,"bbox":[750,300,7,110]}
+{"kind":"textbox","id":"sh/dkfm5cza","slide":11,"text":"Thermal sensitivity","textPreview":"Thermal sensitivity","textChars":19,"textLines":1,"bbox":[772,312,384,30]}
+{"kind":"textbox","id":"sh/elo3exgv","slide":11,"text":"The nominal 4% rice pilot increased from ≈11.6 to 86.1 mPa·s after exploratory heating.","textPreview":"The nominal 4% rice pilot increased from ≈11.6 to 86.1 mPa·s after exploratory heating.","textChars":87,"textLines":1,"bbox":[772,344,384,56]}
+{"kind":"shape","id":"sh/zmx472hg","slide":11,"bbox":[750,435,420,110]}
+{"kind":"shape","id":"sh/076lg7y1","slide":11,"bbox":[750,435,7,110]}
+{"kind":"textbox","id":"sh/18fm9cz6","slide":11,"text":"Practical observations","textPreview":"Practical observations","textChars":22,"textLines":1,"bbox":[772,447,384,30]}
+{"kind":"textbox","id":"sh/upk32dgr","slide":11,"text":"High additions produced lumps, powderiness, bitterness and an excessively thick or yoghurt-like texture.","textPreview":"High additions produced lumps, powderiness, bitterness and an excessively thick or yoghurt-like texture.","textChars":104,"textLines":1,"bbox":[772,479,384,56]}
+{"kind":"textbox","id":"sh/vqtkvihw","slide":11,"text":"Decision: compare blends at a lower common enrichment target","textPreview":"Decision: compare blends at a lower common enrichment target","textChars":60,"textLines":1,"bbox":[190,585,900,50]}
+{"kind":"textbox","id":"sh/ju903exo","slide":11,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/yt0ja9wj","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"chart","id":"ch/cbyd83q5","slide":11,"name":"","chartType":"bar","bbox":[70,160,620,350]}
+{"kind":"notes","id":"nt/5e4w5h","slide":11,"text":"The preliminary trials identified the conditions that would not be suitable for the final sensory test. In the soy series, apparent viscosity at around 100 inverse seconds increased from 30.0 millipascal-seconds for the control to 136.6 at the nominal six-percent level. A separate rice pilot became much thicker after heating. Practical observations also showed lumps, powderiness, bitterness and, at high soy additions, a yoghurt-like texture. These results supported the decision to test blends at a lower common enrichment target.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 13–15."}
+{"kind":"slide","id":"sl/1jyyuf","slide":12,"title":"ANALYTICAL CHARACTERISATION","textShapes":15}
+{"kind":"shape","id":"sh/sry5ozil","slide":12,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/rqp4fe10","slide":12,"text":"ANALYTICAL CHARACTERISATION","textPreview":"ANALYTICAL CHARACTERISATION","textChars":27,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/6pgnm90f","slide":12,"text":"Kjeldahl analysis corrected the protein basis","textPreview":"Kjeldahl analysis corrected the protein basis","textChars":45,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/547md4ju","slide":12,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/p0b6pojy","slide":12,"text":"Freeze-dry","textPreview":"Freeze-dry","textChars":10,"textLines":1,"bbox":[55,380,105,32]}
+{"kind":"shape","id":"sh/ozi5wjit","slide":12,"bbox":[160,396,13,0]}
+{"kind":"shape","id":"sh/qtkjapsr","slide":12,"bbox":[165,390,14,12]}
+{"kind":"textbox","id":"sh/rut0jutc","slide":12,"text":"Digest","textPreview":"Digest","textChars":6,"textLines":1,"bbox":[175,380,105,32]}
+{"kind":"shape","id":"sh/sv21czax","slide":12,"bbox":[280,396,13,0]}
+{"kind":"shape","id":"sh/dwbil4bi","slide":12,"bbox":[285,390,14,12]}
+{"kind":"textbox","id":"sh/ip0j6psv","slide":12,"text":"Distil","textPreview":"Distil","textChars":6,"textLines":1,"bbox":[295,380,105,32]}
+{"kind":"shape","id":"sh/3q90futg","slide":12,"bbox":[400,396,13,0]}
+{"kind":"shape","id":"sh/4r218fa1","slide":12,"bbox":[405,390,14,12]}
+{"kind":"textbox","id":"sh/5sbihkbm","slide":12,"text":"Titrate","textPreview":"Titrate","textChars":7,"textLines":1,"bbox":[415,380,105,32]}
+{"kind":"shape","id":"sh/2l4ji9sz","slide":12,"bbox":[520,396,13,0]}
+{"kind":"shape","id":"sh/nmdkretk","slide":12,"bbox":[525,390,14,12]}
+{"kind":"textbox","id":"sh/j65gj69w","slide":12,"text":"Calculate N","textPreview":"Calculate N","textChars":11,"textLines":1,"bbox":[535,380,105,32]}
+{"kind":"shape","id":"sh/y5wfa18r","slide":12,"bbox":[640,396,13,0]}
+{"kind":"shape","id":"sh/ls7ylgr2","slide":12,"bbox":[645,390,14,12]}
+{"kind":"textbox","id":"sh/krexcbqh","slide":12,"text":"Convert to protein","textPreview":"Convert to protein","textChars":18,"textLines":1,"bbox":[655,380,105,32]}
+{"kind":"shape","id":"sh/7upgnq98","slide":12,"bbox":[790,155,420,330]}
+{"kind":"textbox","id":"sh/6tgfel8n","slide":12,"text":"2.39 ± 0.17","textPreview":"2.39 ± 0.17","textChars":11,"textLines":1,"bbox":[825,210,350,75]}
+{"kind":"textbox","id":"sh/tw7ypgre","slide":12,"text":"g protein / 100 mL","textPreview":"g protein / 100 mL","textChars":18,"textLines":1,"bbox":[825,285,350,40]}
+{"kind":"textbox","id":"sh/8vyxgbqt","slide":12,"text":"Selected oat-beverage base\nn = 3 analytical replicates","textPreview":"Selected oat-beverage base | n = 3 analytical replicates","textChars":54,"textLines":2,"bbox":[825,345,350,70]}
+{"kind":"textbox","id":"sh/vypgrq94","slide":12,"text":"≈1.000 g dry sample, CuSO₄ + K₂SO₄ + H₂SO₄, 0.100 mol/L HCl, factor 5.83","textPreview":"≈1.000 g dry sample, CuSO₄ + K₂SO₄ + H₂SO₄, 0.100 mol/L HCl, factor 5.83","textChars":72,"textLines":1,"bbox":[100,505,1080,42]}
+{"kind":"textbox","id":"sh/uxgzil8j","slide":12,"text":"This measured result replaced the previous 1% working assumption.","textPreview":"This measured result replaced the previous 1% working assumption.","textChars":65,"textLines":1,"bbox":[225,575,830,48]}
+{"kind":"textbox","id":"sh/s3ix8v6x","slide":12,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/d4reh0ni","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/poj214j6","slide":12,"name":"","geometry":"roundRect","alt":"Freeze-dried oat beverage samples","bbox":[60,170,210,180]}
+{"kind":"image","id":"im/2lsj6pkf","slide":12,"name":"","geometry":"roundRect","alt":"Kjeldahl digestion rack","bbox":[290,170,210,180]}
+{"kind":"image","id":"im/nm10zu10","slide":12,"name":"","geometry":"roundRect","alt":"Kjeldahl distillation and titration setup","bbox":[520,170,210,180]}
+{"kind":"notes","id":"nt/1jyyuf","slide":12,"text":"The preliminary calculations assumed that the base contained about one percent protein. I performed Kjeldahl analysis to establish an experimental value. Freeze-dried samples were digested, distilled and titrated with 0.100 molar hydrochloric acid. Total nitrogen was converted using the oat-specific factor of 5.83. The selected batch contained 2.39 plus or minus 0.17 grams of protein per 100 millilitres. The three values represent analytical replicates from one homogenised batch, not independent production batches.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 9–10 and 16."}
+{"kind":"slide","id":"sl/ubby4m","slide":13,"title":"FORMULATION DESIGN","textShapes":28}
+{"kind":"shape","id":"sh/lsrqlo3e","slide":13,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/ep07q9k3","slide":13,"text":"FORMULATION DESIGN","textPreview":"FORMULATION DESIGN","textChars":18,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/zq9ojelo","slide":13,"text":"Final protein formulations","textPreview":"Final protein formulations","textChars":26,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/8f2pg325","slide":13,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/9gbqp83q","slide":13,"text":"All enriched samples were designed for a closely matched theoretical protein level.","textPreview":"All enriched samples were designed for a closely matched theoretical protein level.","textChars":83,"textLines":1,"bbox":[125,145,1030,42]}
+{"kind":"shape","id":"sh/md07etkz","slide":13,"bbox":[90,250,95,185]}
+{"kind":"shape","id":"sh/net8nylk","slide":13,"bbox":[94,350,87,80]}
+{"kind":"textbox","id":"sh/wj2pk321","slide":13,"text":"156","textPreview":"156","textChars":3,"textLines":1,"bbox":[60,205,155,36]}
+{"kind":"textbox","id":"sh/xkbqt8jm","slide":13,"text":"Pea / Rice\n50:50","textPreview":"Pea / Rice | 50:50","textChars":16,"textLines":2,"bbox":[60,452,155,58]}
+{"kind":"textbox","id":"sh/1gb6lw7a","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[60,522,155,34]}
+{"kind":"shape","id":"sh/gfipsrqp","slide":13,"bbox":[260,250,95,185]}
+{"kind":"shape","id":"sh/fe9ojmp4","slide":13,"bbox":[264,350,87,80]}
+{"kind":"textbox","id":"sh/ed07qh8j","slide":13,"text":"235","textPreview":"235","textChars":3,"textLines":1,"bbox":[230,205,155,36]}
+{"kind":"textbox","id":"sh/p4bqpw76","slide":13,"text":"Pea / Soy\n50:50","textPreview":"Pea / Soy | 50:50","textChars":15,"textLines":2,"bbox":[230,452,155,58]}
+{"kind":"textbox","id":"sh/o32pwrql","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[230,522,155,34]}
+{"kind":"shape","id":"sh/32tonmp0","slide":13,"bbox":[430,250,95,185]}
+{"kind":"shape","id":"sh/21k7u18f","slide":13,"bbox":[434,350,87,80]}
+{"kind":"textbox","id":"sh/5876dcr2","slide":13,"text":"320","textPreview":"320","textChars":3,"textLines":1,"bbox":[400,205,155,36]}
+{"kind":"textbox","id":"sh/47ypk7qh","slide":13,"text":"Soy / Rice\n50:50","textPreview":"Soy / Rice | 50:50","textChars":16,"textLines":2,"bbox":[400,452,155,58]}
+{"kind":"textbox","id":"sh/wr2p07yd","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[400,522,155,34]}
+{"kind":"shape","id":"sh/xsb69czy","slide":13,"bbox":[600,250,95,185]}
+{"kind":"shape","id":"sh/apk7yxg7","slide":13,"bbox":[604,350,87,80]}
+{"kind":"textbox","id":"sh/vqto72hs","slide":13,"text":"473","textPreview":"473","textChars":3,"textLines":1,"bbox":[570,205,155,36]}
+{"kind":"textbox","id":"sh/kvmp4ry9","slide":13,"text":"Rice\n100%","textPreview":"Rice | 100%","textChars":9,"textLines":2,"bbox":[570,452,155,58]}
+{"kind":"textbox","id":"sh/5gvqdczu","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[570,522,155,34]}
+{"kind":"shape","id":"sh/itk72hg3","slide":13,"bbox":[770,250,95,185]}
+{"kind":"shape","id":"sh/jud8bmho","slide":13,"bbox":[774,350,87,80]}
+{"kind":"textbox","id":"sh/sjmp8ryl","slide":13,"text":"589","textPreview":"589","textChars":3,"textLines":1,"bbox":[740,205,155,36]}
+{"kind":"textbox","id":"sh/tkvqhwfq","slide":13,"text":"Soy\n100%","textPreview":"Soy | 100%","textChars":8,"textLines":2,"bbox":[740,452,155,58]}
+{"kind":"textbox","id":"sh/3q10nu54","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[740,522,155,34]}
+{"kind":"shape","id":"sh/2p8jup4z","slide":13,"bbox":[940,250,95,185]}
+{"kind":"shape","id":"sh/psjipkna","slide":13,"bbox":[944,350,87,80]}
+{"kind":"textbox","id":"sh/ora1wfmp","slide":13,"text":"667","textPreview":"667","textChars":3,"textLines":1,"bbox":[910,205,155,36]}
+{"kind":"textbox","id":"sh/fmh0ja58","slide":13,"text":"Control","textPreview":"Control","textChars":7,"textLines":1,"bbox":[910,452,155,58]}
+{"kind":"textbox","id":"sh/el8jq54n","slide":13,"text":"2.39%","textPreview":"2.39%","textChars":5,"textLines":1,"bbox":[910,522,155,34]}
+{"kind":"shape","id":"sh/1ozilkne","slide":13,"bbox":[1110,250,95,185]}
+{"kind":"shape","id":"sh/gnq1sfmt","slide":13,"bbox":[1114,350,87,80]}
+{"kind":"textbox","id":"sh/zilkvelc","slide":13,"text":"798","textPreview":"798","textChars":3,"textLines":1,"bbox":[1080,205,155,36]}
+{"kind":"textbox","id":"sh/yhsj294r","slide":13,"text":"Soy / Rice / Pea\n40:30:30","textPreview":"Soy / Rice / Pea | 40:30:30","textChars":25,"textLines":2,"bbox":[1080,452,155,58]}
+{"kind":"textbox","id":"sh/m5snqt0b","slide":13,"text":"4.85%","textPreview":"4.85%","textChars":5,"textLines":1,"bbox":[1080,522,155,34]}
+{"kind":"textbox","id":"sh/7614jy1w","slide":13,"text":"Calculated estimates based on measured base protein, added powder mass and declared powder protein content.","textPreview":"Calculated estimates based on measured base protein, added powder mass and declared powder protein content.","textChars":107,"textLines":1,"bbox":[110,585,1060,36]}
+{"kind":"textbox","id":"sh/87a5s3ih","slide":13,"text":"Soy 90%, rice 80%, pea 80%. Enriched products were not directly reanalysed by Kjeldahl.","textPreview":"Soy 90%, rice 80%, pea 80%. Enriched products were not directly reanalysed by Kjeldahl.","textChars":87,"textLines":1,"bbox":[170,625,940,30]}
+{"kind":"textbox","id":"sh/98jml8jm","slide":13,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/y18nmt0z","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/ubby4m","slide":13,"text":"The final comparison included six enriched formulations and one control. Each enriched sample was calculated to contain approximately 4.85 percent protein, while the control remained at 2.39 percent. Keeping the estimated protein level similar allowed the sensory comparison to focus mainly on protein source and blend. These enriched values are theoretical estimates. They combine the measured protein in the base, the powder mass and the manufacturer declarations of 90 percent for soy and 80 percent for rice and pea. The enriched beverages were not directly reanalysed by Kjeldahl.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 10–11 and 17."}
+{"kind":"slide","id":"sl/zc6f03","slide":14,"title":"SENSORY EVALUATION","textShapes":26}
+{"kind":"shape","id":"sh/kna9g3at","slide":14,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/jm1s7yt8","slide":14,"text":"SENSORY EVALUATION","textPreview":"SENSORY EVALUATION","textChars":18,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/ilsretsn","slide":14,"text":"Sensory test design","textPreview":"Sensory test design","textChars":19,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/xkja5obi","slide":14,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/wja9cjax","slide":14,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[70,160,180,58]}
+{"kind":"textbox","id":"sh/vi183etc","slide":14,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[70,212,180,42]}
+{"kind":"textbox","id":"sh/ahsra9sr","slide":14,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[270,160,180,58]}
+{"kind":"textbox","id":"sh/hgnahsbm","slide":14,"text":"coded samples","textPreview":"coded samples","textChars":13,"textLines":1,"bbox":[270,212,180,42]}
+{"kind":"textbox","id":"sh/gfu9ona1","slide":14,"text":"10 mL","textPreview":"10 mL","textChars":5,"textLines":1,"bbox":[470,160,220,58]}
+{"kind":"textbox","id":"sh/uxcf61gj","slide":14,"text":"per sample, served cold","textPreview":"per sample, served cold","textChars":23,"textLines":1,"bbox":[470,212,220,42]}
+{"kind":"textbox","id":"sh/filwf6x4","slide":14,"text":"24 Aug","textPreview":"24 Aug","textChars":6,"textLines":1,"bbox":[730,160,220,58]}
+{"kind":"textbox","id":"sh/gjux8byp","slide":14,"text":"AUT Food Lab","textPreview":"AUT Food Lab","textChars":12,"textLines":1,"bbox":[730,212,220,42]}
+{"kind":"textbox","id":"sh/1k3ehwfa","slide":14,"text":"Randomised order in Qualtrics","textPreview":"Randomised order in Qualtrics","textChars":29,"textLines":1,"bbox":[990,175,220,62]}
+{"kind":"shape","id":"sh/6tsv2hgn","slide":14,"bbox":[135,335,54,54]}
+{"kind":"textbox","id":"sh/7u1wbmx8","slide":14,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[135,335,54,54]}
+{"kind":"textbox","id":"sh/svud4ryt","slide":14,"text":"Receive coded sample","textPreview":"Receive coded sample","textChars":20,"textLines":1,"bbox":[65,405,195,44]}
+{"kind":"shape","id":"sh/tw3edwfe","slide":14,"bbox":[261,362,36,0]}
+{"kind":"shape","id":"sh/qpwfelgr","slide":14,"bbox":[289,356,14,12]}
+{"kind":"shape","id":"sh/bq5wnqxc","slide":14,"bbox":[375,335,54,54]}
+{"kind":"textbox","id":"sh/nixkje9s","slide":14,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[375,335,54,54]}
+{"kind":"textbox","id":"sh/mh43q9s7","slide":14,"text":"Taste","textPreview":"Taste","textChars":5,"textLines":1,"bbox":[305,405,195,44]}
+{"kind":"shape","id":"sh/9kf2lori","slide":14,"bbox":[501,362,36,0]}
+{"kind":"shape","id":"sh/oj6lsjad","slide":14,"bbox":[529,356,14,12]}
+{"kind":"shape","id":"sh/bmxkny9o","slide":14,"bbox":[615,335,54,54]}
+{"kind":"textbox","id":"sh/alo3uts3","slide":14,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[615,335,54,54]}
+{"kind":"textbox","id":"sh/xof2p8ru","slide":14,"text":"Rate in Qualtrics","textPreview":"Rate in Qualtrics","textChars":17,"textLines":1,"bbox":[545,405,195,44]}
+{"kind":"shape","id":"sh/wn6lw3a9","slide":14,"bbox":[741,362,36,0]}
+{"kind":"shape","id":"sh/jqhkry90","slide":14,"bbox":[769,356,14,12]}
+{"kind":"shape","id":"sh/yp83ytsf","slide":14,"bbox":[855,335,54,54]}
+{"kind":"textbox","id":"sh/gfq1o3qd","slide":14,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[855,335,54,54]}
+{"kind":"textbox","id":"sh/hgz2h87y","slide":14,"text":"Rinse with water","textPreview":"Rinse with water","textChars":16,"textLines":1,"bbox":[785,405,195,44]}
+{"kind":"shape","id":"sh/ut8jmd87","slide":14,"bbox":[981,362,36,0]}
+{"kind":"shape","id":"sh/vehkfyps","slide":14,"bbox":[1009,356,14,12]}
+{"kind":"shape","id":"sh/8rq1k3qh","slide":14,"bbox":[1095,335,54,54]}
+{"kind":"textbox","id":"sh/tsz2d872","slide":14,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1095,335,54,54]}
+{"kind":"textbox","id":"sh/6p8jit8b","slide":14,"text":"Next sample","textPreview":"Next sample","textChars":11,"textLines":1,"bbox":[1025,405,195,44]}
+{"kind":"textbox","id":"sh/7qhkbypw","slide":14,"text":"Overall liking, colour, taste, flavour, consistency and mouthfeel","textPreview":"Overall liking, colour, taste, flavour, consistency and mouthfeel","textChars":65,"textLines":1,"bbox":[125,510,1030,34]}
+{"kind":"textbox","id":"sh/kn61gjq5","slide":14,"text":"JAR, CATA, purchase intention and final preference","textPreview":"JAR, CATA, purchase intention and final preference","textChars":50,"textLines":1,"bbox":[250,555,780,34]}
+{"kind":"textbox","id":"sh/lofi9o7q","slide":14,"text":"Protein dispersions rested for at least 30 min and were agitated before pouring.","textPreview":"Protein dispersions rested for at least 30 min and were agitated before pouring.","textChars":80,"textLines":1,"bbox":[180,610,920,32]}
+{"kind":"textbox","id":"sh/9svyhkni","slide":14,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/ormh8f6x","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/zc6f03","slide":14,"text":"The exploratory sensory test took place on 24 August in the AUT Food Lab with 25 convenience participants. Every participant evaluated all seven coded formulations, served cold in 10-millilitre portions. Qualtrics randomised the sample order for each participant. The questionnaire combined overall liking and other hedonic attributes with just-about-right scales, check-all-that-apply descriptors, purchase intention and final preference. The enriched dispersions rested for at least 30 minutes and were agitated immediately before pouring to limit sedimentation effects.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 11–12."}
+{"kind":"slide","id":"sl/941hky","slide":15,"title":"RESULTS","textShapes":12}
+{"kind":"shape","id":"sh/mtobed03","slide":15,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/9wfa98ze","slide":15,"text":"RESULTS","textPreview":"RESULTS","textChars":7,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/8v6tg3i9","slide":15,"text":"Overall liking identified candidate 798","textPreview":"Overall liking identified candidate 798","textChars":39,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/zqds3yhc","slide":15,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/lsfa58zi","slide":15,"text":"7.04 / 9","textPreview":"7.04 / 9","textChars":8,"textLines":1,"bbox":[860,170,330,58]}
+{"kind":"textbox","id":"sh/krm9c3ix","slide":15,"text":"Control 667 · highest mean","textPreview":"Control 667 · highest mean","textChars":26,"textLines":1,"bbox":[860,222,330,42]}
+{"kind":"textbox","id":"sh/jmhsf2hw","slide":15,"text":"6.56 / 9","textPreview":"6.56 / 9","textChars":8,"textLines":1,"bbox":[860,285,330,58]}
+{"kind":"textbox","id":"sh/il8bmx0b","slide":15,"text":"798 · best enriched mean","textPreview":"798 · best enriched mean","textChars":24,"textLines":1,"bbox":[860,337,330,42]}
+{"kind":"textbox","id":"sh/8ru5072l","slide":15,"text":"40% soy / 30% rice / 30% pea","textPreview":"40% soy / 30% rice / 30% pea","textChars":28,"textLines":1,"bbox":[860,380,330,40]}
+{"kind":"shape","id":"sh/tc3m9cj6","slide":15,"bbox":[850,445,340,120]}
+{"kind":"shape","id":"sh/6pc3yxkf","slide":15,"bbox":[850,445,7,120]}
+{"kind":"textbox","id":"sh/7ql47210","slide":15,"text":"Overall formulation effect","textPreview":"Overall formulation effect","textChars":26,"textLines":1,"bbox":[872,457,304,30]}
+{"kind":"textbox","id":"sh/knulwn2p","slide":15,"text":"Friedman χ²(6) = 27.56\np < 0.001\nKendall's W = 0.184","textPreview":"Friedman χ²(6) = 27.56 | p < 0.001 | Kendall's W = 0.184","textChars":52,"textLines":3,"bbox":[872,489,304,66]}
+{"kind":"textbox","id":"sh/lo3m5sja","slide":15,"text":"Control vs 798: Holm-adjusted p = 0.104","textPreview":"Control vs 798: Holm-adjusted p = 0.104","textChars":39,"textLines":1,"bbox":[850,585,340,44]}
+{"kind":"textbox","id":"sh/yls3udkj","slide":15,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/jml43i14","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"chart","id":"ch/694jql4f","slide":15,"name":"","chartType":"bar","bbox":[60,160,760,430]}
+{"kind":"notes","id":"nt/941hky","slide":15,"text":"Overall liking differed across the seven formulations. The Friedman test gave chi-squared 27.56 with p below 0.001, although Kendall’s W of 0.184 indicates a modest effect size. The control achieved the highest mean score at 7.04 out of 9. Candidate 798, containing 40 percent soy, 30 percent rice and 30 percent pea protein, was the best enriched formulation at 6.56. In the planned comparison, no significant difference was detected between the control and 798 after Holm adjustment, with p equal to 0.104. This does not establish equivalence.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 17–18."}
+{"kind":"slide","id":"sl/cz942v","slide":16,"title":"CANDIDATE SELECTION","textShapes":18}
+{"kind":"shape","id":"sh/ih436pkz","slide":16,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/54v2h43q","slide":16,"text":"CANDIDATE SELECTION","textPreview":"CANDIDATE SELECTION","textChars":19,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/4jml8z25","slide":16,"text":"Why formulation 798 was selected","textPreview":"Why formulation 798 was selected","textChars":32,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/vedkbulo","slide":16,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/udk32pk3","slide":16,"bbox":[470,205,340,340]}
+{"kind":"textbox","id":"sh/hgv2dk3e","slide":16,"text":"798","textPreview":"798","textChars":3,"textLines":1,"bbox":[540,260,200,70]}
+{"kind":"textbox","id":"sh/gfml4f29","slide":16,"text":"Selected development\ncandidate","textPreview":"Selected development | candidate","textChars":30,"textLines":2,"bbox":[530,335,220,70]}
+{"kind":"textbox","id":"sh/fax4nels","slide":16,"text":"40% soy\n30% rice\n30% pea","textPreview":"40% soy | 30% rice | 30% pea","textChars":24,"textLines":3,"bbox":[550,420,180,90]}
+{"kind":"shape","id":"sh/e9o3e9k7","slide":16,"bbox":[60,175,330,120]}
+{"kind":"shape","id":"sh/0zipsrmd","slide":16,"bbox":[60,175,7,120]}
+{"kind":"textbox","id":"sh/10r6lc3y","slide":16,"text":"Overall liking","textPreview":"Overall liking","textChars":14,"textLines":1,"bbox":[82,187,294,30]}
+{"kind":"textbox","id":"sh/ex07qh47","slide":16,"text":"6.56 / 9\nHighest mean among enriched formulations","textPreview":"6.56 / 9 | Highest mean among enriched formulations","textChars":49,"textLines":2,"bbox":[82,219,294,66]}
+{"kind":"shape","id":"sh/fy9ojmls","slide":16,"bbox":[60,340,330,120]}
+{"kind":"shape","id":"sh/svypo7mh","slide":16,"bbox":[60,340,7,120]}
+{"kind":"textbox","id":"sh/dw76hc32","slide":16,"text":"Planned comparison","textPreview":"Planned comparison","textChars":18,"textLines":1,"bbox":[82,352,294,30]}
+{"kind":"textbox","id":"sh/q9g7mx4b","slide":16,"text":"No significant difference detected versus control\npHolm = 0.104","textPreview":"No significant difference detected versus control | pHolm = 0.104","textChars":63,"textLines":2,"bbox":[82,384,294,66]}
+{"kind":"shape","id":"sh/rupof2lw","slide":16,"bbox":[890,175,330,150]}
+{"kind":"shape","id":"sh/47ypk7m5","slide":16,"bbox":[890,175,7,150]}
+{"kind":"textbox","id":"sh/5876ds3q","slide":16,"text":"Balanced JAR profile","textPreview":"Balanced JAR profile","textChars":20,"textLines":1,"bbox":[912,187,294,30]}
+{"kind":"textbox","id":"sh/lozmhofu","slide":16,"text":"Sweetness 84% · bitterness 60%\nFlavour intensity 88%\nCreaminess 84% · thickness 80%","textPreview":"Sweetness 84% · bitterness 60% | Flavour intensity 88% | Creaminess 84% · thickness 80%","textChars":83,"textLines":3,"bbox":[912,219,294,96]}
+{"kind":"shape","id":"sh/knq5oje9","slide":16,"bbox":[890,365,330,120]}
+{"kind":"shape","id":"sh/j2h4fexo","slide":16,"bbox":[890,365,7,120]}
+{"kind":"textbox","id":"sh/y18nmtw3","slide":16,"text":"Descriptors","textPreview":"Descriptors","textChars":11,"textLines":1,"bbox":[912,377,294,30]}
+{"kind":"textbox","id":"sh/x0fmdofi","slide":16,"text":"Relatively low beany/soy-like perception and the lowest gritty/sandy frequency among enriched samples.","textPreview":"Relatively low beany/soy-like perception and the lowest gritty/sandy frequency among enriched samples.","textChars":102,"textLines":1,"bbox":[912,409,294,66]}
+{"kind":"textbox","id":"sh/wz65kjex","slide":16,"text":"MAIN LIMITATION","textPreview":"MAIN LIMITATION","textChars":15,"textLines":1,"bbox":[140,535,240,24]}
+{"kind":"textbox","id":"sh/byx4bexc","slide":16,"text":"Powdery / chalky and gritty / sandy mouthfeel","textPreview":"Powdery / chalky and gritty / sandy mouthfeel","textChars":45,"textLines":1,"bbox":[210,565,860,50]}
+{"kind":"textbox","id":"sh/axoni9wr","slide":16,"text":"A promising candidate for development, not a validated commercial product.","textPreview":"A promising candidate for development, not a validated commercial product.","textChars":74,"textLines":1,"bbox":[280,625,720,30]}
+{"kind":"textbox","id":"sh/hwj6p8vm","slide":16,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/gva5w3eh","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/cz942v","slide":16,"text":"Formulation 798 was selected using several criteria rather than overall liking alone. It achieved the highest mean liking among the enriched samples, and the planned comparison with the control did not detect a significant difference. Its JAR profile was relatively balanced for sweetness, flavour intensity, creaminess and thickness. It also showed relatively low beany perception and the lowest gritty frequency among enriched products. However, particle-related mouthfeel remained the main limitation. For that reason, 798 is a development candidate, not a validated final product.\n\nSource: Kali Mana, AUT Internship Report, 2026, p. 18."}
+{"kind":"slide","id":"sl/cpudi3","slide":17,"title":"NEXT STEPS","textShapes":24}
+{"kind":"shape","id":"sh/0bqlk7qx","slide":17,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/zax4r2pc","slide":17,"text":"NEXT STEPS","textPreview":"NEXT STEPS","textChars":10,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/e9o3ix8r","slide":17,"text":"Limitations translated into a development roadmap","textPreview":"Limitations translated into a development roadmap","textChars":49,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/9gzmxw7e","slide":17,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/ofqlorqt","slide":17,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[65,155,70,70]}
+{"kind":"textbox","id":"sh/neh4vmp8","slide":17,"text":"Protein dispersion","textPreview":"Protein dispersion","textChars":18,"textLines":1,"bbox":[155,155,430,30]}
+{"kind":"textbox","id":"sh/md83mh8n","slide":17,"text":"Prehydration, addition order, finer sieving, suitable homogenisation and particle-size measurement","textPreview":"Prehydration, addition order, finer sieving, suitable homogenisation and particle-size measurement","textChars":98,"textLines":1,"bbox":[155,190,430,65]}
+{"kind":"shape","id":"sh/x4jm1w7a","slide":17,"bbox":[155,263,430,1]}
+{"kind":"textbox","id":"sh/w3alsrq5","slide":17,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[665,155,70,70]}
+{"kind":"textbox","id":"sh/2lkra10v","slide":17,"text":"Thermal validation","textPreview":"Thermal validation","textChars":18,"textLines":1,"bbox":[755,155,430,30]}
+{"kind":"textbox","id":"sh/3mts361g","slide":17,"text":"Direct product-temperature monitoring with calibrated probes and data logging","textPreview":"Direct product-temperature monitoring with calibrated probes and data logging","textChars":77,"textLines":1,"bbox":[755,190,430,65]}
+{"kind":"shape","id":"sh/on29cri1","slide":17,"bbox":[755,263,430,1]}
+{"kind":"textbox","id":"sh/pova5wjm","slide":17,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[65,300,70,70]}
+{"kind":"textbox","id":"sh/qp4re107","slide":17,"text":"Composition","textPreview":"Composition","textChars":11,"textLines":1,"bbox":[155,300,430,30]}
+{"kind":"textbox","id":"sh/bqds761s","slide":17,"text":"Direct protein analysis of the final enriched beverage","textPreview":"Direct protein analysis of the final enriched beverage","textChars":54,"textLines":1,"bbox":[155,335,430,65]}
+{"kind":"shape","id":"sh/crm9gbid","slide":17,"bbox":[155,408,430,1]}
+{"kind":"textbox","id":"sh/dcva9gji","slide":17,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[665,300,70,70]}
+{"kind":"textbox","id":"sh/6t0r2hk3","slide":17,"text":"Repeatability","textPreview":"Repeatability","textChars":13,"textLines":1,"bbox":[755,300,430,30]}
+{"kind":"textbox","id":"sh/ru98vm18","slide":17,"text":"At least three independent control and 798 batches; yield, pH, rheology, particle size and sedimentation","textPreview":"At least three independent control and 798 batches; yield, pH, rheology, particle size and sedimentation","textChars":104,"textLines":1,"bbox":[755,335,430,65]}
+{"kind":"shape","id":"sh/bm5gned4","slide":17,"bbox":[755,408,430,1]}
+{"kind":"textbox","id":"sh/alwfe9cj","slide":17,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[65,445,70,70]}
+{"kind":"textbox","id":"sh/xonypovu","slide":17,"text":"Food safety","textPreview":"Food safety","textChars":11,"textLines":1,"bbox":[155,445,430,30]}
+{"kind":"textbox","id":"sh/wnexgju9","slide":17,"text":"Microbiological analysis and shelf-life testing; pH alone is insufficient","textPreview":"Microbiological analysis and shelf-life testing; pH alone is insufficient","textChars":73,"textLines":1,"bbox":[155,480,430,65]}
+{"kind":"shape","id":"sh/nilgjeds","slide":17,"bbox":[155,553,430,1]}
+{"kind":"textbox","id":"sh/mhcfa9c7","slide":17,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[665,445,70,70]}
+{"kind":"textbox","id":"sh/9knyl4vy","slide":17,"text":"Sensory confirmation","textPreview":"Sensory confirmation","textChars":20,"textLines":1,"bbox":[755,445,430,30]}
+{"kind":"textbox","id":"sh/ojuxczud","slide":17,"text":"A larger and more representative consumer panel","textPreview":"A larger and more representative consumer panel","textChars":47,"textLines":1,"bbox":[755,480,430,65]}
+{"kind":"shape","id":"sh/7epgvydc","slide":17,"bbox":[755,553,430,1]}
+{"kind":"textbox","id":"sh/6dgfmtcr","slide":17,"text":"Proposed next experiment","textPreview":"Proposed next experiment","textChars":24,"textLines":1,"bbox":[80,590,220,36]}
+{"kind":"textbox","id":"sh/4zqdgva9","slide":17,"text":"Control vs 798, replicated production, thermal monitoring, rheology, particle size, Kjeldahl and sensory confirmation","textPreview":"Control vs 798, replicated production, thermal monitoring, rheology, particle size, Kjeldahl and sensory confirmation","textChars":117,"textLines":1,"bbox":[320,590,870,44]}
+{"kind":"textbox","id":"sh/p0zu90be","slide":17,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/2x8velc3","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/cpudi3","slide":17,"text":"Each limitation points to a specific next experiment. Protein dispersion should be improved through controlled hydration, a better addition sequence, finer separation and more suitable homogenisation. The thermal process requires direct product-temperature monitoring. The enriched beverage should be analysed directly for protein. Manufacturing repeatability should be tested with at least three independent control and 798 batches. Microbiological and shelf-life work is essential because pH alone cannot demonstrate safety. Finally, a larger consumer panel should confirm whether the sensory pattern remains stable.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 19–20."}
+{"kind":"slide","id":"sl/q9lczx","slide":18,"title":"PROFESSIONAL OUTCOMES AND CONCLUSION","textShapes":15}
+{"kind":"shape","id":"sh/6dovmtgv","slide":18,"bbox":[800,0,120,720]}
+{"kind":"shape","id":"sh/7ehwfyhg","slide":18,"bbox":[815,0,8,720]}
+{"kind":"textbox","id":"sh/gjqdc3yx","slide":18,"text":"PROFESSIONAL OUTCOMES AND CONCLUSION","textPreview":"PROFESSIONAL OUTCOMES AND CONCLUSION","textChars":36,"textLines":1,"bbox":[60,48,620,24]}
+{"kind":"textbox","id":"sh/hkzel8zi","slide":18,"text":"Engineering is also knowing when an experimental plan must change.","textPreview":"Engineering is also knowing when an experimental plan must change.","textChars":66,"textLines":1,"bbox":[60,90,680,82]}
+{"kind":"textbox","id":"sh/uh8vqdg7","slide":18,"text":"ADAPTATION","textPreview":"ADAPTATION","textChars":10,"textLines":1,"bbox":[60,210,190,25]}
+{"kind":"textbox","id":"sh/fihwjihs","slide":18,"text":"The VR study was redirected when experimental reliability could not be guaranteed.","textPreview":"The VR study was redirected when experimental reliability could not be guaranteed.","textChars":82,"textLines":1,"bbox":[250,208,500,70]}
+{"kind":"textbox","id":"sh/wn6dgjyt","slide":18,"text":"ANALYTICAL RESULT","textPreview":"ANALYTICAL RESULT","textChars":17,"textLines":1,"bbox":[60,312,190,25]}
+{"kind":"textbox","id":"sh/xofu9oze","slide":18,"text":"Selected base: 2.39 ± 0.17 g protein / 100 mL.","textPreview":"Selected base: 2.39 ± 0.17 g protein / 100 mL.","textChars":46,"textLines":1,"bbox":[250,310,500,70]}
+{"kind":"textbox","id":"sh/t4zqpozu","slide":18,"text":"DEVELOPMENT RESULT","textPreview":"DEVELOPMENT RESULT","textChars":18,"textLines":1,"bbox":[60,414,190,25]}
+{"kind":"textbox","id":"sh/83q9wji9","slide":18,"text":"Theoretical enriched level ≈4.85%; 798 was the strongest enriched candidate, with powdery and gritty mouthfeel still unresolved.","textPreview":"Theoretical enriched level ≈4.85%; 798 was the strongest enriched candidate, with powdery and gritty mouthfeel still unresolved.","textChars":128,"textLines":1,"bbox":[250,412,500,70]}
+{"kind":"textbox","id":"sh/72x8nyho","slide":18,"text":"Technical","textPreview":"Technical","textChars":9,"textLines":1,"bbox":[60,535,170,28]}
+{"kind":"textbox","id":"sh/61orut03","slide":18,"text":"Processing, formulation, rheology, Kjeldahl and sensory preparation","textPreview":"Processing, formulation, rheology, Kjeldahl and sensory preparation","textChars":67,"textLines":1,"bbox":[60,568,690,28]}
+{"kind":"textbox","id":"sh/h8zqt8zq","slide":18,"text":"Professional","textPreview":"Professional","textChars":12,"textLines":1,"bbox":[60,610,170,28]}
+{"kind":"textbox","id":"sh/g7q903i5","slide":18,"text":"Working in English, troubleshooting, autonomy, traceability and project redirection","textPreview":"Working in English, troubleshooting, autonomy, traceability and project redirection","textChars":83,"textLines":1,"bbox":[60,643,690,30]}
+{"kind":"textbox","id":"sh/v6h8ryhk","slide":18,"text":"Thank you\nQuestions?","textPreview":"Thank you | Questions?","textChars":20,"textLines":2,"bbox":[900,520,300,100]}
+{"kind":"textbox","id":"sh/u58ryt0z","slide":18,"text":"Kali Mana, AUT 2026","textPreview":"Kali Mana, AUT 2026","textChars":19,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/5wjax8zm","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"image","id":"im/8zeh07yp","slide":18,"name":"","geometry":"rect","alt":"Rheology work during the internship","bbox":[860,0,420,720]}
+{"kind":"notes","id":"nt/q9lczx","slide":18,"text":"This internship developed both technical and professional skills. I gained practical experience in oat processing, enzyme-assisted production, plant protein formulation, rheology, freeze-drying, Kjeldahl analysis and sensory preparation. I also improved my data traceability, Qualtrics work and interpretation of non-parametric statistics. The main lesson was that engineering includes recognising when a plan can no longer produce reliable evidence and changing direction responsibly. The project established a measured base protein value and identified 798 as the strongest enriched candidate, while clearly defining the dispersion work still required. Thank you for listening. I am ready for your questions.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 19–20."}
+{"kind":"slide","id":"sl/27z1ow","slide":19,"title":"BACKUP","textShapes":5}
+{"kind":"shape","id":"sh/a5gnih87","slide":19,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/x8r6dwry","slide":19,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/c7i5krqd","slide":19,"text":"Detailed oat beverage process","textPreview":"Detailed oat beverage process","textChars":29,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/n2p47m9w","slide":19,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/p4769wrm","slide":19,"text":"Coconut caramel: 400 g coconut cream + 250 g brown sugar + 5 g corn starch + 0.5 g salt + 2 g vanilla","textPreview":"Coconut caramel: 400 g coconut cream + 250 g brown sugar + 5 g corn starch + 0.5 g salt + 2 g vanilla","textChars":101,"textLines":1,"bbox":[80,602,1120,34]}
+{"kind":"textbox","id":"sh/o3y5grah","slide":19,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/7ytoj690","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"table","id":"tb/76hw7md0","slide":19,"name":"","rows":7,"cols":3,"preview":"Stage | Inputs / conditions | Key control point","bbox":[60,155,1160,420]}
+{"kind":"notes","id":"nt/27z1ow","slide":19,"text":"Backup detail for questions about the selected oat beverage process.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 5–7."}
+{"kind":"slide","id":"sl/u7dbwt","slide":20,"title":"BACKUP","textShapes":7}
+{"kind":"shape","id":"sh/h0f2lo7i","slide":20,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/uxo3q9o7","slide":20,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/vyxkjepc","slide":20,"text":"Preliminary rheology","textPreview":"Preliminary rheology","textChars":20,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/8v6loz61","slide":20,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/mt43m9ov","slide":20,"text":"SOY: NOMINAL PRELIMINARY LEVELS","textPreview":"SOY: NOMINAL PRELIMINARY LEVELS","textChars":31,"textLines":1,"bbox":[85,172,300,24]}
+{"kind":"textbox","id":"sh/krmlkz6p","slide":20,"text":"RICE: EXPLORATORY HEATING PILOT","textPreview":"RICE: EXPLORATORY HEATING PILOT","textChars":31,"textLines":1,"bbox":[710,172,330,24]}
+{"kind":"textbox","id":"sh/lsv2d47a","slide":20,"text":"Single screening runs. Preliminary nominal percentages used the earlier 1% base-protein assumption.","textPreview":"Single screening runs. Preliminary nominal percentages used the earlier 1% base-protein assumption.","textChars":99,"textLines":1,"bbox":[160,590,960,42]}
+{"kind":"textbox","id":"sh/ts3elo7u","slide":20,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/s7udc369","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"chart","id":"ch/hkb2dsby","slide":20,"name":"","chartType":"bar","bbox":[55,160,570,390]}
+{"kind":"chart","id":"ch/vi9kbit8","slide":20,"name":"","chartType":"bar","bbox":[680,160,520,390]}
+{"kind":"notes","id":"nt/u7dbwt","slide":20,"text":"Backup chart using the exact apparent-viscosity values reported at approximately 100 inverse seconds. Raw curve data were not included in the supplied report.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 14–15."}
+{"kind":"slide","id":"sl/rzbz45","slide":21,"title":"BACKUP","textShapes":16}
+{"kind":"shape","id":"sh/b2tcjidw","slide":21,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/c32dcne1","slide":21,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/d4bulsvm","slide":21,"text":"Kjeldahl method","textPreview":"Kjeldahl method","textChars":15,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/2x0b6dwz","slide":21,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/3y9cfidk","slide":21,"bbox":[55,170,165,70]}
+{"kind":"textbox","id":"sh/oz2d8ne5","slide":21,"text":"Freeze-drying","textPreview":"Freeze-drying","textChars":13,"textLines":1,"bbox":[63,178,149,54]}
+{"kind":"shape","id":"sh/p0buh8vq","slide":21,"bbox":[223,205,24,0]}
+{"kind":"shape","id":"sh/ut0b2tw3","slide":21,"bbox":[239,199,14,12]}
+{"kind":"shape","id":"sh/fu9cbydo","slide":21,"bbox":[253,170,165,70]}
+{"kind":"textbox","id":"sh/zmd4v2xk","slide":21,"text":"≈1.000 g sample","textPreview":"≈1.000 g sample","textChars":15,"textLines":1,"bbox":[261,178,149,54]}
+{"kind":"shape","id":"sh/el4n2xwz","slide":21,"bbox":[421,205,24,0]}
+{"kind":"shape","id":"sh/1ofmxcfq","slide":21,"bbox":[437,199,14,12]}
+{"kind":"shape","id":"sh/0n6547e5","slide":21,"bbox":[451,170,165,70]}
+{"kind":"textbox","id":"sh/nqx4zmxg","slide":21,"text":"Digestion","textPreview":"Digestion","textChars":9,"textLines":1,"bbox":[459,178,149,54]}
+{"kind":"shape","id":"sh/mpon6hwv","slide":21,"bbox":[619,205,24,0]}
+{"kind":"shape","id":"sh/9sfm1wvm","slide":21,"bbox":[635,199,14,12]}
+{"kind":"shape","id":"sh/or658re1","slide":21,"bbox":[649,170,165,70]}
+{"kind":"textbox","id":"sh/3ut4nixc","slide":21,"text":"Distillation","textPreview":"Distillation","textChars":12,"textLines":1,"bbox":[657,178,149,54]}
+{"kind":"shape","id":"sh/2tk3udwr","slide":21,"bbox":[817,205,24,0]}
+{"kind":"shape","id":"sh/6ps72lgf","slide":21,"bbox":[833,199,14,12]}
+{"kind":"shape","id":"sh/7a18vqx0","slide":21,"bbox":[847,170,165,70]}
+{"kind":"textbox","id":"sh/8bap4vyl","slide":21,"text":"0.100 mol/L HCl","textPreview":"0.100 mol/L HCl","textChars":15,"textLines":1,"bbox":[855,178,149,54]}
+{"kind":"shape","id":"sh/tcjqx0fq","slide":21,"bbox":[1015,205,24,0]}
+{"kind":"shape","id":"sh/yl87ylg3","slide":21,"bbox":[1031,199,14,12]}
+{"kind":"shape","id":"sh/jm1orqho","slide":21,"bbox":[1045,170,165,70]}
+{"kind":"textbox","id":"sh/knap0vy9","slide":21,"text":"Calculation","textPreview":"Calculation","textChars":11,"textLines":1,"bbox":[1053,178,149,54]}
+{"kind":"textbox","id":"sh/lojqt0zu","slide":21,"text":"Vcorrected = Vsample − Vblank","textPreview":"Vcorrected = Vsample − Vblank","textChars":29,"textLines":1,"bbox":[90,300,500,58]}
+{"kind":"textbox","id":"sh/ah87u1g7","slide":21,"text":"Nitrogen (% DM) = Vcorrected × CHCl × 14.007 × 100 / (m × 1000)","textPreview":"Nitrogen (% DM) = Vcorrected × CHCl × 14.007 × 100 / (m × 1000)","textChars":63,"textLines":1,"bbox":[625,300,570,58]}
+{"kind":"textbox","id":"sh/bihon6hs","slide":21,"text":"Protein (% DM) = Nitrogen (% DM) × 5.83","textPreview":"Protein (% DM) = Nitrogen (% DM) × 5.83","textChars":39,"textLines":1,"bbox":[90,390,500,58]}
+{"kind":"textbox","id":"sh/do72p83m","slide":21,"text":"Protein (g/100 mL) = Protein (% DM) × dry matter (g/100 mL) / 100","textPreview":"Protein (g/100 mL) = Protein (% DM) × dry matter (g/100 mL) / 100","textChars":65,"textLines":1,"bbox":[625,390,570,58]}
+{"kind":"shape","id":"sh/cny1g3m1","slide":21,"bbox":[190,505,900,90]}
+{"kind":"shape","id":"sh/bmp0nylg","slide":21,"bbox":[190,505,7,90]}
+{"kind":"textbox","id":"sh/qlgjet4v","slide":21,"text":"Reagents","textPreview":"Reagents","textChars":8,"textLines":1,"bbox":[212,517,864,30]}
+{"kind":"textbox","id":"sh/pk7ilona","slide":21,"text":"≈0.5 g CuSO₄, 7 g K₂SO₄, 10 mL concentrated H₂SO₄ and boric-acid indicator solution","textPreview":"≈0.5 g CuSO₄, 7 g K₂SO₄, 10 mL concentrated H₂SO₄ and boric-acid indicator solution","textChars":83,"textLines":1,"bbox":[212,549,864,36]}
+{"kind":"textbox","id":"sh/ojy1c3mp","slide":21,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/3i50jy5k","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/rzbz45","slide":21,"text":"Backup equations and analytical workflow used for Kjeldahl protein determination.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 9–10."}
+{"kind":"slide","id":"sl/q6ws2d","slide":22,"title":"BACKUP","textShapes":23}
+{"kind":"shape","id":"sh/be58f610","slide":22,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/wfepobil","slide":22,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/xg7qhgj6","slide":22,"text":"Kjeldahl calculation example: selected batch replicate 1","textPreview":"Kjeldahl calculation example: selected batch replicate 1","textChars":56,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/yhg7ql0r","slide":22,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/jip8jq1c","slide":22,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[80,150,60,50]}
+{"kind":"textbox","id":"sh/kjypsbix","slide":22,"text":"Measured HCl","textPreview":"Measured HCl","textChars":12,"textLines":1,"bbox":[165,150,380,48]}
+{"kind":"textbox","id":"sh/lk7qlgj2","slide":22,"text":"13.95 mL","textPreview":"13.95 mL","textChars":8,"textLines":1,"bbox":[570,150,610,48]}
+{"kind":"textbox","id":"sh/6lg7ul0n","slide":22,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[80,226,60,50]}
+{"kind":"textbox","id":"sh/7mp8nq18","slide":22,"text":"Blank correction","textPreview":"Blank correction","textChars":16,"textLines":1,"bbox":[165,226,380,48]}
+{"kind":"textbox","id":"sh/3ed07yp8","slide":22,"text":"13.95 − 0.45 = 13.50 mL","textPreview":"13.95 − 0.45 = 13.50 mL","textChars":23,"textLines":1,"bbox":[570,226,610,48]}
+{"kind":"textbox","id":"sh/2d4zyt8n","slide":22,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[80,302,60,50]}
+{"kind":"textbox","id":"sh/pgfi987e","slide":22,"text":"Nitrogen in dry matter","textPreview":"Nitrogen in dry matter","textChars":22,"textLines":1,"bbox":[165,302,380,48]}
+{"kind":"textbox","id":"sh/of6103qt","slide":22,"text":"1.8909%","textPreview":"1.8909%","textChars":7,"textLines":1,"bbox":[570,302,610,48]}
+{"kind":"textbox","id":"sh/fqd03ypw","slide":22,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[80,378,60,50]}
+{"kind":"textbox","id":"sh/ep4zut8r","slide":22,"text":"Protein in dry matter","textPreview":"Protein in dry matter","textChars":21,"textLines":1,"bbox":[165,378,380,48]}
+{"kind":"textbox","id":"sh/1cvi5o72","slide":22,"text":"1.8909 × 5.83 = 11.024%","textPreview":"1.8909 × 5.83 = 11.024%","textChars":23,"textLines":1,"bbox":[570,378,610,48]}
+{"kind":"textbox","id":"sh/grmhw3qh","slide":22,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[80,454,60,50]}
+{"kind":"textbox","id":"sh/zmx0fipg","slide":22,"text":"Selected-batch dry matter","textPreview":"Selected-batch dry matter","textChars":25,"textLines":1,"bbox":[165,454,380,48]}
+{"kind":"textbox","id":"sh/yloj6d8v","slide":22,"text":"14 g / 60 mL = 23.33 g/100 mL","textPreview":"14 g / 60 mL = 23.33 g/100 mL","textChars":29,"textLines":1,"bbox":[570,454,610,48]}
+{"kind":"textbox","id":"sh/udcbulwf","slide":22,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[80,530,60,50]}
+{"kind":"textbox","id":"sh/velcnqdk","slide":22,"text":"Protein in beverage","textPreview":"Protein in beverage","textChars":19,"textLines":1,"bbox":[165,530,380,48]}
+{"kind":"textbox","id":"sh/gfudwve5","slide":22,"text":"11.024 × 23.33 / 100 = 2.572 g/100 mL","textPreview":"11.024 × 23.33 / 100 = 2.572 g/100 mL","textChars":37,"textLines":1,"bbox":[570,530,610,48]}
+{"kind":"textbox","id":"sh/hg3upgvq","slide":22,"text":"Replicate result: 2.572 g protein / 100 mL","textPreview":"Replicate result: 2.572 g protein / 100 mL","textChars":42,"textLines":1,"bbox":[330,615,620,44]}
+{"kind":"textbox","id":"sh/ihcvylwb","slide":22,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/3ilcrqdw","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/q6ws2d","slide":22,"text":"Backup calculation based on the first analytical replicate from the selected batch. The sample mass was approximately 1.000 g.\n\nSource: Kali Mana, AUT Internship Report, 2026, Appendix A, p. 22."}
+{"kind":"slide","id":"sl/bv4z6a","slide":23,"title":"BACKUP","textShapes":5}
+{"kind":"shape","id":"sh/nu5svyds","slide":23,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/ofe9o3ud","slide":23,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/pgnax8vy","slide":23,"text":"Complete final formulation table","textPreview":"Complete final formulation table","textChars":32,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/ahwrqdcj","slide":23,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/cje9snup","slide":23,"text":"The 4.85% values are corrected theoretical estimates, not direct Kjeldahl measurements of the enriched products.","textPreview":"The 4.85% values are corrected theoretical estimates, not direct Kjeldahl measurements of the enriched products.","textChars":112,"textLines":1,"bbox":[150,610,980,42]}
+{"kind":"textbox","id":"sh/xkna1sva","slide":23,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/ylgrudcf","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"table","id":"tb/ilk7q9g7","slide":23,"name":"","rows":8,"cols":7,"preview":"Code | Protein composition | Soy (g) | Rice (g) | Pea (g) | Total powder (g) | Estimated protein (%)","bbox":[45,150,1190,430]}
+{"kind":"notes","id":"nt/bv4z6a","slide":23,"text":"Backup table reproducing the final formulation design from the report.\n\nSource: Kali Mana, AUT Internship Report, 2026, Table 6, p. 11."}
+{"kind":"slide","id":"sl/h8utwi","slide":24,"title":"BACKUP","textShapes":5}
+{"kind":"shape","id":"sh/t0z2lsz6","slide":24,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/mx8jax0f","slide":24,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/7yhkjih0","slide":24,"text":"Hedonic results: complete visual and reported values","textPreview":"Hedonic results: complete visual and reported values","textChars":52,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/kvq18nip","slide":24,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/zuhkfih4","slide":24,"text":"The chart shows all seven means. Exact mean ± SD values for 156 and 235 were not available in the supplied text, so they were not inferred.","textPreview":"The chart shows all seven means. Exact mean ± SD values for 156 and 235 were not available in the supplied text, so they were not inferred.","textChars":139,"textLines":1,"bbox":[110,585,1060,52]}
+{"kind":"textbox","id":"sh/c76143id","slide":24,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/xsf2d8zy","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"table","id":"tb/nalkzmxk","slide":24,"name":"","rows":8,"cols":3,"preview":"Code | Formulation | Mean ± SD / 9","bbox":[700,155,535,400]}
+{"kind":"image","id":"im/gba1gnyx","slide":24,"name":"","geometry":"roundRect","alt":"Overall liking chart from the supplied report","bbox":[50,155,620,375]}
+{"kind":"notes","id":"nt/h8utwi","slide":24,"text":"Backup hedonic results. The original report chart is retained to show all seven products; the table includes every exact mean and standard deviation stated in the supplied materials.\n\nSource: Kali Mana, AUT Internship Report, 2026, pp. 17–18."}
+{"kind":"slide","id":"sl/q7xxq9","slide":25,"title":"BACKUP","textShapes":7}
+{"kind":"shape","id":"sh/4nyxcjeh","slide":25,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/3mpgjexw","slide":25,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/ilgfa9wb","slide":25,"text":"JAR profile of candidate 798","textPreview":"JAR profile of candidate 798","textChars":28,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/hk7yh4fq","slide":25,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/vi5gfux0","slide":25,"bbox":[915,200,250,250]}
+{"kind":"textbox","id":"sh/uhwf6pwf","slide":25,"text":"798","textPreview":"798","textChars":3,"textLines":1,"bbox":[955,235,170,60]}
+{"kind":"textbox","id":"sh/twnydkfu","slide":25,"text":"The most balanced JAR profile among the enriched formulations","textPreview":"The most balanced JAR profile among the enriched formulations","textChars":61,"textLines":1,"bbox":[940,310,200,100]}
+{"kind":"textbox","id":"sh/8vex4ze9","slide":25,"text":"Bitterness showed the lowest central response at 60%.","textPreview":"Bitterness showed the lowest central response at 60%.","textChars":53,"textLines":1,"bbox":[900,485,280,65]}
+{"kind":"textbox","id":"sh/axsry98j","slide":25,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/by187ep4","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"chart","id":"ch/cnehwb2d","slide":25,"name":"","chartType":"bar","bbox":[100,160,760,420]}
+{"kind":"notes","id":"nt/q7xxq9","slide":25,"text":"Backup visual of the exact central JAR percentages reported for candidate 798.\n\nSource: Kali Mana, AUT Internship Report, 2026, p. 18."}
+{"kind":"slide","id":"sl/00qk58","slide":26,"title":"BACKUP","textShapes":7}
+{"kind":"shape","id":"sh/lc321cji","slide":26,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/y9sj6xkr","slide":26,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/jalkf21c","slide":26,"text":"CATA descriptors linked to particle-related mouthfeel","textPreview":"CATA descriptors linked to particle-related mouthfeel","textChars":53,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/8fu1cr2t","slide":26,"bbox":[60,122,1160,1]}
+{"kind":"textbox","id":"sh/6dcjahk3","slide":26,"text":"Primary formulation issue","textPreview":"Primary formulation issue","textChars":25,"textLines":1,"bbox":[120,535,260,30]}
+{"kind":"textbox","id":"sh/7elk3m1o","slide":26,"text":"Particle-related mouthfeel","textPreview":"Particle-related mouthfeel","textChars":26,"textLines":1,"bbox":[410,515,470,70]}
+{"kind":"textbox","id":"sh/gjelgr25","slide":26,"text":"798 reduced, but did not eliminate, this limitation.","textPreview":"798 reduced, but did not eliminate, this limitation.","textChars":52,"textLines":1,"bbox":[900,530,260,45]}
+{"kind":"textbox","id":"sh/h4n29wjq","slide":26,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/tsnml8j2","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"table","id":"tb/wba18fud","slide":26,"name":"","rows":5,"cols":4,"preview":"Descriptor | Control 667 | Enriched formulations | Interpretation","bbox":[70,170,1140,310]}
+{"kind":"notes","id":"nt/00qk58","slide":26,"text":"Backup CATA summary using only frequencies and ranges explicitly reported in the supplied report.\n\nSource: Kali Mana, AUT Internship Report, 2026, p. 18."}
+{"kind":"slide","id":"sl/cjc0f9","slide":27,"title":"BACKUP","textShapes":9}
+{"kind":"shape","id":"sh/fut8f6xo","slide":27,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/gv2p8by9","slide":27,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/hgbqhgfu","slide":27,"text":"Purchase intention and final preference","textPreview":"Purchase intention and final preference","textChars":39,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/2hkralgf","slide":27,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/4j29cbyl","slide":27,"bbox":[850,170,330,180]}
+{"kind":"textbox","id":"sh/pkbqlgf6","slide":27,"text":"44%","textPreview":"44%","textChars":3,"textLines":1,"bbox":[900,205,230,65]}
+{"kind":"textbox","id":"sh/ql4relgb","slide":27,"text":"Control 667\n11 of 25 first-choice votes","textPreview":"Control 667 | 11 of 25 first-choice votes","textChars":39,"textLines":2,"bbox":[900,275,230,55]}
+{"kind":"shape","id":"sh/rmd8nqxw","slide":27,"bbox":[850,395,330,125]}
+{"kind":"shape","id":"sh/3yhwrqtg","slide":27,"bbox":[850,395,7,125]}
+{"kind":"textbox","id":"sh/2x8vylcb","slide":27,"text":"Positive purchase intention","textPreview":"Positive purchase intention","textChars":27,"textLines":1,"bbox":[872,407,294,30]}
+{"kind":"textbox","id":"sh/p0zetgbm","slide":27,"text":"Control: 56%\nEnriched formulations: 16–28%","textPreview":"Control: 56% | Enriched formulations: 16–28%","textChars":42,"textLines":2,"bbox":[872,439,294,71]}
+{"kind":"textbox","id":"sh/4zqd0vu1","slide":27,"text":"Preference varied across the enriched formulations.","textPreview":"Preference varied across the enriched formulations.","textChars":51,"textLines":1,"bbox":[820,555,390,42]}
+{"kind":"textbox","id":"sh/fuhwn6tk","slide":27,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/u98vu1cz","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"chart","id":"ch/rixorut4","slide":27,"name":"","chartType":"bar","bbox":[60,160,720,410]}
+{"kind":"notes","id":"nt/cjc0f9","slide":27,"text":"Backup preference and purchase-intention results using the exact values provided in the report.\n\nSource: Kali Mana, AUT Internship Report, 2026, p. 18 and Appendix C."}
+{"kind":"slide","id":"sl/1t3anj","slide":28,"title":"BACKUP","textShapes":17}
+{"kind":"shape","id":"sh/18v2t8vm","slide":28,"bbox":[0,0,1280,10]}
+{"kind":"textbox","id":"sh/e54jydwv","slide":28,"text":"BACKUP","textPreview":"BACKUP","textChars":6,"textLines":1,"bbox":[60,24,220,22]}
+{"kind":"textbox","id":"sh/z6dkridg","slide":28,"text":"Study limitations","textPreview":"Study limitations","textChars":17,"textLines":1,"bbox":[60,54,1120,60]}
+{"kind":"shape","id":"sh/ovm14nex","slide":28,"bbox":[60,122,1160,1]}
+{"kind":"shape","id":"sh/9wv2xsvi","slide":28,"bbox":[70,155,540,110]}
+{"kind":"shape","id":"sh/m94j2dw7","slide":28,"bbox":[70,155,7,110]}
+{"kind":"textbox","id":"sh/nadkvidc","slide":28,"text":"Manufacturing","textPreview":"Manufacturing","textChars":13,"textLines":1,"bbox":[92,167,504,30]}
+{"kind":"textbox","id":"sh/4f21sjet","slide":28,"text":"One experimental preparation; no independent batch replication","textPreview":"One experimental preparation; no independent batch replication","textChars":62,"textLines":1,"bbox":[92,199,504,56]}
+{"kind":"shape","id":"sh/p0bilove","slide":28,"bbox":[655,155,540,110]}
+{"kind":"shape","id":"sh/dkr29kv2","slide":28,"bbox":[655,155,7,110]}
+{"kind":"textbox","id":"sh/cjil0feh","slide":28,"text":"Kjeldahl","textPreview":"Kjeldahl","textChars":8,"textLines":1,"bbox":[677,167,504,30]}
+{"kind":"textbox","id":"sh/ripk7adw","slide":28,"text":"Analytical replicates from one homogenised batch","textPreview":"Analytical replicates from one homogenised batch","textChars":48,"textLines":1,"bbox":[677,199,504,56]}
+{"kind":"shape","id":"sh/qxg3y5wr","slide":28,"bbox":[70,300,540,110]}
+{"kind":"shape","id":"sh/1or2dkve","slide":28,"bbox":[70,300,7,110]}
+{"kind":"textbox","id":"sh/0nil4fet","slide":28,"text":"Sensory panel","textPreview":"Sensory panel","textChars":13,"textLines":1,"bbox":[92,312,504,30]}
+{"kind":"textbox","id":"sh/zm9kbad8","slide":28,"text":"n = 25 convenience participants; limited habitual oat-beverage consumption","textPreview":"n = 25 convenience participants; limited habitual oat-beverage consumption","textChars":74,"textLines":1,"bbox":[92,344,504,56]}
+{"kind":"shape","id":"sh/el0325wn","slide":28,"bbox":[655,300,540,110]}
+{"kind":"shape","id":"sh/9sb2h4va","slide":28,"bbox":[655,300,7,110]}
+{"kind":"textbox","id":"sh/or2l8zep","slide":28,"text":"Protein estimate","textPreview":"Protein estimate","textChars":16,"textLines":1,"bbox":[677,312,504,30]}
+{"kind":"textbox","id":"sh/8va54321","slide":28,"text":"Final enriched products were not directly analysed by Kjeldahl","textPreview":"Final enriched products were not directly analysed by Kjeldahl","textChars":62,"textLines":1,"bbox":[677,344,504,56]}
+{"kind":"shape","id":"sh/twjmd83m","slide":28,"bbox":[70,445,540,110]}
+{"kind":"shape","id":"sh/6t8n2tkv","slide":28,"bbox":[70,445,7,110]}
+{"kind":"textbox","id":"sh/7uh4bylg","slide":28,"text":"Thermal process","textPreview":"Thermal process","textChars":15,"textLines":1,"bbox":[92,457,504,30]}
+{"kind":"textbox","id":"sh/gza5832x","slide":28,"text":"No validated product-temperature profile","textPreview":"No validated product-temperature profile","textChars":40,"textLines":1,"bbox":[92,489,504,56]}
+{"kind":"shape","id":"sh/h0jmh83i","slide":28,"bbox":[655,445,540,110]}
+{"kind":"shape","id":"sh/uxsn6dk7","slide":28,"bbox":[655,445,7,110]}
+{"kind":"textbox","id":"sh/vy14filc","slide":28,"text":"Safety and shelf life","textPreview":"Safety and shelf life","textChars":21,"textLines":1,"bbox":[677,457,504,30]}
+{"kind":"textbox","id":"sh/w3q5wj2t","slide":28,"text":"No microbiological shelf-life validation","textPreview":"No microbiological shelf-life validation","textChars":40,"textLines":1,"bbox":[677,489,504,56]}
+{"kind":"textbox","id":"sh/x4zm5o3e","slide":28,"text":"These results guide further development; they do not validate a commercial product or shelf life.","textPreview":"These results guide further development; they do not validate a commercial product or shelf life.","textChars":97,"textLines":1,"bbox":[175,600,930,48]}
+{"kind":"textbox","id":"sh/fi58bm5w","slide":28,"text":"Appendix","textPreview":"Appendix","textChars":8,"textLines":1,"bbox":[60,686,350,18]}
+{"kind":"textbox","id":"sh/ehw7ih4b","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1180,684,40,20]}
+{"kind":"notes","id":"nt/1t3anj","slide":28,"text":"Backup summary of the principal study limitations that constrain interpretation and generalisation.\n\nSource: Kali Mana, AUT Internship Report, 2026, p. 19."}

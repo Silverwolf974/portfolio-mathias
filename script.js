@@ -4,6 +4,17 @@
    =========================================================== */
 (function () {
   "use strict";
+  var isEnglish = document.documentElement.lang === "en";
+  // Keep the current section when switching between equivalent pages.
+  var languageSwitch = document.querySelector(".language-switch");
+  if (languageSwitch) {
+    var languagePage = languageSwitch.getAttribute("href");
+    function syncLanguageAnchor() {
+      languageSwitch.setAttribute("href", languagePage + window.location.hash);
+    }
+    syncLanguageAnchor();
+    window.addEventListener("hashchange", syncLanguageAnchor);
+  }
 
   // ===========================================================
   // GSAP + Lenis : moteur d'animation et défilement fluide.
@@ -105,7 +116,7 @@
   // --- Bouton retour-en-haut (progressive enhancement) ---
   var toTop = document.createElement("button");
   toTop.className = "to-top";
-  toTop.setAttribute("aria-label", "Revenir en haut de la page");
+  toTop.setAttribute("aria-label", isEnglish ? "Back to top" : "Revenir en haut de la page");
   toTop.innerHTML =
     '<svg class="ring" viewBox="0 0 56 56" aria-hidden="true">' +
     '<circle cx="28" cy="28" r="26"/><circle class="ring-val" cx="28" cy="28" r="26"/></svg>' +

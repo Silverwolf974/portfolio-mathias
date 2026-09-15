@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing a SOC — Mathias ALY BERIL</title>
+  <meta name="description" content="Designing a complete SOC architecture with Wazuh SIEM, Suricata IDS, multi-source log collection and detection use cases mapped to MITRE ATT&amp;CK." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/conception-soc.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/conception-soc.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-soc">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/conception-soc.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Designing a SOC</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersecurity</span><span class="chip chip-sys">Systems &amp; networks</span></div>
+      <h1>Designing a SOC</h1>
+      <p class="project-lead">Designing a complete Security Operations Center architecture for an IT infrastructure: log collection, detection, correlation, visualisation and response procedures.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Academic project — first year of Master’s-level study</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Group</span></div>
+        <div class="meta-item"><span class="meta-label">Period</span><span class="meta-value">2025 – 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Deliverables</span><span class="meta-value">3 stages (analysis, benchmarking, architecture)</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>The infrastructure under study (Proxmox hypervisor, SSH and HTTP bastion hosts, Gitea, internal DNS and an OPNsense firewall) lacked centralised security monitoring. The project involved designing a SOC suited to this environment: selecting log sources, choosing analysis tools and prioritising threats to detect.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Assess infrastructure risks and prioritise threats.</li>
+        <li>Benchmark SIEM and IDS solutions and justify the chosen stack.</li>
+        <li>Design a layered architecture for collection, detection, correlation, visualisation and response.</li>
+        <li>Define actionable detection use cases mapped to MITRE ATT&amp;CK.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Selected architecture</h2>
+      <p>A layered architecture built around an open-source stack: <strong>Wazuh</strong> as an all-in-one SIEM (integrated Elasticsearch and Kibana, with native MITRE ATT&amp;CK mapping), <strong>Suricata</strong> as the IDS/IPS, <strong>Prometheus + Grafana</strong> for infrastructure monitoring, and multi-source collection through Wazuh agents, Syslog (RFC 5424) and Filebeat. Alerting combines native Wazuh notifications, email and a scripted Discord webhook.</p>
+      <ul>
+        <li><strong>Sources covered</strong> : SSH/HTTP bastion hosts, Gitea, internal DNS (Bind9), OPNsense firewall and Proxmox hypervisor.</li>
+        <li><strong>Detection</strong> : eight priority use cases covering 17 MITRE ATT&amp;CK techniques, including SSH brute force, lateral movement and exfiltration.</li>
+        <li><strong>Response</strong> : triaged alerts and documented manual procedures (SOAR was outside the scope).</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Work completed</h2>
+      <ul>
+        <li>Stage 1 — assessment of the existing infrastructure and its risks.</li>
+        <li>Stage 2 — comparative benchmark of SIEM, IDS and monitoring solutions (LaTeX report).</li>
+        <li>Stage 3 — detailed architecture: SOC overview diagram, inventory of log sources, collection methods per host and eight detection use cases, including severity, MITRE technique, data sources and detection logic.</li>
+        <li>Environment mock-up: deployment of a virtualised OPNsense instance using Docker Compose (KVM).</li>
+        <li>Oral presentation of each deliverable to an assessment panel.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills demonstrated</h2>
+      <p>A complete security architecture process: risk assessment, tool selection supported by benchmarking, realistic log collection design and detection logic usable by analysts. This work provided a foundation for my SOC Analyst internship.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Wazuh (SIEM)</li>
+        <li>Suricata (IDS/IPS)</li>
+        <li>MITRE ATT&amp;CK</li>
+        <li>Prometheus / Grafana</li>
+        <li>OPNsense</li>
+        <li>Proxmox</li>
+        <li>Syslog / Filebeat</li>
+        <li>Docker Compose</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note:</strong> The detailed reports contain sensitive technical information about the infrastructure and are not published here. They can be presented on request.</div>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="transmission-securisee-mqtt.html">Secure transmission over MQTT →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

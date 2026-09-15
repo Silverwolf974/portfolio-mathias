@@ -15,6 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <noscript><style>.hero-text>*,.hero-visual{opacity:1 !important}</style></noscript>
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/index.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/index.html" />
+  <!-- /locale-controls -->
 </head>
 <body>
   <!-- ============ SVG ICON SPRITE (réutilisé via <use>) ============ -->
@@ -57,6 +62,10 @@
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="en/index.html" hreflang="en" lang="en" aria-label="Passer en anglais"><span aria-hidden="true"><span class="language-current">FR</span> / <strong>EN</strong></span></a>
+      <!-- /locale-controls -->
     </nav>
   </header>
 
@@ -86,7 +95,7 @@
           </div>
           <div class="hero-social">
             <a href="https://github.com/Silverwolf974" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#ic-github"/></svg></a>
-            <a href="https://www.linkedin.com/in/mathias-aly-beril/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#ic-linkedin"/></svg></a>
+            <a href="http://www.linkedin.com/in/mathias-aly-beri" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic"><use href="#ic-linkedin"/></svg></a>
             <a href="mailto:alyderil.mathias@gmail.com" aria-label="Email"><svg class="ic"><use href="#ic-mail"/></svg></a>
           </div>
         </div>
@@ -140,7 +149,7 @@
 
       <div class="projects-grid">
 
-        <!-- Projet 0 : SOC ESIROI -->
+        <!-- Projet 0 : Conception SOC -->
         <article class="project-card pc-soc" data-cat="cyber sys">
           <div class="project-thumb">
             <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -168,13 +177,13 @@
           </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
-            <h3 class="project-title"><a href="projects/soc-esiroi.html">Conception d'un SOC pour l'ESIROI</a></h3>
+            <h3 class="project-title"><a href="projects/conception-soc.html">Conception d'un SOC</a></h3>
             <p class="project-desc">
               Projet principal de 4ᵉ année : architecture complète d'un SOC — SIEM Wazuh, IDS Suricata,
               collecte de logs multi-sources et 8 use cases de détection alignés MITRE ATT&amp;CK.
             </p>
             <ul class="tags small"><li>Wazuh</li><li>Suricata</li><li>MITRE ATT&amp;CK</li><li>OPNsense</li><li>Proxmox</li></ul>
-            <div class="project-links"><a class="btn-link ghost" href="projects/soc-esiroi.html">Voir le détail</a></div>
+            <div class="project-links"><a class="btn-link ghost" href="projects/conception-soc.html">Voir le détail</a></div>
           </div>
         </article>
 
@@ -687,15 +696,21 @@
     <section class="section container reveal" id="cv">
       <h2 class="section-title"><span class="section-index">06</span> CV</h2>
       <div class="cv-box">
-        <p>Mon CV est disponible au téléchargement en français et en anglais.</p>
-        <div class="cv-actions">
-          <a class="btn btn-primary" href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" target="_blank" rel="noopener" download>
-            <svg class="ic"><use href="#ic-external"/></svg> Télécharger mon CV (FR)
-          </a>
-          <a class="btn btn-ghost" href="assets/cv/CV_Mathias_Aly_Beril_EN.pdf" target="_blank" rel="noopener" download>
-            <svg class="ic"><use href="#ic-external"/></svg> Download my CV (EN)
-          </a>
+        <div class="cv-copy">
+          <p>Mon CV est disponible au téléchargement en français et en anglais.</p>
+          <div class="cv-actions">
+            <a class="btn btn-primary" href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" target="_blank" rel="noopener" download>
+              <svg class="ic"><use href="#ic-external"/></svg> Télécharger mon CV (FR)
+            </a>
+            <a class="btn btn-ghost" href="assets/cv/CV_Mathias_Aly_Beril_EN.pdf" target="_blank" rel="noopener" download>
+              <svg class="ic"><use href="#ic-external"/></svg> Download my CV (EN)
+            </a>
+          </div>
         </div>
+        <a class="cv-qr" href="assets/cv/CV_Mathias_ALY_BERIL_FR.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le CV français">
+          <img src="assets/images/cv-qr-fr.svg" alt="QR code vers le CV français de Mathias ALY BERIL" />
+          <span>Scanner pour ouvrir le CV français</span>
+        </a>
       </div>
     </section>
 
@@ -709,10 +724,10 @@
           <span class="contact-label">Email</span>
           <span class="contact-value">alyderil.mathias@gmail.com</span>
         </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/mathias-aly-beril/" target="_blank" rel="noopener">
+        <a class="contact-card" href="http://www.linkedin.com/in/mathias-aly-beri" target="_blank" rel="noopener">
           <svg class="ic"><use href="#ic-linkedin"/></svg>
           <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">mathias-aly-beril</span>
+          <span class="contact-value">mathias-aly-beri</span>
         </a>
         <a class="contact-card" href="https://github.com/Silverwolf974" target="_blank" rel="noopener">
           <svg class="ic"><use href="#ic-github"/></svg>

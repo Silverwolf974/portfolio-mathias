@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infrastructure monitoring with Grafana — Mathias ALY BERIL</title>
+  <meta name="description" content="Deploying a complete observability stack for system metrics, business data, logs and alerts on containerised infrastructure." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/supervision-infrastructure-grafana.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/supervision-infrastructure-grafana.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-super">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/supervision-infrastructure-grafana.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Infrastructure monitoring with Grafana…</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersecurity</span><span class="chip chip-sys">Systems &amp; networks</span></div>
+      <h1>Infrastructure monitoring with Grafana</h1>
+      <p class="project-lead">Deploying a complete observability stack for system metrics, business data, logs and alerts on containerised infrastructure.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Master’s-level lab — Security Monitoring module</span></div>
+        <div class="meta-item"><span class="meta-label">Environment</span><span class="meta-value">Teaching lab (2 VMs)</span></div>
+        <div class="meta-item"><span class="meta-label">Deliverable</span><span class="meta-value">58-page report</span></div>
+        <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value">Completed</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>Setting up observability on containerised infrastructure in a teaching environment simulating isolated research bases (TAAF). The architecture uses two virtual machines on an internal network: one for application services and one for monitoring.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Deploy a complete observability stack using containers.</li>
+        <li>Design Grafana dashboards for containers and business data.</li>
+        <li>Write relevant PromQL and SQL queries.</li>
+        <li>Set up alerting and log analysis.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture and operation</h2>
+      <p>Prometheus collects system and container metrics through cAdvisor, node_exporter and postgres_exporter. Grafana centralises visualisation, while Loki aggregates logs collected by Grafana Alloy. Dashboards combine technical metrics from Prometheus with business data from PostgreSQL.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Work completed</h2>
+      <ul>
+        <li>Infrastructure validation: connectivity between VMs, firewall, Docker network and service availability.</li>
+        <li>Container monitoring with cAdvisor and Prometheus: status, resource usage and disk I/O.</li>
+        <li>Business dashboards querying PostgreSQL with SQL.</li>
+        <li>Loki and Alloy integration for logs, with alerting rules.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Results</h2>
+      <p>Working monitoring dashboards for containers and business data, alerting and centralised logs. The process, queries and interpretations were documented in a 58-page lab report.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills demonstrated</h2>
+      <p>End-to-end observability (metrics, logs, dashboards and alerts), Docker Compose containerisation, PromQL/LogQL/SQL queries and network troubleshooting: foundations relevant to SOC work.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Docker Compose</li>
+        <li>Prometheus</li>
+        <li>Grafana</li>
+        <li>Loki</li>
+        <li>Grafana Alloy</li>
+        <li>cAdvisor</li>
+        <li>PostgreSQL</li>
+        <li>PromQL</li>
+        <li>LogQL</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note:</strong> A simulated teaching environment: lab addresses and accounts are not published. Full report available on request.</div>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="transmission-securisee-mqtt.html">← Secure data transmission over MQTT</a>
+      <a class="btn-link ghost" href="data-mining-potabilite-eau.html">Water potability classification →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

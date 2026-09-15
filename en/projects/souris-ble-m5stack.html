@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motion-controlled Bluetooth mouse on M5Stack Core2 — Mathias ALY BERIL</title>
+  <meta name="description" content="Turning an M5Stack Core2 (ESP32) into a tilt-controlled Bluetooth HID mouse with touchscreen click zones and onboard audio feedback." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/souris-ble-m5stack.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/souris-ble-m5stack.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-ble">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/souris-ble-m5stack.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Motion-controlled Bluetooth mouse…</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-embarque">Embedded / IoT</span><span class="chip chip-dev">Development</span></div>
+      <h1>Motion-controlled Bluetooth mouse on M5Stack Core2</h1>
+      <p class="project-lead">Turning an M5Stack Core2 (ESP32) into a tilt-controlled Bluetooth HID mouse with touchscreen click zones and onboard audio feedback.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Academic lab (2025)</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Two students</span></div>
+        <div class="meta-item"><span class="meta-label">Hardware</span><span class="meta-value">M5Stack Core2 (ESP32)</span></div>
+        <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value">Completed and working</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>Designing an M5Stack Core2 interface that works as a Bluetooth HID mouse, controlled through buttons, the touchscreen and the inertial measurement unit (IMU).</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Work completed</h2>
+      <ul>
+        <li>Compilation toolchain using arduino-cli and command-line flashing.</li>
+        <li>BLE HID validation: the host recognises the board as a mouse.</li>
+        <li>IMU pitch/roll readings control cursor movement; touchscreen zones handle clicks; the centre button enables scrolling.</li>
+        <li>Audio integration: WAV files converted into C headers stored in flash memory (PROGMEM).</li>
+        <li>Modular code: <code>BleMouseModule</code>, <code>ImuDirectionModule</code>, <code>ButtonUI</code>.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Challenges overcome</h2>
+      <ul>
+        <li>BLE Mouse library missing from the Arduino index: manually installing and patching a fork.</li>
+        <li>ESP32 memory constraints: storing embedded audio in flash using PROGMEM.</li>
+        <li>Converting WAV audio files into C headers.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Results</h2>
+      <p>A working Bluetooth mouse with tilt-based movement, touchscreen clicks, scrolling mode and audio feedback at key moments.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills demonstrated</h2>
+      <p>Embedded C++ programming on ESP32, Bluetooth Low Energy with the HID profile, inertial sensor integration and microcontroller memory management.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>C++ / Arduino</li>
+        <li>ESP32</li>
+        <li>M5Stack Core2</li>
+        <li>BLE HID</li>
+        <li>M5Unified</li>
+        <li>IMU</li>
+        <li>arduino-cli</li>
+      </ul>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="data-mining-potabilite-eau.html">← Water potability classification</a>
+      <a class="btn-link ghost" href="distributeur-automatique-java.html">Vending machine — Java simulation →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

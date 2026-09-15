@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure data transmission over MQTT — Mathias ALY BERIL</title>
+  <meta name="description" content="Encrypting environmental data end to end with AES and relaying it through an MQTT broker that never sees the plaintext." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/transmission-securisee-mqtt.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/transmission-securisee-mqtt.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-mqtt">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/transmission-securisee-mqtt.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Secure data transmission over MQTT…</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersecurity</span><span class="chip chip-dev">Development</span></div>
+      <h1>Secure data transmission over MQTT</h1>
+      <p class="project-lead">Encrypting environmental data end to end with AES and relaying it through an MQTT broker that never sees the plaintext.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">SAE — academic project (ESIROI)</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Two students</span></div>
+        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">Java 17</span></div>
+        <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value">Completed and working</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>Simulating the transmission of environmental readings (temperature and humidity) from a device to a business workstation through an MQTT broker, keeping the data confidential even from the broker itself.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Understand MQTT’s publish/subscribe model.</li>
+        <li>Implement end-to-end AES encryption.</li>
+        <li>Apply robust key derivation (PBKDF2) using a shared secret.</li>
+        <li>Structure a modular Java application and separate configuration from code.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture and operation</h2>
+      <p>Three Ubuntu virtual machines on one local network: a sender (device), a receiver (business workstation) and a Mosquitto broker. An AES key is derived from a shared identifier using PBKDF2, and the MQTT topic is derived using SHA-256. The sender encrypts and publishes a JSON message; the receiver subscribes to the same topic, decrypts it and displays it. The broker handles ciphertext only. Its address is stored in an external configuration file.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Work completed</h2>
+      <ul>
+        <li>Setting up a local Mosquitto broker and validating the publish/subscribe flow.</li>
+        <li>Java classes: <code>CryptoUtils</code> (key derivation and encryption), <code>ClientPublisher</code>, <code>ClientSubscriber</code>.</li>
+        <li>AES-CBC encryption of JSON messages before publication.</li>
+        <li>Topic derived from the shared secret to separate exchanges.</li>
+        <li>External network configuration.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Results</h2>
+      <p>A working end-to-end flow: data encrypted on the device, relayed without exposing plaintext to the broker, then decrypted and displayed on the business workstation. The confidentiality objective was met within the project’s scope.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills demonstrated</h2>
+      <p>Applied cryptography (AES, PBKDF2 and SHA-256), MQTT, structured Java development and Linux administration on a local network.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Java 17</li>
+        <li>Eclipse Paho MQTT</li>
+        <li>Mosquitto</li>
+        <li>AES-CBC</li>
+        <li>PBKDF2-HMAC-SHA256</li>
+        <li>SHA-256</li>
+        <li>Ubuntu Server</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note:</strong> The detailed report includes test-network addresses, which are not published here. Source code is hosted on the school’s internal GitLab and is available on request.</div>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="supervision-infrastructure-grafana.html">Infrastructure monitoring with Grafana →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

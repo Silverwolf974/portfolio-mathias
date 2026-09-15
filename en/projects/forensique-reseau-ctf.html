@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network forensics — CTF — Mathias ALY BERIL</title>
+  <meta name="description" content="Investigating a packet capture: detecting DNS data exfiltration and automatically decoding flags using Python (dpkt) and PowerShell." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/forensique-reseau-ctf.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/forensique-reseau-ctf.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-ctf">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/forensique-reseau-ctf.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Network forensics — CTF</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-cyber">Cybersecurity</span></div>
+      <h1>Network forensics — CTF</h1>
+      <p class="project-lead">Investigating a packet capture in a CTF exercise: identifying data exfiltration hidden in DNS traffic and automating flag decoding.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Practical exercise — cybersecurity module</span></div>
+        <div class="meta-item"><span class="meta-label">Format</span><span class="meta-value">CTF / forensic analysis</span></div>
+        <div class="meta-item"><span class="meta-label">Tools</span><span class="meta-value">Wireshark, Python, PowerShell</span></div>
+        <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value">Flags recovered</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>Using a packet capture (<code>.pcapng</code>), the exercise involved recovering information hidden in network traffic. The investigation also drew on real threat reports from CERT-FR to connect the work to professional practice.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Investigation approach</h2>
+      <ul>
+        <li>Exploratory analysis of the capture in <strong>Wireshark</strong> : identifying protocols, conversations and unusual traffic volumes.</li>
+        <li>Identifying a channel for<strong>DNS exfiltration</strong> : hexadecimal-encoded data in query labels sent to an attacker-controlled domain.</li>
+        <li>Writing a script in <strong>Python using dpkt</strong> to iterate through the capture, extract DNS labels, decode them from hex to UTF-8 and export timestamped TSV data.</li>
+        <li>Additional <strong>PowerShell</strong> scripts to decode other flags and reconstruct files.</li>
+        <li>Verifying and correlating the results, including reconstructed files and validated flags.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills demonstrated</h2>
+      <p>Analyst skills: reading a packet capture, recognising a covert exfiltration channel and then <strong>automating</strong> data extraction rather than decoding manually. This is the kind of investigation carried out in a SOC when an incident is suspected.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges">
+        <li>Wireshark</li>
+        <li>Python 3</li>
+        <li>dpkt</li>
+        <li>PowerShell</li>
+        <li>DNS</li>
+        <li>CERT-FR reports</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <div class="note-box"><strong>Note:</strong> An educational exercise using a capture supplied by the instructor. Scripts can be presented on request.</div>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="conception-soc.html">Designing a SOC →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
