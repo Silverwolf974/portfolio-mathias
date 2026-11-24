@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mix Atelier — AI-assisted DJ mashups | Mathias ALY BERIL</title>
+  <meta name="description" content="Application locale d&#x27;analyse audio et de mashups DJ entre deux morceaux électro : tempo, tonalité, structure, séparation voix/instrumental par IA et export WAV." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/mix-atelier.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/mix-atelier.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-mix">
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/mix-atelier.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Mix Atelier — AI DJ mashups</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-data">Data / AI</span><span class="chip chip-dev">Development</span></div>
+      <h1>Mix Atelier — AI-assisted DJ mashups</h1>
+      <p class="project-lead">Local app that analyses two electronic tracks, prepares transitions and mashups, lets you listen to them, then exports an audio file — with vocal / instrumental separation by an AI model.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Personal project</span></div>
+        <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">Solo</span></div>
+        <div class="meta-item"><span class="meta-label">Period</span><span class="meta-value">October 2026 — ongoing</span></div>
+        <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value">Working prototype (V1)</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>Prepare DJ transitions and mashups between two tracks without paid software or an online service, and understand what makes a transition sound natural. The project is both a complete local web app and a testbed for audio analysis.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objective</h2>
+      <p>From two tracks, propose coherent transitions and arrangements — good passages, good alignment, no double bass or clashing vocals —, let you listen to them, then export the result as a WAV.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>How it works</h2>
+      <ul>
+        <li><strong>Analysis</strong> of each track: tempo and beat grid, key, energy, silences and sections.</li>
+        <li><strong>Alignment</strong> to the target tempo by time-stretching.</li>
+        <li><strong>Choice of passages and transitions</strong> through explicit, traceable rules.</li>
+        <li><strong>Rendering</strong> and export as 24-bit WAV.</li>
+        <li>The only AI component in the app: the <strong>vocal / instrumental separation</strong> with Open-Unmix (pre-trained model, optional, run on CPU).</li>
+        <li>A <strong>transition-ranking model</strong> (pairwise logistic regression) exists in the lab, but is not yet trained on real listening preferences.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Work completed</h2>
+      <ul>
+        <li>App <strong>FastAPI + React</strong> : import, analysis, transition editor and multitrack mashup editor.</li>
+        <li>Four rule-based generators: alternation, section-based arrangement, vocal / instrumental, continuous instrumental.</li>
+        <li>Automatic diagnosis of the joins between tracks.</li>
+        <li>An <strong>evaluation lab</strong> separate from the app: inventory and de-duplication of files by their audio content, a leak-free split of the corpus (tracks reserved for evaluation), a blind listening session with a section-annotation editor in the browser, statistical reports and automated tests.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Results</h2>
+      <ul>
+        <li>The app works end to end: two tracks → arrangement → listening → WAV export.</li>
+        <li>Technical baseline: no errors on 5 pairs × 2 generation modes (alignment within 5 ms, no clipping).</li>
+        <li>Tempo estimated within 2% error on 11 of 13 clips from a reference dataset (UnmixDB).</li>
+        <li>First blind listening test (1 listener, 30 comparisons): the transitions are not convincing yet, and the sample is too small to draw conclusions.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficulties</h2>
+      <ul>
+        <li>Estimating the first beat of each bar and spotting the musical phrases.</li>
+        <li>Avoiding double bass and clashing vocals at the joins.</li>
+        <li>Windows constraints (path length, some models impossible to install).</li>
+        <li>Evaluating quality without ground truth, hence the use of blind human listening.</li>
+        <li>Small corpus: 25 tracks, 24 version families.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>What I learned</h2>
+      <ul>
+        <li>Audio processing: beat grids, time-stretching, level management.</li>
+        <li>Experimental rigour: splitting by version family, blind tests, a statistical policy fixed before looking at the data, freezing the system before evaluation.</li>
+        <li>Architecture of a complete local application, from backend to interface.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limitations and next steps</h2>
+      <ul>
+        <li>Limited to electronic music in 4/4 at a stable tempo, and to two tracks at a time.</li>
+        <li>Structure detected by heuristics; source separation leaves artefacts.</li>
+        <li>The ranking model is not trained yet: it needs more listens and several listeners.</li>
+        <li>Next steps: train on human preferences, handle mashups of three tracks or more, port the pre-trained analyser to Linux.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges"><li>Python 3.13</li><li>TypeScript</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>librosa</li><li>NumPy / SciPy</li><li>soundfile</li><li>FFmpeg</li><li>PyTorch (CPU)</li><li>Open-Unmix</li><li>scikit-learn</li><li>React 19</li><li>Vite</li><li>wavesurfer.js</li><li>pytest / Vitest</li></ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Resources</h2>
+      <div class="project-resources">
+        <span class="btn-link disabled" title="Dépôt privé pour le moment">Private code — access on request</span>
+      </div>
+      <p class="note-box" style="margin-top:14px;"><strong>Note:</strong> project built with the help of a coding assistant. No audio excerpt is published: the test corpus contains copyrighted commercial tracks, described without being reproduced.</p>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="oslo.html">Bikes in Oslo →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

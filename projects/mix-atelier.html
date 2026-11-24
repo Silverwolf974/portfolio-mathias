@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mix Atelier — mashups DJ assistés par IA | Mathias ALY BERIL</title>
+  <meta name="description" content="Application locale d'analyse audio et de mashups DJ entre deux morceaux électro : tempo, tonalité, structure, séparation voix/instrumental par IA et export WAV." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/mix-atelier.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/mix-atelier.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-mix">
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../en/projects/mix-atelier.html" hreflang="en" lang="en" aria-label="Passer en anglais"><span aria-hidden="true"><span class="language-current">FR</span> / <strong>EN</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Mix Atelier — mashups DJ par IA</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-dev">Développement</span></div>
+      <h1>Mix Atelier — mashups DJ assistés par IA</h1>
+      <p class="project-lead">Application locale qui analyse deux morceaux électro, prépare des transitions et des mashups, les fait écouter puis exporte un fichier audio — avec une séparation voix / instrumental par un modèle d'IA.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Projet personnel</span></div>
+        <div class="meta-item"><span class="meta-label">Rôle</span><span class="meta-value">Solo</span></div>
+        <div class="meta-item"><span class="meta-label">Période</span><span class="meta-value">Octobre 2026 — en cours</span></div>
+        <div class="meta-item"><span class="meta-label">Statut</span><span class="meta-value">Prototype fonctionnel (V1)</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>Préparer des transitions et des mashups de DJ entre deux morceaux sans logiciel payant ni service en ligne, et comprendre ce qui rend un raccord musicalement naturel. Le projet est à la fois une application web locale complète et un terrain d'expérimentation sur l'analyse audio.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectif</h2>
+      <p>À partir de deux titres, proposer des transitions et des arrangements cohérents — bons passages, bon calage, sans double basse ni collision de voix —, les faire écouter, puis exporter le résultat en WAV.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Fonctionnement</h2>
+      <ul>
+        <li><strong>Analyse</strong> de chaque morceau : tempo et grille rythmique, tonalité, énergie, silences et sections.</li>
+        <li><strong>Calage</strong> au tempo cible par étirement temporel (time-stretch).</li>
+        <li><strong>Choix des passages et des raccords</strong> par des règles explicites et traçables.</li>
+        <li><strong>Rendu</strong> audio et export en WAV 24 bits.</li>
+        <li>Seule brique d'IA dans l'application : la <strong>séparation voix / instrumental</strong> avec Open-Unmix (modèle préentraîné, facultatif, exécuté sur CPU).</li>
+        <li>Un modèle de <strong>classement des transitions</strong> (régression logistique par paires) existe dans le laboratoire, mais n'est pas encore entraîné sur de vraies préférences d'écoute.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <ul>
+        <li>Application <strong>FastAPI + React</strong> : import, analyse, éditeur de transition et éditeur de mashup multipiste.</li>
+        <li>Quatre générateurs à règles : alternance, arrangement par sections, voix / instrumental, instrumental continu.</li>
+        <li>Diagnostic automatique des jonctions entre morceaux.</li>
+        <li>Un <strong>laboratoire d'évaluation</strong> séparé de l'application : inventaire et dédoublonnage des fichiers par leur contenu audio, partition du corpus sans fuite (titres réservés à l'évaluation), session d'écoute à l'aveugle avec éditeur d'annotation dans le navigateur, rapports statistiques et tests automatisés.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats</h2>
+      <ul>
+        <li>L'application fonctionne de bout en bout : deux titres → arrangement → écoute → export WAV.</li>
+        <li>Référence technique : aucune erreur sur 5 paires × 2 modes de génération (calage à 5 ms près, pas de saturation).</li>
+        <li>Tempo estimé à moins de 2 % d'erreur sur 11 extraits sur 13 d'un jeu de données de référence (UnmixDB).</li>
+        <li>Première écoute à l'aveugle (1 auditeur, 30 comparaisons) : les raccords ne sont pas encore convaincants, et l'échantillon est trop petit pour conclure.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficultés</h2>
+      <ul>
+        <li>Estimer le premier temps de chaque mesure et repérer les phrases musicales.</li>
+        <li>Éviter les doubles basses et les collisions de voix lors des raccords.</li>
+        <li>Contraintes Windows (longueur des chemins, certains modèles impossibles à installer).</li>
+        <li>Évaluer la qualité sans vérité terrain, d'où le recours à l'écoute humaine à l'aveugle.</li>
+        <li>Corpus réduit : 25 titres, 24 familles de versions.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que j'ai appris</h2>
+      <ul>
+        <li>Traitement audio : grilles rythmiques, étirement temporel, gestion des niveaux.</li>
+        <li>Rigueur expérimentale : partition par famille de versions, tests à l'aveugle, politique statistique fixée avant de regarder les données, gel du système avant évaluation.</li>
+        <li>Architecture d'une application locale complète, du backend à l'interface.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limites et pistes</h2>
+      <ul>
+        <li>Limité à la musique électronique en 4/4 à tempo stable, et à deux morceaux à la fois.</li>
+        <li>Structure détectée par heuristiques ; la séparation de sources laisse des artefacts.</li>
+        <li>Le modèle de classement n'est pas encore entraîné : il faut plus d'écoutes et plusieurs auditeurs.</li>
+        <li>Pistes : entraîner sur des préférences humaines, gérer des mashups de trois morceaux ou plus, porter l'analyseur préentraîné sous Linux.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges"><li>Python 3.13</li><li>TypeScript</li><li>FastAPI</li><li>Pydantic</li><li>SQLite</li><li>librosa</li><li>NumPy / SciPy</li><li>soundfile</li><li>FFmpeg</li><li>PyTorch (CPU)</li><li>Open-Unmix</li><li>scikit-learn</li><li>React 19</li><li>Vite</li><li>wavesurfer.js</li><li>pytest / Vitest</li></ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ressources</h2>
+      <div class="project-resources">
+        <span class="btn-link disabled" title="Dépôt privé pour le moment">Code privé — accès sur demande</span>
+      </div>
+      <p class="note-box" style="margin-top:14px;"><strong>Note :</strong> projet développé avec l'aide d'un assistant de code. Aucun extrait audio n'est publié : le corpus de test contient des morceaux commerciaux sous droits, décrits sans être reproduits.</p>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="oslo.html">Vélos à Oslo &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -596,6 +596,7 @@ html::before {
 .pc-ids     { --pc: #a3e635; --pc-glow: rgba(163, 230, 53, .28);  --pc-soft: rgba(163, 230, 53, .12);  --pc-bg1: #1e2a07; --pc-bg2: #30410c; }
 .pc-superv2 { --pc: #818cf8; --pc-glow: rgba(129, 140, 248, .32); --pc-soft: rgba(129, 140, 248, .12); --pc-bg1: #191c40; --pc-bg2: #262a60; }
 .pc-pentest { --pc: #f472b6; --pc-glow: rgba(244, 114, 182, .30); --pc-soft: rgba(244, 114, 182, .12); --pc-bg1: #3a102e; --pc-bg2: #521a41; }
+.pc-mix     { --pc: #e879f9; --pc-glow: rgba(232, 121, 249, .30); --pc-soft: rgba(232, 121, 249, .12); --pc-bg1: #2a0f3a; --pc-bg2: #3d1654; }
 
 /* Liseré lumineux en haut de chaque carte, aux couleurs du projet */
 .project-card::before {
