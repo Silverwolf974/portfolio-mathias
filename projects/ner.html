@@ -48,40 +48,71 @@
     <header class="project-hero">
       <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
       <h1>Repérer les noms dans les textes</h1>
-      <p class="project-lead">Évaluation d’un modèle entraîné sur Wikipédia pour repérer les personnes, les entreprises et les produits dans des tweets.</p>
+      <p class="project-lead">Un modèle qui repère bien les personnes, les entreprises et les produits dans Wikipédia les trouve-t-il encore dans des tweets ? Nous avons mesuré la baisse, puis cherché d’où elle venait.</p>
       <div class="project-meta">
-        <div class="meta-item"><span class="meta-label">Formation</span><span class="meta-value">INSA Lyon</span></div>
-        <div class="meta-item"><span class="meta-label">Domaine</span><span class="meta-value">Analyse de texte</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Projet de Text Mining (semestre d’échange, 5ᵉ année)</span></div>
+        <div class="meta-item"><span class="meta-label">Établissement</span><span class="meta-value">INSA Lyon</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Groupe de 3</span></div>
+        <div class="meta-item"><span class="meta-label">Livrables</span><span class="meta-value">Article de 27 pages et deux soutenances</span></div>
       </div>
     </header>
 
     <section class="project-section">
-      <h2>Contexte et objectif</h2>
-      <p>Vérifier si un outil fiable sur des articles rédigés reste pertinent sur des messages courts et informels.</p>
+      <h2>Contexte</h2>
+      <p>Le sujet imposé était de reconnaître des personnes, des entreprises et des produits dans des textes, en partant d’un projet de recherche publié : Linked-DocRED (SIGIR 2023). Ce projet s’appuie sur environ 5 000 documents Wikipédia et enchaîne quatre modules : détection des noms, regroupement des mentions d’une même entité, relations entre entités et liaison à Wikidata.</p>
+      <p>Après la première séance, l’encadrant nous a demandé de nous concentrer sur la reconnaissance des noms. La question est devenue : un modèle appris sur des articles bien rédigés reste-t-il fiable sur des messages courts et informels ?</p>
     </section>
 
     <section class="project-section">
-      <h2>Travaux réalisés</h2>
-      <p>J’ai remis en marche le code de départ et vérifié la façon dont les réponses étaient notées. Un des tests donnait un score parfait même lorsque le système associait les mauvais noms. J’ai ensuite exécuté les expériences finales sur Google Colab.</p>
+      <h2>Mon rôle</h2>
+      <ul>
+        <li><strong>Remise en marche du code d’origine</strong> : le code publié ne fonctionnait pas en l’état. J’ai créé un environnement isolé par module (trois versions de Python sous WSL2) et corrigé les erreurs bloquantes : limite cachée à 10 documents, test qui utilisait en réalité les données de validation, appel à la mauvaise API, dépendances non figées. J’ai aussi adapté l’entraînement pour tenir sur une carte graphique de 8 Go.</li>
+        <li><strong>Vérification des métriques</strong> : le script d’évaluation publié ne notait que le dernier document et donnait un score parfait à des prédictions absurdes. J’en ai écrit une version corrigée.</li>
+        <li><strong>Recherche</strong> : revue des travaux qui citent l’article de départ et grille de choix des jeux de données.</li>
+        <li><strong>Expériences finales</strong> : exécution de toutes les expériences GPU de fin de projet sur Google Colab (modèle sur trois graines aléatoires, test sur un corpus supplémentaire, variantes de prétraitement).</li>
+        <li><strong>Communication</strong> : présentation de mi-parcours en anglais et rédaction de la partie reproduction de l’article.</li>
+      </ul>
+      <p>La conception des modèles et l’essentiel de l’analyse d’erreurs ont été menés par un coéquipier.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Démarche</h2>
+      <p>Quatre jeux de données aux étiquettes différentes ont été ramenés à un schéma commun : personne, entreprise, produit, autre. Quatre familles de modèles ont été comparées : un CRF classique, RoBERTa entraîné sur nos données, GLiNER utilisé sans entraînement et un grand modèle de langage (Llama) guidé par quelques exemples. Tous sont notés sur les mêmes phrases, avec la même métrique, et le jeu de test n’est utilisé qu’à la fin.</p>
     </section>
 
     <section class="project-section">
       <h2>Résultats</h2>
-      <p>Pour les noms d’entreprises, le score de reconnaissance passe de 0,68 sur Wikipédia à 0,07 sur les tweets.</p>
+      <ul>
+        <li>Pour les noms d’entreprises, le score de reconnaissance passe de <strong>0,68 sur Wikipédia à 0,07 sur les tweets</strong>.</li>
+        <li>Le meilleur modèle entraîné uniquement sur des textes de type Wikipédia passe de 0,835 à 0,375 sur les tweets. Entraîné aussi sur des tweets, il atteint 0,73.</li>
+        <li>Les balises propres à Twitter expliquent environ un tiers de la baisse : les retirer fait gagner 0,16 à un modèle qui n’a jamais vu de tweets, mais fait perdre 0,05 à un modèle qui les a appris.</li>
+        <li>À la relecture, 26 à 44 % des « erreurs » du modèle étaient jugées correctes par deux relecteurs : une partie de la baisse vient d’annotations ambiguës, pas du modèle.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limites</h2>
+      <ul>
+        <li>Le pipeline d’origine n’a pas été réentraîné entièrement : la comparaison avec les scores publiés reste indicative.</li>
+        <li>La détection des liens entre entités a été retirée du périmètre à la demande de l’encadrant.</li>
+        <li>La plupart des résultats reposent sur une seule graine aléatoire ; seul le plus grand modèle a été testé sur trois.</li>
+      </ul>
     </section>
 
     <section class="project-section">
       <h2>Ce que j’ai appris</h2>
       <p>J’ai appris à relire les exemples avant de conclure : certaines erreurs venaient du modèle, d’autres d’une ambiguïté dans les réponses attendues.</p>
+      <p>J’ai aussi appris à tester une métrique avec des prédictions dont on connaît déjà le bon score, avant de lui faire confiance.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
-      <ul class="tech-badges"><li>RoBERTa</li><li>Google Colab</li></ul>
+      <ul class="tech-badges"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>RoBERTa</li><li>GLiNER</li><li>Llama</li><li>scikit-learn (CRF)</li><li>WSL2</li><li>Google Colab</li><li>LaTeX</li></ul>
     </section>
 
     <nav class="project-nav">
       <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="ia-pierre-feuille-ciseaux.html">IA de reconnaissance de gestes &rarr;</a>
     </nav>
   </main>
 

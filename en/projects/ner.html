@@ -48,40 +48,71 @@
     <header class="project-hero">
       <div class="project-cats"><span class="chip chip-data">Data / AI</span></div>
       <h1>Finding names in text</h1>
-      <p class="project-lead">Evaluation of how well a model trained on Wikipedia identifies people, companies and products in tweets.</p>
+      <p class="project-lead">Does a model that finds people, companies and products reliably in Wikipedia still find them in tweets? We measured the drop, then looked for where it came from.</p>
       <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Text mining project (exchange semester, 5th year)</span></div>
         <div class="meta-item"><span class="meta-label">School</span><span class="meta-value">INSA Lyon</span></div>
-        <div class="meta-item"><span class="meta-label">Domain</span><span class="meta-value">Text analysis</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Team of 3</span></div>
+        <div class="meta-item"><span class="meta-label">Deliverables</span><span class="meta-value">27-page paper and two presentations</span></div>
       </div>
     </header>
 
     <section class="project-section">
-      <h2>Context and objective</h2>
-      <p>Find out whether a tool that works on edited articles remains reliable on short, informal messages.</p>
+      <h2>Context</h2>
+      <p>The assigned topic was to recognise people, companies and products in text, starting from a published research project: Linked-DocRED (SIGIR 2023). It is built on about 5,000 Wikipedia documents and chains four modules: name detection, grouping mentions of the same entity, relations between entities, and linking to Wikidata.</p>
+      <p>After the first session, our supervisor asked us to focus on name recognition. The question became: does a model trained on well-written articles stay reliable on short, informal messages?</p>
     </section>
 
     <section class="project-section">
-      <h2>My contribution</h2>
-      <p>I got the original code running again and checked how its answers were scored. One test gave a perfect score even when the system linked the wrong names. I then ran the final experiments on Google Colab.</p>
+      <h2>My role</h2>
+      <ul>
+        <li><strong>Getting the original code running</strong> : the published code did not run as released. I set up one isolated environment per module (three Python versions under WSL2) and fixed the blocking bugs: a hidden 10-document limit, a test that actually used the validation data, a call to the wrong API, and unpinned dependencies. I also adapted training to fit on an 8 GB GPU.</li>
+        <li><strong>Checking the metrics</strong> : the published evaluation script only scored the last document and gave a perfect score to nonsensical predictions. I wrote a corrected version.</li>
+        <li><strong>Research</strong> : review of the papers citing the original work and a selection grid for datasets.</li>
+        <li><strong>Final experiments</strong> : ran all the end-of-project GPU experiments on Google Colab (a model over three random seeds, a test on an additional corpus, preprocessing variants).</li>
+        <li><strong>Communication</strong> : mid-term presentation in English and writing the reproduction section of the paper.</li>
+      </ul>
+      <p>Model design and most of the error analysis were led by a teammate.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Approach</h2>
+      <p>Four datasets with different labels were mapped to a common scheme: person, company, product, other. Four families of models were compared: a classic CRF, RoBERTa trained on our data, GLiNER used without training, and a large language model (Llama) prompted with a few examples. All are scored on the same sentences with the same metric, and the test set is only used at the end.</p>
     </section>
 
     <section class="project-section">
       <h2>Results</h2>
-      <p>For company names, the recognition score fell from 0.68 on Wikipedia to 0.07 on tweets.</p>
+      <ul>
+        <li>For company names, the recognition score drops from <strong>0.68 on Wikipedia to 0.07 on tweets</strong>.</li>
+        <li>The best model trained only on Wikipedia-style text drops from 0.835 to 0.375 on tweets. When also trained on tweets, it reaches 0.73.</li>
+        <li>Twitter-specific markup explains about a third of the drop: removing it gains 0.16 for a model that has never seen tweets, but costs 0.05 for a model that has learned them.</li>
+        <li>On review, 26 to 44% of the model’s “errors” were judged correct by two reviewers: part of the drop comes from ambiguous annotations, not from the model.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limitations</h2>
+      <ul>
+        <li>The original pipeline was not fully retrained, so the comparison with the published scores is only indicative.</li>
+        <li>Detecting links between entities was taken out of scope at the supervisor’s request.</li>
+        <li>Most results rely on a single random seed; only the largest model was tested on three.</li>
+      </ul>
     </section>
 
     <section class="project-section">
       <h2>What I learned</h2>
-      <p>I learned to inspect examples before drawing conclusions: some errors came from the model, while others came from ambiguity in the expected answers.</p>
+      <p>I learned to read through examples before drawing conclusions: some errors came from the model, others from ambiguity in the expected answers.</p>
+      <p>I also learned to test a metric with predictions whose correct score is already known, before trusting it.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
-      <ul class="tech-badges"><li>RoBERTa</li><li>Google Colab</li></ul>
+      <ul class="tech-badges"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>RoBERTa</li><li>GLiNER</li><li>Llama</li><li>scikit-learn (CRF)</li><li>WSL2</li><li>Google Colab</li><li>LaTeX</li></ul>
     </section>
 
     <nav class="project-nav">
       <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="ia-pierre-feuille-ciseaux.html">AI gesture recognition →</a>
     </nav>
   </main>
 

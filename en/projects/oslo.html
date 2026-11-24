@@ -46,42 +46,89 @@
     </nav>
 
     <header class="project-hero">
-      <div class="project-cats"><span class="chip chip-data">Data / AI</span></div>
+      <div class="project-cats"><span class="chip chip-data">Data / AI</span><span class="chip chip-sys">Big Data</span></div>
       <h1>Forecasting bike availability in Oslo</h1>
-      <p class="project-lead">One-hour forecasts of bike availability at Oslo stations using station records and weather observations.</p>
+      <p class="project-lead">One-hour forecasts of the number of bikes available at Oslo’s 271 bike-sharing stations, based on 1.96 million records combined with weather data.</p>
       <div class="project-meta">
-        <div class="meta-item"><span class="meta-label">School</span><span class="meta-value">ESIROI</span></div>
-        <div class="meta-item"><span class="meta-label">Domain</span><span class="meta-value">Bike sharing</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Big Data &amp; Machine Learning challenge (4th year)</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Two students</span></div>
+        <div class="meta-item"><span class="meta-label">Period</span><span class="meta-value">2025 – 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Data</span><span class="meta-value">1.96 M records · 271 stations</span></div>
       </div>
     </header>
 
     <section class="project-section">
-      <h2>Context and objective</h2>
-      <p>Help identify stations likely to run out of bikes before the next redistribution.</p>
+      <h2>Context</h2>
+      <p>This challenge combined two ESIROI courses: large-scale data systems and machine learning. The data come from Oslo’s bike-sharing service, which publishes the state of every station every three minutes, and from hourly weather records (Open-Meteo), from January to November 2025.</p>
+      <p>The need is practical: an operator has to know which stations will empty or fill up within the hour to plan bike redistribution.</p>
     </section>
 
     <section class="project-section">
-      <h2>My contribution</h2>
-      <p>I matched observations by station and time to compare bike availability across different times of day and weather conditions.</p>
+      <h2>Objectives</h2>
+      <ul>
+        <li>Deploy a distributed HDFS / Spark cluster.</li>
+        <li>Build an ETL pipeline with Spark, from the APIs to Parquet files.</li>
+        <li>Analyse usage by hour, day, season, weather and station.</li>
+        <li>Predict, for each station, the number of bikes available one hour later.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Three-phase architecture</h2>
+      <ul>
+        <li><strong>Infrastructure</strong> : a 4-VM cluster (1 NameNode, 3 DataNodes), HDFS replication ×3, Spark 3.5. Distributed storage and processing were validated with dedicated tests.</li>
+        <li><strong>ETL pipeline</strong> : extraction from the station API (JSON) and the weather API (CSV), parsing a nested JSON field with an explicit schema, aligning records to the hour, then joining them with the weather data. The full pipeline runs in 1 min 42 s.</li>
+        <li><strong>Machine learning</strong> : 58 engineered features (past values from 1 to 24 h, rolling averages, cyclical encoding of hour and day, station profile, weather interactions) and a 70 / 15 / 15 chronological split so that no information leaks from the future into the past.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>What the data show</h2>
+      <ul>
+        <li>Stations are emptiest around 3 pm, 4 pm and 11 pm, and fullest between 3 am and 6 am.</li>
+        <li>At weekends, 6% more bikes remain available on average.</li>
+        <li>When it rains, 5.7% more bikes stay docked: people ride less.</li>
+        <li>The distribution is bimodal: many stations are either nearly empty or nearly full.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Choosing the model</h2>
+      <p>A first Random Forest reached an R² of 0.85 in training but only 0.48 on test data: it was learning noise. We switched to XGBoost with strong regularisation (shallower trees, a smaller learning rate, L1 and L2 penalties, early stopping), which halved the gap between training and test (from 0.15 to 0.09).</p>
     </section>
 
     <section class="project-section">
       <h2>Results</h2>
-      <p>The average forecast error on the test data was 3.02 bikes.</p>
+      <ul>
+        <li>On test data, forecasts are off by an average of <strong>3.02 bikes</strong> from the actual count (RMSE 5.25; R² 0.47).</li>
+        <li>The most useful features are rolling averages over 3 to 6 hours and the number of bikes one hour earlier.</li>
+        <li>Station by station, the model beats a simple average on 154 of the 271 stations. Highly irregular stations (tourism, events) remain poorly predicted.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limitations and next steps</h2>
+      <ul>
+        <li>More than half of the variation remains unexplained: one-off events, very local weather, individual behaviour.</li>
+        <li>Nearly empty stations make the relative error high, even when the gap in number of bikes is small.</li>
+        <li>Next steps: one model per station type, adding public holidays and events, real-time processing with Spark Structured Streaming. A production architecture was proposed but not deployed.</li>
+      </ul>
     </section>
 
     <section class="project-section">
       <h2>What I learned</h2>
-      <p>I learned to interpret that figure in practical terms: at a nearly empty station, three bikes can change the decision to send more.</p>
+      <p>I learned to turn a score into a concrete decision: for a nearly empty station, a three-bike gap can change whether it gets restocked.</p>
+      <p>The Random Forest also showed me that a good training score proves nothing until it is confirmed on unseen data.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
-      <ul class="tech-badges"><li>Spark</li><li>XGBoost</li></ul>
+      <ul class="tech-badges"><li>Hadoop HDFS</li><li>Apache Spark / PySpark</li><li>Python</li><li>XGBoost</li><li>scikit-learn</li><li>pandas</li><li>Jupyter</li></ul>
     </section>
 
     <nav class="project-nav">
       <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="ner.html">Finding names in text →</a>
     </nav>
   </main>
 

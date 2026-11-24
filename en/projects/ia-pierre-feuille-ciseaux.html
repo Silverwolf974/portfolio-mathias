@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI gesture recognition (webcam) — Mathias ALY BERIL</title>
-  <meta name="description" content="A deep learning system recognising rock–paper–scissors gestures in real time via webcam, using CNNs, transfer learning and an interactive demo." />
+  <meta name="description" content="Rock-paper-scissors gesture recognition from a webcam: a CNN compared with MobileNetV2 (94.6% accuracy) and a real-time game with MediaPipe." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,54 +48,87 @@
     <header class="project-hero">
       <div class="project-cats"><span class="chip chip-data">Data / AI</span><span class="chip chip-dev">Development</span></div>
       <h1>AI gesture recognition (webcam)</h1>
-      <p class="project-lead">A deep learning system that recognises rock–paper–scissors gestures in real time from webcam images.</p>
+      <p class="project-lead">Recognising rock, paper and scissors gestures from webcam images, then playing a real-time game against the computer. Two neural networks were compared; the best reaches 94.6% accuracy.</p>
       <div class="project-meta">
-        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Data challenge — AI module (ESIROI)</span></div>
-        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">Python</span></div>
-        <div class="meta-item"><span class="meta-label">Field</span><span class="meta-value">Computer vision</span></div>
-        <div class="meta-item"><span class="meta-label">Dataset</span><span class="meta-value">Rock Paper Scissors (TensorFlow Datasets)</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Artificial intelligence course project (4th year)</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Two students</span></div>
+        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">Python · PyTorch</span></div>
+        <div class="meta-item"><span class="meta-label">Deliverable</span><span class="meta-value">40-page report and live demo</span></div>
       </div>
     </header>
 
     <section class="project-section">
       <h2>Context</h2>
-      <p>For the artificial intelligence module, the goal was to build a complete computer vision pipeline: the user makes a gesture in front of the camera and the model automatically predicts <strong>rock</strong>, <strong>paper</strong> or <strong>scissors</strong>.</p>
+      <p>This ESIROI artificial intelligence project covers the whole computer vision workflow: preparing images, training and comparing models, then using them in an interactive application. The user makes a gesture in front of the webcam, the system recognises it and plays a round against them.</p>
     </section>
 
     <section class="project-section">
       <h2>Objectives</h2>
       <ul>
-        <li>Build an end-to-end image classification system.</li>
-        <li>Train an effective CNN using transfer learning.</li>
-        <li>Analyse the model’s performance and limitations.</li>
-        <li>Implement an interactive real-time webcam demo.</li>
+        <li>Prepare and explore a dataset of hand images in three classes: rock, paper, scissors.</li>
+        <li>Compare a network designed for the task with a pre-trained network.</li>
+        <li>Evaluate the models on images they have never seen.</li>
+        <li>Integrate recognition into a game that runs in real time.</li>
       </ul>
     </section>
 
     <section class="project-section">
-      <h2>Pipeline</h2>
-      <p>The project follows a standard computer vision pipeline: webcam image capture, preprocessing (resizing and normalisation), classification by a CNN trained using transfer learning, and live display of the predicted gesture.</p>
+      <h2>Data</h2>
+      <p>The dataset is the Rock Paper Scissors set published by TensorFlow, with a training set and a separate test set. The three classes are balanced. Images are resized to 128 × 128 pixels and normalised.</p>
+      <p>Many images have plain backgrounds and even lighting, much simpler than a real webcam. To narrow that gap, every training image goes through random transformations: flips, rotations up to 20°, colour and brightness changes, shifts and zoom, conversion to greyscale, and masking of a region.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Two models compared</h2>
       <ul>
-        <li><strong>Data</strong> : TensorFlow Datasets’ Rock Paper Scissors dataset, supplemented and preprocessed (<code>data/raw</code> → <code>data/processed</code>).</li>
-        <li><strong>Exploration &amp; training</strong> : Jupyter notebooks for dataset analysis and model training.</li>
-        <li><strong>Project structure</strong> : clear separation into <code>src</code> / <code>models</code> / <code>demo</code> / <code>report</code>, for reusable code.</li>
-        <li><strong>Real-time demo</strong> : webcam capture with OpenCV and live predictions.</li>
+        <li><strong>Network designed for the task</strong> : four convolution blocks (32 to 256 filters) with normalisation and dropout, followed by a three-output classifier. About 1.2 million parameters, trained from scratch.</li>
+        <li><strong>Pre-trained MobileNetV2</strong> : a lightweight network already trained on ImageNet, with its last layer replaced. Training happens in two steps: first the new layer alone, then the last five blocks with a very small learning rate.</li>
+      </ul>
+      <p>Both models follow the same protocol: 90% of the training images for learning, 10% for validation, the test set kept for the final evaluation, a fixed random seed, learning-rate reduction and early stopping when validation stops improving.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Results</h2>
+      <p>The network designed for the task achieves the best accuracy, about <strong>94.6%</strong> on the test set, ahead of MobileNetV2. On images this simple and this specific, a smaller model trained directly on the data did better than the pre-trained one. The best model is selected automatically and saved with its class mapping, so it can be reloaded without retraining.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Real-time demo</h2>
+      <ul>
+        <li><strong>Hand detection</strong> : MediaPipe Hands locates the hand in the webcam image and finds the finger joints.</li>
+        <li><strong>Reading the gesture</strong> : the position of the joints shows which fingers are open or closed.</li>
+        <li><strong>Stabilisation</strong> : predictions from the last few frames are kept and the most frequent one is used, so the result does not flicker from frame to frame.</li>
+        <li><strong>Game</strong> : an interface with a start screen shows the detected gesture, the computer's move, the score and the result of each round.</li>
+        <li><strong>Single image</strong> : a function also analyses one image and displays the model's confidence for each class, which helps when studying errors.</li>
       </ul>
     </section>
 
     <section class="project-section">
-      <h2>Skills demonstrated</h2>
-      <p>Working across the full deep learning workflow: data preparation, CNN training and evaluation, transfer learning, and moving from a notebook to a usable real-time demonstration.</p>
+      <h2>Limitations and next steps</h2>
+      <ul>
+        <li>Errors mostly appear when lighting is poor, the hand is partly out of frame, the gesture is badly formed or the background is cluttered.</li>
+        <li>The dataset lacks diversity: few different hands, angles and lighting conditions.</li>
+        <li>The system only knows three gestures: adding more requires new data and retraining.</li>
+        <li>Next steps: a more varied dataset, systematic hand detection before classification, and a lighter model for low-powered machines.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>What I learned</h2>
+      <p>A pre-trained model is not better by default: it has to be compared with a simpler solution, using the same protocol, before choosing it.</p>
+      <p>A good test score is not enough either: with a real webcam, lighting and background matter as much as the model.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
       <ul class="tech-badges">
         <li>Python</li>
-        <li>TensorFlow / Keras</li>
-        <li>CNN / Transfer learning</li>
+        <li>PyTorch / torchvision</li>
+        <li>CNN</li>
+        <li>MobileNetV2</li>
+        <li>MediaPipe Hands</li>
         <li>OpenCV</li>
-        <li>NumPy</li>
+        <li>scikit-learn</li>
         <li>Jupyter</li>
       </ul>
     </section>

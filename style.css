@@ -713,16 +713,20 @@ html::before {
 .fx-data { animation: data-run 2.2s ease-in-out infinite; opacity: 0; }
 @keyframes data-run { 0% { transform: translateX(96px); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateX(140px); opacity: 0; } }
 
+/* Oslo : barres d'historique qui respirent (fx-bar), prévision en pointillés
+   qui avance vers le point « t+1h » qui pulse (fx-ring) */
+.fx-forecast { animation: forecast-flow 1.6s linear infinite; }
+@keyframes forecast-flow { to { stroke-dashoffset: -18; } }
+
+/* NER : un curseur parcourt le texte, les entités s'allument tour à tour */
+.fx-ent { fill-opacity: .08; animation: ent-tag 3.6s ease-in-out infinite; }
+.fx-e2 { animation-delay: 1.2s; } .fx-e3 { animation-delay: 2.4s; }
+@keyframes ent-tag { 0%, 40%, 100% { fill-opacity: .08; stroke-opacity: .55; } 14%, 26% { fill-opacity: .42; stroke-opacity: 1; } }
+.fx-caret { animation: caret-scan 3.6s linear infinite; }
+@keyframes caret-scan { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(240px); opacity: 0; } }
+
 /* Perf : les scènes SVG ne s'animent que quand leur carte est visible
    (classe .live posée en JS via IntersectionObserver) */
-@media (prefers-reduced-motion: no-preference) {
-  .pc-oslo.live .scene path[stroke-dasharray] { animation: forecast-flow 2.4s linear infinite; }
-  .pc-ner.live .scene rect { animation: entity-highlight 3.6s ease-in-out infinite; }
-  .pc-ner.live .scene rect:nth-of-type(2) { animation-delay: 1.2s; }
-  .pc-ner.live .scene rect:nth-of-type(3) { animation-delay: 2.4s; }
-}
-@keyframes forecast-flow { to { stroke-dashoffset: -27; } }
-@keyframes entity-highlight { 0%, 40%, 100% { fill: transparent; } 20% { fill: var(--pc); } }
 .projects-grid .scene * { animation-play-state: paused; }
 .project-card.live .scene * { animation-play-state: running; }
 

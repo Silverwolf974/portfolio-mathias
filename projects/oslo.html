@@ -46,42 +46,89 @@
     </nav>
 
     <header class="project-hero">
-      <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
+      <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-sys">Big Data</span></div>
       <h1>Vélos à Oslo : prévoir les disponibilités</h1>
-      <p class="project-lead">Prévision à une heure du nombre de vélos disponibles dans les stations d’Oslo à partir de leur historique et de la météo.</p>
+      <p class="project-lead">Prévision à une heure du nombre de vélos disponibles dans les 271 stations de vélos en libre-service d’Oslo, à partir de 1,96 million de relevés croisés avec la météo.</p>
       <div class="project-meta">
-        <div class="meta-item"><span class="meta-label">Formation</span><span class="meta-value">ESIROI</span></div>
-        <div class="meta-item"><span class="meta-label">Domaine</span><span class="meta-value">Mobilité urbaine</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Challenge Big Data &amp; Machine Learning (4ᵉ année)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Période</span><span class="meta-value">2025 – 2026</span></div>
+        <div class="meta-item"><span class="meta-label">Données</span><span class="meta-value">1,96 M relevés · 271 stations</span></div>
       </div>
     </header>
 
     <section class="project-section">
-      <h2>Contexte et objectif</h2>
-      <p>Anticiper les stations qui risquent de manquer de vélos avant le prochain réapprovisionnement.</p>
+      <h2>Contexte</h2>
+      <p>Ce challenge relie deux cours de l’ESIROI : systèmes de données massives et apprentissage automatique. Les données viennent du service de vélos en libre-service d’Oslo, qui publie l’état de chaque station toutes les trois minutes, et de relevés météo horaires (Open-Meteo), de janvier à novembre 2025.</p>
+      <p>Le besoin est concret : un opérateur doit savoir quelles stations vont se vider ou se remplir dans l’heure pour planifier le déplacement des vélos.</p>
     </section>
 
     <section class="project-section">
-      <h2>Travaux réalisés</h2>
-      <p>J’ai croisé les observations par station et par heure pour comparer la disponibilité des vélos selon le moment de la journée et les conditions météo.</p>
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Déployer un cluster distribué HDFS / Spark.</li>
+        <li>Construire un pipeline ETL avec Spark, des API jusqu’à des fichiers Parquet.</li>
+        <li>Analyser les usages selon l’heure, le jour, la saison, la météo et la station.</li>
+        <li>Prédire, pour chaque station, le nombre de vélos disponibles une heure plus tard.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture en trois phases</h2>
+      <ul>
+        <li><strong>Infrastructure</strong> : cluster de 4 machines virtuelles (1 NameNode, 3 DataNodes), réplication HDFS ×3, Spark 3.5. Le stockage et le calcul distribués ont été validés par des tests dédiés.</li>
+        <li><strong>Pipeline ETL</strong> : extraction depuis l’API des stations (JSON) et l’API météo (CSV), lecture d’un champ JSON imbriqué avec un schéma explicite, alignement des relevés à l’heure puis jointure avec la météo. Le pipeline complet s’exécute en 1 min 42 s.</li>
+        <li><strong>Machine learning</strong> : 58 variables construites (valeurs passées de 1 à 24 h, moyennes glissantes, encodage cyclique de l’heure et du jour, profil de la station, interactions avec la météo) et un découpage chronologique 70 / 15 / 15 pour éviter toute fuite d’information du futur vers le passé.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que montrent les données</h2>
+      <ul>
+        <li>Les stations sont les plus vides vers 15 h, 16 h et 23 h, et les plus pleines entre 3 h et 6 h.</li>
+        <li>Le week-end, il reste en moyenne 6 % de vélos disponibles en plus.</li>
+        <li>Quand il pleut, 5,7 % de vélos en plus restent en station : les usagers roulent moins.</li>
+        <li>La répartition est bimodale : beaucoup de stations sont soit presque vides, soit presque pleines.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Choix du modèle</h2>
+      <p>Un premier Random Forest obtenait un R² de 0,85 à l’entraînement mais seulement 0,48 en test : il apprenait le bruit. Nous sommes passés à XGBoost avec une régularisation forte (arbres moins profonds, pas d’apprentissage réduit, pénalités L1 et L2, arrêt anticipé), ce qui a divisé par deux l’écart entre entraînement et test (de 0,15 à 0,09).</p>
     </section>
 
     <section class="project-section">
       <h2>Résultats</h2>
-      <p>Sur les données de test, les prévisions s’écartent du nombre réel de 3,02 vélos en moyenne.</p>
+      <ul>
+        <li>Sur les données de test, la prévision s’écarte en moyenne de <strong>3,02 vélos</strong> du nombre réel (RMSE 5,25 ; R² 0,47).</li>
+        <li>Les variables les plus utiles sont les moyennes glissantes sur 3 à 6 h et le nombre de vélos une heure plus tôt.</li>
+        <li>Station par station, le modèle fait mieux qu’une simple moyenne sur 154 des 271 stations. Les stations très irrégulières (tourisme, événements) restent mal prévues.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Limites et pistes</h2>
+      <ul>
+        <li>Plus de la moitié des variations reste inexpliquée : événements ponctuels, météo très locale, comportements individuels.</li>
+        <li>Les stations presque vides rendent l’erreur relative élevée, même quand l’écart en nombre de vélos est faible.</li>
+        <li>Pistes : un modèle par type de station, l’ajout des jours fériés et des événements, un traitement en temps réel avec Spark Structured Streaming. Une architecture de mise en production a été proposée, sans être déployée.</li>
+      </ul>
     </section>
 
     <section class="project-section">
       <h2>Ce que j’ai appris</h2>
       <p>J’ai appris à traduire un score en décision concrète : pour une station presque vide, un écart de trois vélos peut changer la décision de la réapprovisionner.</p>
+      <p>Le Random Forest m’a aussi montré qu’un bon score à l’entraînement ne prouve rien tant qu’il n’a pas été confirmé sur des données jamais vues.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
-      <ul class="tech-badges"><li>Spark</li><li>XGBoost</li></ul>
+      <ul class="tech-badges"><li>Hadoop HDFS</li><li>Apache Spark / PySpark</li><li>Python</li><li>XGBoost</li><li>scikit-learn</li><li>pandas</li><li>Jupyter</li></ul>
     </section>
 
     <nav class="project-nav">
       <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="ner.html">Repérer les noms dans les textes &rarr;</a>
     </nav>
   </main>
 

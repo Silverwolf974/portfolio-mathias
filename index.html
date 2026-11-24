@@ -380,23 +380,59 @@
         </article>
 
         <article class="project-card pc-oslo" data-cat="data">
-          <div class="project-thumb"><svg class="scene" viewBox="0 0 320 140" aria-hidden="true" fill="none" stroke="var(--pc)" stroke-width="2"><path d="M56 100h208M65 98V72h16v26m18 0V60h16v38m18 0V80h16v18m18 0V55h16v43m18 0V48h16v50"/><path stroke-dasharray="4 5" d="m66 54 37-14 37 15 34-28 37-4 38 8"/></svg></div>
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <path d="M40 112h240" stroke="rgba(135,233,175,.35)" stroke-width="1.5"/>
+              <path d="M204 22v90" stroke="rgba(135,233,175,.35)" stroke-width="1.5" stroke-dasharray="2 4"/>
+              <g fill="rgba(135,233,175,.22)" stroke="#87e9af" stroke-width="1.5">
+                <rect class="fx-bar" x="52" y="70" width="20" height="42" rx="3"/>
+                <rect class="fx-bar fx-b2" x="82" y="54" width="20" height="58" rx="3"/>
+                <rect class="fx-bar fx-b3" x="112" y="76" width="20" height="36" rx="3"/>
+                <rect class="fx-bar fx-b4" x="142" y="48" width="20" height="64" rx="3"/>
+                <rect class="fx-bar fx-b2" x="172" y="62" width="20" height="50" rx="3"/>
+              </g>
+              <path d="M62 70L92 54L122 76L152 48L182 62" fill="none" stroke="#bbf7d0" stroke-width="2" stroke-linejoin="round"/>
+              <path class="fx-forecast" d="M182 62C212 50 232 40 262 50" fill="none" stroke="#87e9af" stroke-width="2.5" stroke-dasharray="4 5" stroke-linecap="round"/>
+              <circle class="fx-ring" cx="262" cy="50" r="9" fill="none" stroke="#87e9af" stroke-width="2"/>
+              <circle cx="262" cy="50" r="4.5" fill="#87e9af"/>
+              <text x="246" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#bbf7d0">t+1h</text>
+            </svg>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
             <h3 class="project-title"><a href="projects/oslo.html">Vélos à Oslo : prévoir les disponibilités</a></h3>
             <p class="project-desc">Prévision à une heure du nombre de vélos disponibles dans les stations d’Oslo à partir de leur historique et de la météo.</p>
-            <ul class="tags small"><li>Spark</li><li>XGBoost</li></ul>
+            <ul class="tags small"><li>Spark</li><li>HDFS</li><li>XGBoost</li><li>Python</li></ul>
             <div class="project-links"><a class="btn-link ghost" href="projects/oslo.html">Voir le détail</a></div>
           </div>
         </article>
 
         <article class="project-card pc-ner" data-cat="data">
-          <div class="project-thumb"><svg class="scene" viewBox="0 0 320 140" aria-hidden="true" fill="none" stroke="var(--pc)" stroke-width="2"><path d="M60 44h40m80 0h62M60 72h78m75 0h29M60 98h36m91 0h55"/><rect x="110" y="33" width="60" height="20" rx="4"/><rect x="148" y="61" width="55" height="20" rx="4"/><rect x="106" y="87" width="70" height="20" rx="4"/></svg></div>
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <g fill="rgba(197,172,255,.2)">
+                <rect x="40" y="32" width="44" height="12" rx="3"/><rect x="90" y="32" width="30" height="12" rx="3"/><rect x="204" y="32" width="56" height="12" rx="3"/>
+                <rect x="40" y="62" width="70" height="12" rx="3"/><rect x="188" y="62" width="34" height="12" rx="3"/><rect x="228" y="62" width="40" height="12" rx="3"/>
+                <rect x="40" y="92" width="36" height="12" rx="3"/><rect x="82" y="92" width="48" height="12" rx="3"/><rect x="228" y="92" width="30" height="12" rx="3"/>
+              </g>
+              <g stroke="#c5acff" stroke-width="1.5">
+                <rect class="fx-ent" x="128" y="26" width="68" height="24" rx="5" fill="#c5acff"/>
+                <rect class="fx-ent fx-e2" x="118" y="56" width="62" height="24" rx="5" fill="#c5acff"/>
+                <rect class="fx-ent fx-e3" x="138" y="86" width="82" height="24" rx="5" fill="#c5acff"/>
+              </g>
+              <g font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#ede5ff" text-anchor="middle">
+                <text x="162" y="42">PER</text>
+                <text x="149" y="72">ORG</text>
+                <text x="179" y="102">PROD</text>
+              </g>
+              <rect class="fx-caret" x="36" y="20" width="2" height="96" rx="1" fill="#e0d4ff"/>
+            </svg>
+          </div>
           <div class="project-body">
             <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
             <h3 class="project-title"><a href="projects/ner.html">Repérer les noms dans les textes</a></h3>
             <p class="project-desc">Évaluation d’un modèle entraîné sur Wikipédia pour repérer les personnes, les entreprises et les produits dans des tweets.</p>
-            <ul class="tags small"><li>RoBERTa</li><li>Google Colab</li></ul>
+            <ul class="tags small"><li>RoBERTa</li><li>PyTorch</li><li>Hugging Face</li><li>Google Colab</li></ul>
             <div class="project-links"><a class="btn-link ghost" href="projects/ner.html">Voir le détail</a></div>
           </div>
         </article>
@@ -428,10 +464,10 @@
             <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-dev">Développement</span></div>
             <h3 class="project-title"><a href="projects/ia-pierre-feuille-ciseaux.html">IA de reconnaissance de gestes (webcam)</a></h3>
             <p class="project-desc">
-              CNN et transfer learning pour reconnaître les gestes pierre-feuille-ciseaux en temps
-              réel via webcam — pipeline complet, de l'acquisition des données à la démo interactive.
+              Reconnaissance des gestes pierre-feuille-ciseaux par webcam : un CNN conçu pour le problème
+              atteint 94,6 % de précision, intégré dans un jeu en temps réel.
             </p>
-            <ul class="tags small"><li>Python</li><li>TensorFlow / Keras</li><li>CNN</li><li>OpenCV</li></ul>
+            <ul class="tags small"><li>Python</li><li>PyTorch</li><li>CNN</li><li>MediaPipe</li><li>OpenCV</li></ul>
             <div class="project-links"><a class="btn-link ghost" href="projects/ia-pierre-feuille-ciseaux.html">Voir le détail</a></div>
           </div>
         </article>
@@ -486,7 +522,7 @@
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-droplet"/></svg><h3>Data / IA</h3></div>
-          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>TensorFlow / Keras</li><li>Deep Learning (CNN)</li><li>OpenCV</li><li>Spark / Hadoop</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li></ul>
+          <ul class="tags"><li>pandas</li><li>scikit-learn</li><li>PyTorch</li><li>Deep Learning (CNN)</li><li>OpenCV</li><li>Spark / Hadoop</li><li>statsmodels</li><li>R / RStudio</li><li>Jupyter</li></ul>
         </article>
         <article class="skill-card">
           <div class="skill-head"><svg class="ic"><use href="#ic-shield"/></svg><h3>Cybersécurité</h3></div>
@@ -559,7 +595,7 @@
         </article>
         <article class="curr-card">
           <svg class="ic"><use href="#ic-spark"/></svg>
-          <div><h4>IA &amp; deep learning</h4><p>Vision par ordinateur, CNN et transfer learning (TensorFlow/Keras), pipeline complet de la donnée au modèle déployé.</p></div>
+          <div><h4>IA &amp; deep learning</h4><p>Vision par ordinateur (CNN, transfer learning) et traitement du texte avec des transformers, sous PyTorch.</p></div>
         </article>
         <article class="curr-card">
           <svg class="ic"><use href="#ic-shield"/></svg>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IA de reconnaissance de gestes (webcam) — Mathias ALY BERIL</title>
-  <meta name="description" content="Système de deep learning reconnaissant les gestes pierre-feuille-ciseaux en temps réel via webcam : CNN, transfer learning et démo interactive." />
+  <meta name="description" content="Reconnaissance des gestes pierre-feuille-ciseaux par webcam : comparaison d'un CNN et de MobileNetV2 (94,6 % de précision) et jeu en temps réel avec MediaPipe." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,54 +48,87 @@
     <header class="project-hero">
       <div class="project-cats"><span class="chip chip-data">Data / IA</span><span class="chip chip-dev">Développement</span></div>
       <h1>IA de reconnaissance de gestes (webcam)</h1>
-      <p class="project-lead">Un système de deep learning capable de reconnaître les gestes du jeu pierre-feuille-ciseaux à partir d'images capturées par une webcam, en temps réel.</p>
+      <p class="project-lead">Reconnaître les gestes pierre, feuille et ciseaux à partir d'images de webcam, puis jouer une partie en temps réel contre l'ordinateur. Deux réseaux de neurones ont été comparés ; le meilleur atteint 94,6 % de précision.</p>
       <div class="project-meta">
-        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Data challenge — module IA (ESIROI)</span></div>
-        <div class="meta-item"><span class="meta-label">Langage</span><span class="meta-value">Python</span></div>
-        <div class="meta-item"><span class="meta-label">Domaine</span><span class="meta-value">Vision par ordinateur</span></div>
-        <div class="meta-item"><span class="meta-label">Dataset</span><span class="meta-value">Rock Paper Scissors (TensorFlow Datasets)</span></div>
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Projet du module d'intelligence artificielle (4ᵉ année)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Langage</span><span class="meta-value">Python · PyTorch</span></div>
+        <div class="meta-item"><span class="meta-label">Livrable</span><span class="meta-value">Rapport de 40 pages et démonstration</span></div>
       </div>
     </header>
 
     <section class="project-section">
       <h2>Contexte</h2>
-      <p>Dans le cadre du module d'intelligence artificielle, l'objectif était de construire un pipeline complet de vision par ordinateur : l'utilisateur effectue un geste devant la caméra et le modèle prédit automatiquement <strong>pierre</strong>, <strong>feuille</strong> ou <strong>ciseaux</strong>.</p>
+      <p>Ce projet du module d'intelligence artificielle de l'ESIROI couvre toute la chaîne d'un projet de vision par ordinateur : préparer les images, entraîner et comparer des modèles, puis les utiliser dans une application interactive. L'utilisateur fait un geste devant sa webcam, le système le reconnaît et joue une manche contre lui.</p>
     </section>
 
     <section class="project-section">
       <h2>Objectifs</h2>
       <ul>
-        <li>Construire un système de classification d'images de bout en bout.</li>
-        <li>Entraîner un modèle CNN performant (avec transfer learning).</li>
-        <li>Analyser les performances du modèle et ses limites.</li>
-        <li>Implémenter une démonstration interactive en temps réel avec webcam.</li>
+        <li>Préparer et explorer un jeu d'images de mains en trois classes : pierre, feuille, ciseaux.</li>
+        <li>Comparer un réseau conçu pour le problème et un réseau pré-entraîné.</li>
+        <li>Évaluer les modèles sur des images qu'ils n'ont jamais vues.</li>
+        <li>Intégrer la reconnaissance dans un jeu utilisable en temps réel.</li>
       </ul>
     </section>
 
     <section class="project-section">
-      <h2>Pipeline</h2>
-      <p>Le projet suit un pipeline classique de vision par ordinateur : capture d'image (webcam), preprocessing (redimensionnement, normalisation), classification par un CNN entraîné par transfer learning, puis affichage du geste prédit en direct.</p>
+      <h2>Données</h2>
+      <p>Le jeu de données est le jeu Rock Paper Scissors publié par TensorFlow, avec un ensemble d'entraînement et un ensemble de test séparé. Les trois classes sont équilibrées. Les images sont redimensionnées en 128 × 128 pixels et normalisées.</p>
+      <p>Beaucoup d'images ont des fonds homogènes et un éclairage régulier, bien plus simples qu'une vraie webcam. Pour réduire cet écart, chaque image d'entraînement subit des transformations aléatoires : retournement, rotation jusqu'à 20°, variations de couleur et de luminosité, décalage et zoom, passage en niveaux de gris, masquage d'une zone.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Deux modèles comparés</h2>
       <ul>
-        <li><strong>Données</strong> : dataset Rock Paper Scissors de TensorFlow Datasets, complété et prétraité (<code>data/raw</code> → <code>data/processed</code>).</li>
-        <li><strong>Exploration &amp; entraînement</strong> : notebooks Jupyter dédiés à l'analyse du dataset et à l'entraînement des modèles.</li>
-        <li><strong>Structure projet</strong> : séparation claire <code>src</code> / <code>models</code> / <code>demo</code> / <code>report</code>, pour un code réutilisable.</li>
-        <li><strong>Démo temps réel</strong> : capture webcam avec OpenCV et prédiction affichée en direct.</li>
+        <li><strong>Réseau conçu pour le problème</strong> : quatre blocs de convolution (de 32 à 256 filtres) avec normalisation et dropout, puis un classifieur à trois sorties. Environ 1,2 million de paramètres, entraînés à partir de zéro.</li>
+        <li><strong>MobileNetV2 pré-entraîné</strong> : un réseau léger déjà entraîné sur ImageNet, dont on remplace la dernière couche. Entraînement en deux temps : d'abord la nouvelle couche seule, puis les cinq derniers blocs avec un pas d'apprentissage très faible.</li>
+      </ul>
+      <p>Les deux modèles suivent le même protocole : 90 % des images d'entraînement pour apprendre, 10 % pour la validation, l'ensemble de test réservé à l'évaluation finale, graine aléatoire fixée, réduction du pas d'apprentissage et arrêt anticipé si la validation ne progresse plus.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats</h2>
+      <p>Le réseau conçu pour le problème obtient la meilleure précision, environ <strong>94,6 %</strong> sur l'ensemble de test, devant MobileNetV2. Sur des images aussi simples et aussi spécifiques, un modèle plus petit entraîné directement sur les données a fait mieux que le modèle pré-entraîné. Le meilleur modèle est choisi automatiquement et sauvegardé avec la correspondance de ses classes, pour être rechargé sans nouvel entraînement.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Démonstration en temps réel</h2>
+      <ul>
+        <li><strong>Détection de la main</strong> : MediaPipe Hands localise la main dans l'image de la webcam et repère les articulations des doigts.</li>
+        <li><strong>Lecture du geste</strong> : la position des articulations indique quels doigts sont ouverts ou fermés.</li>
+        <li><strong>Stabilisation</strong> : les prédictions des dernières images sont conservées et la plus fréquente est retenue, pour éviter que le résultat change à chaque image.</li>
+        <li><strong>Jeu</strong> : une interface avec écran de démarrage affiche le geste détecté, celui de l'ordinateur, le score et le résultat de chaque manche.</li>
+        <li><strong>Image fixe</strong> : une fonction analyse aussi une seule image et affiche la confiance du modèle pour chaque classe, utile pour étudier les erreurs.</li>
       </ul>
     </section>
 
     <section class="project-section">
-      <h2>Ce que ce projet démontre</h2>
-      <p>Maîtrise de la chaîne complète d'un projet de deep learning : préparation des données, entraînement et évaluation d'un CNN, transfer learning, et surtout passage du notebook à une démonstration temps réel utilisable — l'étape qui manque souvent aux projets académiques.</p>
+      <h2>Limites et pistes</h2>
+      <ul>
+        <li>Les erreurs apparaissent surtout quand l'éclairage est faible, que la main sort en partie du cadre, que le geste est mal formé ou que l'arrière-plan est chargé.</li>
+        <li>Le jeu de données manque de diversité : peu de mains différentes, d'angles et de conditions de lumière.</li>
+        <li>Le système ne connaît que trois gestes : en ajouter demande de nouvelles données et un nouvel entraînement.</li>
+        <li>Pistes : un jeu de données plus varié, une détection de la main systématique avant la classification, un modèle plus léger pour les machines peu puissantes.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que j'ai appris</h2>
+      <p>Un modèle pré-entraîné n'est pas meilleur par principe : il faut le comparer à une solution plus simple, avec le même protocole, avant de le choisir.</p>
+      <p>Un bon score sur le jeu de test ne suffit pas non plus : face à une vraie webcam, la lumière et l'arrière-plan comptent autant que le modèle.</p>
     </section>
 
     <section class="project-section">
       <h2>Technologies</h2>
       <ul class="tech-badges">
         <li>Python</li>
-        <li>TensorFlow / Keras</li>
-        <li>CNN / Transfer learning</li>
+        <li>PyTorch / torchvision</li>
+        <li>CNN</li>
+        <li>MobileNetV2</li>
+        <li>MediaPipe Hands</li>
         <li>OpenCV</li>
-        <li>NumPy</li>
+        <li>scikit-learn</li>
         <li>Jupyter</li>
       </ul>
     </section>
