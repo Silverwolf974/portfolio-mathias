@@ -587,6 +587,8 @@ html::before {
 .pc-eau   { --pc: #2dd4bf; --pc-glow: rgba(45, 212, 191, .30);  --pc-soft: rgba(45, 212, 191, .12);  --pc-bg1: #06302c; --pc-bg2: #0d4a44; }
 .pc-ble   { --pc: #4ade80; --pc-glow: rgba(74, 222, 128, .28);  --pc-soft: rgba(74, 222, 128, .12);  --pc-bg1: #0a2e18; --pc-bg2: #124424; }
 .pc-java  { --pc: #a78bfa; --pc-glow: rgba(167, 139, 250, .32); --pc-soft: rgba(167, 139, 250, .12); --pc-bg1: #1f1b4a; --pc-bg2: #2b2668; }
+.pc-oslo { --pc: #87e9af; --pc-glow: #87e9af44; --pc-soft: #87e9af18; --pc-bg1: #0e2927; --pc-bg2: #174236; }
+.pc-ner { --pc: #c5acff; --pc-glow: #c5acff44; --pc-soft: #c5acff18; --pc-bg1: #221d34; --pc-bg2: #372852; }
 .pc-velib { --pc: #f472b6; --pc-glow: rgba(244, 114, 182, .30); --pc-soft: rgba(244, 114, 182, .12); --pc-bg1: #3a102e; --pc-bg2: #521a41; }
 .pc-soc   { --pc: #60a5fa; --pc-glow: rgba(96, 165, 250, .32);  --pc-soft: rgba(96, 165, 250, .12);  --pc-bg1: #0a1f3d; --pc-bg2: #123362; }
 .pc-rps   { --pc: #facc15; --pc-glow: rgba(250, 204, 21, .26);  --pc-soft: rgba(250, 204, 21, .12);  --pc-bg1: #2e2606; --pc-bg2: #48390a; }
