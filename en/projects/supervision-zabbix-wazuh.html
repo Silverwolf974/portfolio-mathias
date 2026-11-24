@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network monitoring — Zabbix, Wazuh &amp; pfSense | Mathias ALY BERIL</title>
+  <meta name="description" content="Supervision d&#x27;une infrastructure virtualisée avec Zabbix (métriques) et Wazuh (SIEM) derrière un pare-feu pfSense, avec détection d&#x27;une attaque brute-force SSH." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 64 64&#x27;%3E%3Crect width=&#x27;64&#x27; height=&#x27;64&#x27; rx=&#x27;14&#x27; fill=&#x27;%230f172a&#x27;/%3E%3Ctext x=&#x27;32&#x27; y=&#x27;42&#x27; font-family=&#x27;Arial,sans-serif&#x27; font-size=&#x27;28&#x27; font-weight=&#x27;800&#x27; fill=&#x27;%2338bdf8&#x27; text-anchor=&#x27;middle&#x27;%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/supervision-zabbix-wazuh.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/supervision-zabbix-wazuh.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-superv2">
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../../projects/supervision-zabbix-wazuh.html" hreflang="fr" lang="fr" aria-label="Switch to French"><span aria-hidden="true"><span class="language-current">EN</span> / <strong>FR</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projects</a><span class="sep">/</span>
+      <span>Zabbix, Wazuh &amp; pfSense monitoring</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-sys">Systems &amp; networks</span><span class="chip chip-cyber">Cybersecurity</span></div>
+      <h1>Network monitoring — Zabbix, Wazuh &amp; pfSense</h1>
+      <p class="project-lead">Deploy and monitor a small virtualised infrastructure end to end: metrics with Zabbix, incident detection with Wazuh (SIEM), all behind a pfSense firewall.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">Cybersecurity lab project (4th year)</span></div>
+        <div class="meta-item"><span class="meta-label">Team</span><span class="meta-value">Two students</span></div>
+        <div class="meta-item"><span class="meta-label">Period</span><span class="meta-value">November 2025</span></div>
+        <div class="meta-item"><span class="meta-label">Scope</span><span class="meta-value">4 virtual machines</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Context</h2>
+      <p>The whole infrastructure is virtualised on a single physical machine, on an isolated internal network managed by a firewall. It brings together four systems: a pfSense firewall (router and gateway), an Ubuntu monitoring server, a Linux application server and a Windows server joined to an Active Directory domain.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Set up centralised monitoring of the machines and services.</li>
+        <li>Collect both system metrics and security logs.</li>
+        <li>Detect a security incident and correlate it with the metrics.</li>
+        <li>Document a reusable architecture for a professional context.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture set up</h2>
+      <ul>
+        <li><strong>pfSense</strong> : firewall, router and gateway, which reports its information via SNMP and sends its logs over Syslog.</li>
+        <li><strong>Ubuntu monitoring server</strong> hosting <strong>Zabbix</strong> (network and system metrics) and <strong>Wazuh</strong> in all-in-one mode (SIEM for correlation and log analysis).</li>
+        <li><strong>Linux application server</strong> (Apache) and <strong>Windows server</strong> (Active Directory), each fitted with the Zabbix and Wazuh agents.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Monitoring carried out</h2>
+      <ul>
+        <li>Availability of the web service on the Linux server.</li>
+        <li>Integrity of a critical file on the Windows server.</li>
+        <li>Network performance and SNMP metrics of the pfSense firewall.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Security side</h2>
+      <p>An SSH brute-force attack was simulated against the Linux server, then detected by the Wazuh SIEM from the authentication logs. Wazuh events (security) and Zabbix metrics (system) were then correlated to get a complete view of the incident.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Result</h2>
+      <p>The whole chain works on a single host: service monitoring, metric collection, event correlation and real-time incident detection. The project proves that complete monitoring is feasible despite strong hardware constraints.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficulties and next steps</h2>
+      <ul>
+        <li>Fitting everything onto a single physical machine raised connectivity, compatibility and installation issues, solved over the course of the project.</li>
+        <li>Next steps: automate the deployment (Ansible or Docker Compose), add email alerts and cross dashboards with Grafana, and strengthen log rotation and centralisation.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills developed</h2>
+      <ul>
+        <li>Infrastructure monitoring with Zabbix.</li>
+        <li>SIEM and log analysis with Wazuh.</li>
+        <li>Configuring a pfSense firewall (SNMP, Syslog).</li>
+        <li>Windows Server / Active Directory and Linux administration.</li>
+        <li>Detecting and correlating security incidents.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges"><li>Zabbix</li><li>Wazuh (SIEM)</li><li>pfSense</li><li>Windows Server / AD</li><li>Debian / Ubuntu</li><li>Apache</li><li>SNMP</li><li>Syslog</li></ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Confidentiality</h2>
+      <div class="note-box"><strong>Note:</strong> isolated lab infrastructure. The addressing plan and the screenshots are not reproduced here.</div>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">← All projects</a>
+      <a class="btn-link ghost" href="pentest-ctf.html">Penetration testing of machines — CTF →</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Back to portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

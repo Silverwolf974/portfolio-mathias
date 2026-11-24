@@ -340,45 +340,6 @@
           </div>
         </article>
 
-        <!-- Projet 6 : Challenge Big Data Vélib' -->
-        <article class="project-card pc-velib" data-cat="data">
-          <div class="project-thumb">
-            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-              <g class="fx-wheel" fill="none" stroke="#f472b6" stroke-width="2">
-                <circle cx="66" cy="72" r="30"/>
-                <path d="M66 42v60M36 72h60M45 51l42 42M87 51l-42 42"/>
-              </g>
-              <circle cx="66" cy="72" r="5" fill="#f472b6"/>
-              <g fill="none" stroke="rgba(244,114,182,.4)" stroke-width="1.5">
-                <path d="M96 72h44M140 72l38-26M140 72l38 26M178 46l44 10M178 98l44-10M222 56v32M222 56l20-2"/>
-              </g>
-              <circle class="fx-data" cy="72" r="3.5" fill="#fbcfe8"/>
-              <g fill="#f472b6">
-                <circle cx="140" cy="72" r="4.5"/>
-                <circle cx="178" cy="46" r="4.5"/>
-                <circle cx="178" cy="98" r="4.5"/>
-                <circle cx="222" cy="56" r="4.5"/>
-                <circle cx="222" cy="88" r="4.5"/>
-              </g>
-              <g fill="none" stroke="#f472b6" stroke-width="2">
-                <ellipse cx="276" cy="52" rx="17" ry="6.5"/>
-                <path d="M259 52v34c0 3.6 7.6 6.5 17 6.5s17-2.9 17-6.5V52"/>
-                <path d="M259 69c0 3.6 7.6 6.5 17 6.5s17-2.9 17-6.5"/>
-              </g>
-            </svg>
-          </div>
-          <div class="project-body">
-            <div class="project-cats"><span class="chip chip-data">Data / Big Data</span><span class="chip chip-proto">Prototype</span></div>
-            <h3 class="project-title"><a href="projects/challenge-big-data-velib.html">Challenge Big Data — prédiction Vélib'</a></h3>
-            <p class="project-desc">
-              Cadrage d'un pipeline Big Data (Spark) pour prédire l'usage des vélos en libre-service
-              à partir de données ouvertes Vélib' et météo. Resté au stade du prototype.
-            </p>
-            <ul class="tags small"><li>Python</li><li>Apache Spark</li><li>HDFS</li><li>APIs publiques</li></ul>
-            <div class="project-links"><a class="btn-link ghost" href="projects/challenge-big-data-velib.html">Voir le détail</a></div>
-          </div>
-        </article>
-
         <article class="project-card pc-oslo" data-cat="data">
           <div class="project-thumb">
             <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
@@ -505,6 +466,87 @@
             </p>
             <ul class="tags small"><li>Python</li><li>dpkt</li><li>Wireshark</li><li>PowerShell</li><li>DNS</li></ul>
             <div class="project-links"><a class="btn-link ghost" href="projects/forensique-reseau-ctf.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet : Détection & contournement IDS (Suricata) -->
+        <article class="project-card pc-ids" data-cat="cyber sys">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <path d="M160 16v108" stroke="rgba(163,230,53,.35)" stroke-width="2" stroke-dasharray="4 6"/>
+              <rect x="30" y="54" width="34" height="32" rx="4" fill="none" stroke="#a3e635" stroke-width="2"/>
+              <rect x="256" y="54" width="34" height="32" rx="4" fill="none" stroke="#a3e635" stroke-width="2"/>
+              <path d="M44 86v12h232V86" fill="none" stroke="rgba(163,230,53,.3)" stroke-width="1.5"/>
+              <g fill="#bef264"><circle class="fx-pkt fx-pkt-a" cx="0" cy="62" r="4"/><circle class="fx-pkt fx-pkt-b" cx="0" cy="78" r="4"/></g>
+              <g class="fx-alert"><path d="M160 44l10 18h-20z" fill="none" stroke="#a3e635" stroke-width="2"/><path d="M160 52v5" stroke="#a3e635" stroke-width="2" stroke-linecap="round"/></g>
+              <text x="36" y="48" font-family="'JetBrains Mono', monospace" font-size="10" fill="#bef264">src</text>
+              <text x="262" y="48" font-family="'JetBrains Mono', monospace" font-size="10" fill="#bef264">C2</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span><span class="chip chip-sys">Systèmes &amp; réseaux</span></div>
+            <h3 class="project-title"><a href="projects/ids-dns-suricata.html">Détection &amp; contournement d'un IDS</a></h3>
+            <p class="project-desc">
+              Mise en place de l'IDS Suricata, puis construction d'un tunnel DNS d'exfiltration qui passe
+              de « détecté » à « invisible » — pour montrer les limites des règles par signature.
+            </p>
+            <ul class="tags small"><li>Suricata</li><li>DNS tunneling</li><li>Bind9</li><li>Python</li><li>Linux</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/ids-dns-suricata.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet : Supervision Zabbix / Wazuh / pfSense -->
+        <article class="project-card pc-superv2" data-cat="sys cyber">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <rect x="112" y="28" width="96" height="60" rx="6" fill="none" stroke="#818cf8" stroke-width="2"/>
+              <g fill="rgba(129,140,248,.3)" stroke="#818cf8" stroke-width="1">
+                <rect class="fx-bar" x="124" y="60" width="12" height="20" rx="2"/>
+                <rect class="fx-bar fx-b2" x="142" y="48" width="12" height="32" rx="2"/>
+                <rect class="fx-bar fx-b3" x="160" y="54" width="12" height="26" rx="2"/>
+                <rect class="fx-bar fx-b4" x="178" y="42" width="12" height="38" rx="2"/>
+              </g>
+              <path d="M160 88v14M112 102h96" fill="none" stroke="rgba(129,140,248,.4)" stroke-width="1.5"/>
+              <g fill="none" stroke="#818cf8" stroke-width="2"><rect x="36" y="94" width="40" height="26" rx="4"/><rect x="140" y="110" width="40" height="22" rx="4"/><rect x="244" y="94" width="40" height="26" rx="4"/></g>
+              <g fill="#a5b4fc"><circle class="fx-node" cx="56" cy="107" r="3.5"/><circle class="fx-node fx-n2" cx="160" cy="121" r="3.5"/><circle class="fx-node fx-n3" cx="264" cy="107" r="3.5"/></g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-sys">Systèmes &amp; réseaux</span><span class="chip chip-cyber">Cybersécurité</span></div>
+            <h3 class="project-title"><a href="projects/supervision-zabbix-wazuh.html">Supervision réseau — Zabbix, Wazuh &amp; pfSense</a></h3>
+            <p class="project-desc">
+              Infrastructure virtualisée supervisée de bout en bout : métriques avec Zabbix, détection
+              d'incidents avec Wazuh (SIEM), le tout derrière un pare-feu pfSense.
+            </p>
+            <ul class="tags small"><li>Zabbix</li><li>Wazuh</li><li>pfSense</li><li>Active Directory</li><li>SNMP / Syslog</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/supervision-zabbix-wazuh.html">Voir le détail</a></div>
+          </div>
+        </article>
+
+        <!-- Projet : Pentest de machines (CTF) -->
+        <article class="project-card pc-pentest" data-cat="cyber">
+          <div class="project-thumb">
+            <svg class="scene" viewBox="0 0 320 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <rect x="40" y="26" width="240" height="88" rx="8" fill="none" stroke="#f472b6" stroke-width="2"/>
+              <path d="M40 44h240" stroke="rgba(244,114,182,.4)" stroke-width="1.5"/>
+              <g fill="#f9a8d4"><circle cx="54" cy="35" r="3"/><circle cx="66" cy="35" r="3"/><circle cx="78" cy="35" r="3"/></g>
+              <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#f9a8d4">
+                <text x="56" y="66">$ nmap -sV</text>
+                <text x="56" y="84">22/tcp open</text>
+              </g>
+              <rect class="fx-caret" x="56" y="94" width="9" height="13" fill="#f472b6"/>
+              <g class="fx-flag"><path d="M244 58v42" stroke="#f9a8d4" stroke-width="2" stroke-linecap="round"/><path d="M244 58l26 7-26 7z" fill="#f472b6"/></g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-cats"><span class="chip chip-cyber">Cybersécurité</span></div>
+            <h3 class="project-title"><a href="projects/pentest-ctf.html">Pentest de machines — CTF</a></h3>
+            <p class="project-desc">
+              Tests d'intrusion sur une série de machines vulnérables : reconnaissance, énumération web,
+              OSINT et élévation de privilèges, documentés dans un write-up.
+            </p>
+            <ul class="tags small"><li>Nmap</li><li>Gobuster</li><li>WPScan</li><li>John</li><li>Linux</li></ul>
+            <div class="project-links"><a class="btn-link ghost" href="projects/pentest-ctf.html">Voir le détail</a></div>
           </div>
         </article>
 

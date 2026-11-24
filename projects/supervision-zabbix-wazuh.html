@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supervision réseau — Zabbix, Wazuh &amp; pfSense | Mathias ALY BERIL</title>
+  <meta name="description" content="Supervision d'une infrastructure virtualisée avec Zabbix (métriques) et Wazuh (SIEM) derrière un pare-feu pfSense, avec détection d'une attaque brute-force SSH." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/supervision-zabbix-wazuh.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/supervision-zabbix-wazuh.html" />
+  <!-- /locale-controls -->
+</head>
+<body class="pp-theme pc-superv2">
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../en/projects/supervision-zabbix-wazuh.html" hreflang="en" lang="en" aria-label="Passer en anglais"><span aria-hidden="true"><span class="language-current">FR</span> / <strong>EN</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
+  <main class="project-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Supervision Zabbix, Wazuh &amp; pfSense</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-sys">Systèmes &amp; réseaux</span><span class="chip chip-cyber">Cybersécurité</span></div>
+      <h1>Supervision réseau — Zabbix, Wazuh &amp; pfSense</h1>
+      <p class="project-lead">Déployer et superviser une petite infrastructure virtualisée de bout en bout : métriques avec Zabbix, détection d'incidents avec Wazuh (SIEM), le tout derrière un pare-feu pfSense.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Type</span><span class="meta-value">TP cybersécurité (4ᵉ année)</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">Binôme</span></div>
+        <div class="meta-item"><span class="meta-label">Période</span><span class="meta-value">Novembre 2025</span></div>
+        <div class="meta-item"><span class="meta-label">Périmètre</span><span class="meta-value">4 machines virtuelles</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte</h2>
+      <p>Toute l'infrastructure est virtualisée sur une seule machine physique, sur un réseau interne isolé géré par un pare-feu. Elle réunit quatre systèmes : un pare-feu pfSense (routeur et passerelle), un serveur de supervision Ubuntu, un serveur Linux applicatif et un serveur Windows intégré à un annuaire Active Directory.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Objectifs</h2>
+      <ul>
+        <li>Mettre en place une supervision centralisée des machines et des services.</li>
+        <li>Collecter à la fois des métriques système et des journaux de sécurité.</li>
+        <li>Détecter un incident de sécurité et le corréler aux métriques.</li>
+        <li>Documenter une architecture réutilisable en contexte professionnel.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture mise en place</h2>
+      <ul>
+        <li><strong>pfSense</strong> : pare-feu, routeur et passerelle, qui remonte ses informations via SNMP et envoie ses journaux en Syslog.</li>
+        <li><strong>Serveur de supervision Ubuntu</strong> hébergeant <strong>Zabbix</strong> (métriques réseau et système) et <strong>Wazuh</strong> en mode tout-en-un (SIEM pour la corrélation et l'analyse de logs).</li>
+        <li><strong>Serveur Linux applicatif</strong> (Apache) et <strong>serveur Windows Server</strong> (Active Directory), chacun équipé des agents Zabbix et Wazuh.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Supervision réalisée</h2>
+      <ul>
+        <li>Disponibilité du service web sur le serveur Linux.</li>
+        <li>Intégrité d'un fichier critique sur le serveur Windows.</li>
+        <li>Performance réseau et métriques SNMP du pare-feu pfSense.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Volet sécurité</h2>
+      <p>Une attaque par force brute SSH a été simulée contre le serveur Linux, puis détectée par le SIEM Wazuh à partir des journaux d'authentification. Les événements de Wazuh (sécurité) et les métriques de Zabbix (système) ont ensuite été corrélés pour obtenir une vision complète de l'incident.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultat</h2>
+      <p>La chaîne complète fonctionne sur un seul hôte : observation des services, collecte de métriques, corrélation d'événements et détection d'incidents en temps réel. Le projet démontre la faisabilité d'une supervision complète malgré des contraintes matérielles fortes.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Difficultés et pistes</h2>
+      <ul>
+        <li>Tout faire tenir sur une seule machine physique a posé des problèmes de connectivité, de compatibilité et d'installation, résolus au fil du projet.</li>
+        <li>Pistes : automatiser le déploiement (Ansible ou Docker Compose), ajouter des alertes par mail et des tableaux de bord croisés sous Grafana, renforcer la rotation et la centralisation des journaux.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Compétences développées</h2>
+      <ul>
+        <li>Supervision d'infrastructure avec Zabbix.</li>
+        <li>SIEM et analyse de logs avec Wazuh.</li>
+        <li>Configuration d'un pare-feu pfSense (SNMP, Syslog).</li>
+        <li>Administration Windows Server / Active Directory et Linux.</li>
+        <li>Détection et corrélation d'incidents de sécurité.</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges"><li>Zabbix</li><li>Wazuh (SIEM)</li><li>pfSense</li><li>Windows Server / AD</li><li>Debian / Ubuntu</li><li>Apache</li><li>SNMP</li><li>Syslog</li></ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Confidentialité</h2>
+      <div class="note-box"><strong>Note :</strong> infrastructure de laboratoire isolée. Le plan d'adressage et les captures ne sont pas reproduits ici.</div>
+    </section>
+
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+      <a class="btn-link ghost" href="pentest-ctf.html">Pentest de machines — CTF &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
