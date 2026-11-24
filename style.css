@@ -715,6 +715,14 @@ html::before {
 
 /* Perf : les scènes SVG ne s'animent que quand leur carte est visible
    (classe .live posée en JS via IntersectionObserver) */
+@media (prefers-reduced-motion: no-preference) {
+  .pc-oslo.live .scene path[stroke-dasharray] { animation: forecast-flow 2.4s linear infinite; }
+  .pc-ner.live .scene rect { animation: entity-highlight 3.6s ease-in-out infinite; }
+  .pc-ner.live .scene rect:nth-of-type(2) { animation-delay: 1.2s; }
+  .pc-ner.live .scene rect:nth-of-type(3) { animation-delay: 2.4s; }
+}
+@keyframes forecast-flow { to { stroke-dashoffset: -27; } }
+@keyframes entity-highlight { 0%, 40%, 100% { fill: transparent; } 20% { fill: var(--pc); } }
 .projects-grid .scene * { animation-play-state: paused; }
 .project-card.live .scene * { animation-play-state: running; }
 

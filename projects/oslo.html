@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vélos à Oslo : prévoir les disponibilités | Mathias ALY BERIL</title>
-  <meta name="description" content="Combien de vélos restera-t-il dans une station dans une heure ? J’ai travaillé sur cette prévision à partir des relevés des stations et de la météo.">
-  <link rel="stylesheet" href="../style.css">
+  <meta name="description" content="Prévision à une heure du nombre de vélos disponibles dans les stations d’Oslo à partir de leur historique et de la météo." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%2338bdf8' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- locale-controls -->
+  <link rel="alternate" hreflang="fr" href="https://silverwolf974.github.io/portfolio-mathias/projects/oslo.html" />
+  <link rel="alternate" hreflang="en" href="https://silverwolf974.github.io/portfolio-mathias/en/projects/oslo.html" />
+  <!-- /locale-controls -->
 </head>
 <body class="pp-theme pc-oslo">
-  <header class="site-header"><nav class="nav container">
-    <a class="brand" href="../index.html">MA<span>.</span></a>
-    <a href="../index.html#projets">Projets</a>
-    <a class="language-switch" href="../en/projects/oslo.html" hreflang="en" lang="en">English</a>
-  </nav></header>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="ic-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="ic-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MA<span>.</span></a>
+      <ul class="nav-links nav-links-static">
+        <li><a href="../index.html#projets">Projets</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <!-- locale-controls -->
+      <a class="language-switch" href="../en/projects/oslo.html" hreflang="en" lang="en" aria-label="Passer en anglais"><span aria-hidden="true"><span class="language-current">FR</span> / <strong>EN</strong></span></a>
+      <!-- /locale-controls -->
+    </nav>
+  </header>
+
   <main class="project-page">
-    <header class="project-hero"><h1>Vélos à Oslo : prévoir les disponibilités</h1><p class="project-lead">Combien de vélos restera-t-il dans une station dans une heure ? J’ai travaillé sur cette prévision à partir des relevés des stations et de la météo.</p></header>
-    <section class="project-section"><h2>Ma contribution</h2><p>J’ai croisé les observations par station et par heure pour comparer la disponibilité des vélos selon le moment de la journée et les conditions météo.</p></section>
-    <section class="project-section"><h2>Ce que j’ai appris</h2><p>Sur les données de test, la prévision s’écarte du nombre réel de 3,02 vélos en moyenne. J’ai appris à traduire un score en décision concrète : pour une station presque vide, un écart de trois vélos peut changer la décision de la réapprovisionner.</p></section>
-    <section class="project-section"><h2>Outils utilisés</h2><ul class="tech-badges"><li>Spark</li><li>XGBoost</li></ul></section>
-    <nav class="project-nav"><a class="btn-link ghost" href="../index.html#projets">Retour aux projets</a></nav>
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="../index.html">Accueil</a><span class="sep">/</span>
+      <a href="../index.html#projets">Projets</a><span class="sep">/</span>
+      <span>Vélos à Oslo : prévoir les disponibilités</span>
+    </nav>
+
+    <header class="project-hero">
+      <div class="project-cats"><span class="chip chip-data">Data / IA</span></div>
+      <h1>Vélos à Oslo : prévoir les disponibilités</h1>
+      <p class="project-lead">Prévision à une heure du nombre de vélos disponibles dans les stations d’Oslo à partir de leur historique et de la météo.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Formation</span><span class="meta-value">ESIROI</span></div>
+        <div class="meta-item"><span class="meta-label">Domaine</span><span class="meta-value">Mobilité urbaine</span></div>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Contexte et objectif</h2>
+      <p>Anticiper les stations qui risquent de manquer de vélos avant le prochain réapprovisionnement.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Travaux réalisés</h2>
+      <p>J’ai croisé les observations par station et par heure pour comparer la disponibilité des vélos selon le moment de la journée et les conditions météo.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Résultats</h2>
+      <p>Sur les données de test, les prévisions s’écartent du nombre réel de 3,02 vélos en moyenne.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Ce que j’ai appris</h2>
+      <p>J’ai appris à traduire un score en décision concrète : pour une station presque vide, un écart de trois vélos peut changer la décision de la réapprovisionner.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Technologies</h2>
+      <ul class="tech-badges"><li>Spark</li><li>XGBoost</li></ul>
+    </section>
+
+    <nav class="project-nav">
+      <a class="btn-link ghost" href="../index.html#projets">&larr; Tous les projets</a>
+    </nav>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mathias ALY BERIL</p>
+      <p class="footer-note"><a href="../index.html" style="color:var(--accent)">Retour au portfolio</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
